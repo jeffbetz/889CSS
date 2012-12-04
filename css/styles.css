@@ -529,6 +529,14 @@ input {
   text-decoration: none;
 }
 /* line 376, ../scss/styles.scss */
-.footerUtilityNav li .footerUtilityDonate {
-  background: url(../images/donate-heart.png) no-repeat 3px 3px;
+.footerUtilityNav li.footerUtilityDonate {
+  color: red;
+  background: url(../images/donate-heart.png) no-repeat 17px 11px;
+  padding-left: 36px;
+}
+
+/* line 384, ../scss/styles.scss */
+.footerUtilityWrapper {
+  background: url(../images/texturebg.png);
+  padding: 15px;
 }

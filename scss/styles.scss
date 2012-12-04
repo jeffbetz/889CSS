@@ -373,9 +373,17 @@ input
     border-right: dashed 1px $lightGrayImageBorder;
     &:last-child { border-right: none; };
     a { color: $brownText; text-decoration:none; };
-    .footerUtilityDonate {@include background(url(../images/donate-heart.png) no-repeat 3px 3px);};
+    &.footerUtilityDonate {color: red; @include background(url(../images/donate-heart.png) no-repeat 17px 11px); padding-left: 36px;}; 
   }
-  
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.footerUtilityWrapper
+{
+  @include background(url(../images/texturebg.png));
+  padding: 15px;
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
