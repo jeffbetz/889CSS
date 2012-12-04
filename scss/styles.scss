@@ -358,7 +358,7 @@ input
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
-}
+} 
 
 .footerUtilityNav
 {
@@ -372,8 +372,10 @@ input
     padding: 10px 18px;
     border-right: dashed 1px $lightGrayImageBorder;
     &:last-child { border-right: none; };
-    a { color: $brownText; text-decoration:none; }
+    a { color: $brownText; text-decoration:none; };
+    .footerUtilityDonate {@include background(url(../images/donate-heart.png) no-repeat 3px 3px);};
   }
+  
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }

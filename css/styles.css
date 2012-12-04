@@ -528,3 +528,7 @@ input {
   color: #4f3700;
   text-decoration: none;
 }
+/* line 376, ../scss/styles.scss */
+.footerUtilityNav li .footerUtilityDonate {
+  background: url(../images/donate-heart.png) no-repeat 3px 3px;
+}
