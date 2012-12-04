@@ -1,57 +1,67 @@
 /* support */
-/* line 69, ../scss/styles.scss */
+/* line 70, ../scss/styles.scss */
 .plainBG {
   background: url(../images/texturebg.png);
 }
 
-/* line 73, ../scss/styles.scss */
+/* line 74, ../scss/styles.scss */
 .paddIt {
   padding: 20px;
 }
 
-/* line 77, ../scss/styles.scss */
+/* line 78, ../scss/styles.scss */
 .sizeIt {
   height: 300px;
   width: 300px;
 }
 
-/* line 81, ../scss/styles.scss */
+/* line 82, ../scss/styles.scss */
+.addLeftSpace {
+  margin-left: 15px;
+}
+
+/* line 86, ../scss/styles.scss */
+.addTopSpace {
+  margin-top: 15px;
+}
+
+/* line 90, ../scss/styles.scss */
 .spacer {
   height: 60px;
   width: 300px;
 }
 
-/* line 84, ../scss/styles.scss */
+/* line 101, ../scss/styles.scss */
 .headerBG {
   width: 100%;
   background: url(../images/texturebg.png);
 }
 @media only screen and (min-width: 1024px) {
-  /* line 84, ../scss/styles.scss */
+  /* line 101, ../scss/styles.scss */
   .headerBG {
     height: 162px;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 84, ../scss/styles.scss */
+  /* line 101, ../scss/styles.scss */
   .headerBG {
     height: 142px;
   }
 }
 @media only screen and (max-width: 420px) {
-  /* line 84, ../scss/styles.scss */
+  /* line 101, ../scss/styles.scss */
   .headerBG {
     height: 67px;
   }
 }
 
-/* line 93, ../scss/styles.scss */
+/* line 110, ../scss/styles.scss */
 .dashedBorder {
   padding: 4px;
   border: dashed 1px rgba(102, 102, 102, 0.3);
 }
 
-/* line 99, ../scss/styles.scss */
+/* line 116, ../scss/styles.scss */
 .utilityNavText {
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -61,13 +71,13 @@
   color: #4d3800;
   border-right: dashed 1px rgba(102, 102, 102, 0.3);
 }
-/* line 105, ../scss/styles.scss */
+/* line 122, ../scss/styles.scss */
 .utilityNavText a {
   color: #4d3800;
   text-decoration: none;
 }
 
-/* line 113, ../scss/styles.scss */
+/* line 130, ../scss/styles.scss */
 input {
   width: 218px;
   height: 28px;
@@ -86,7 +96,7 @@ input {
   font-size: 14px;
 }
 
-/* line 129, ../scss/styles.scss */
+/* line 146, ../scss/styles.scss */
 .tanOverlay {
   width: 100%;
   background-color: rgba(219, 215, 209, 0.4);
@@ -98,43 +108,43 @@ input {
   background: linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
 }
 @media only screen and (min-width: 1024px) {
-  /* line 129, ../scss/styles.scss */
+  /* line 146, ../scss/styles.scss */
   .tanOverlay {
     height: 58px;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 129, ../scss/styles.scss */
+  /* line 146, ../scss/styles.scss */
   .tanOverlay {
     height: 40px;
   }
 }
 
-/* line 144, ../scss/styles.scss */
+/* line 161, ../scss/styles.scss */
 .brownBar {
   width: 100%;
   background-color: #4d3800;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 144, ../scss/styles.scss */
+  /* line 161, ../scss/styles.scss */
   .brownBar {
     height: 36px;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 144, ../scss/styles.scss */
+  /* line 161, ../scss/styles.scss */
   .brownBar {
     height: 36px;
   }
 }
 @media only screen and (max-width: 420px) {
-  /* line 144, ../scss/styles.scss */
+  /* line 161, ../scss/styles.scss */
   .brownBar {
     display: none;
   }
 }
 
-/* line 153, ../scss/styles.scss */
+/* line 170, ../scss/styles.scss */
 .brownBarArtist {
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -142,14 +152,14 @@ input {
   color: white;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 153, ../scss/styles.scss */
+  /* line 170, ../scss/styles.scss */
   .brownBarArtist {
     line-height: 36px;
     font-size: 13px;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 153, ../scss/styles.scss */
+  /* line 170, ../scss/styles.scss */
   .brownBarArtist {
     line-height: 36px;
     font-size: 11px;
@@ -157,7 +167,7 @@ input {
   }
 }
 
-/* line 162, ../scss/styles.scss */
+/* line 179, ../scss/styles.scss */
 .brownBarSong {
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -167,21 +177,21 @@ input {
   margin-left: 5px;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 162, ../scss/styles.scss */
+  /* line 179, ../scss/styles.scss */
   .brownBarSong {
     line-height: 36px;
     font-size: 13px;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 162, ../scss/styles.scss */
+  /* line 179, ../scss/styles.scss */
   .brownBarSong {
     line-height: 36px;
     font-size: 11px;
   }
 }
 
-/* line 173, ../scss/styles.scss */
+/* line 190, ../scss/styles.scss */
 .brownBarSponsor {
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -192,14 +202,14 @@ input {
   float: right;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 173, ../scss/styles.scss */
+  /* line 190, ../scss/styles.scss */
   .brownBarSponsor {
     line-height: 36px;
     font-size: 13px;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 173, ../scss/styles.scss */
+  /* line 190, ../scss/styles.scss */
   .brownBarSponsor {
     line-height: 36px;
     font-size: 11px;
@@ -207,7 +217,7 @@ input {
   }
 }
 
-/* line 185, ../scss/styles.scss */
+/* line 202, ../scss/styles.scss */
 .mainNav {
   color: rgba(77, 56, 0, 0.9);
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
@@ -217,27 +227,27 @@ input {
   padding: 6px 12px;
   overflow: visible;
 }
-/* line 191, ../scss/styles.scss */
+/* line 208, ../scss/styles.scss */
 .mainNav a {
   color: rgba(77, 56, 0, 0.9);
   text-decoration: none;
   height: 58px;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 185, ../scss/styles.scss */
+  /* line 202, ../scss/styles.scss */
   .mainNav {
     font-size: 17px;
     border-right: 1px dashed rgba(75, 57, 0, 0.2);
     line-height: 58px;
     height: 150px;
   }
-  /* line 198, ../scss/styles.scss */
+  /* line 215, ../scss/styles.scss */
   .mainNav:last-child {
     border-right: none;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 185, ../scss/styles.scss */
+  /* line 202, ../scss/styles.scss */
   .mainNav {
     line-height: 40px;
     font-size: 14px;
@@ -245,19 +255,19 @@ input {
     line-height: 40px;
     height: 40px;
   }
-  /* line 203, ../scss/styles.scss */
+  /* line 220, ../scss/styles.scss */
   .mainNav:last-child {
     border-right: none;
   }
 }
 @media only screen and (max-width: 420px) {
-  /* line 185, ../scss/styles.scss */
+  /* line 202, ../scss/styles.scss */
   .mainNav {
     font-size: 17px;
   }
 }
 
-/* line 209, ../scss/styles.scss */
+/* line 226, ../scss/styles.scss */
 .mainNavSelected {
   background-color: white;
   overflow: visible;
@@ -268,7 +278,7 @@ input {
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#80808080', endColorstr='#80808080');
 }
 @media only screen and (min-width: 1024px) {
-  /* line 209, ../scss/styles.scss */
+  /* line 226, ../scss/styles.scss */
   .mainNavSelected {
     background: url(../images/selectedNavArrow.png) no-repeat center 56px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.94)), color-stop(10%, rgba(255, 255, 255, 0.99)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(83%, #ffffff), color-stop(83%, rgba(255, 255, 255, 0)));
     background: url(../images/selectedNavArrow.png) no-repeat center 56px, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.99) 10%, rgba(255, 255, 255, 0) 50%, #ffffff 83%, rgba(255, 255, 255, 0) 83%);
@@ -279,7 +289,7 @@ input {
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 209, ../scss/styles.scss */
+  /* line 226, ../scss/styles.scss */
   .mainNavSelected {
     background: url(../images/selectedNavArrow.png) no-repeat center 39px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.94)), color-stop(10%, rgba(255, 255, 255, 0.99)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(83%, #ffffff), color-stop(83%, rgba(255, 255, 255, 0)));
     background: url(../images/selectedNavArrow.png) no-repeat center 39px, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.99) 10%, rgba(255, 255, 255, 0) 50%, #ffffff 83%, rgba(255, 255, 255, 0) 83%);
@@ -290,7 +300,7 @@ input {
   }
 }
 
-/* line 222, ../scss/styles.scss */
+/* line 239, ../scss/styles.scss */
 .subNavBG {
   width: 100%;
   background-color: rgba(219, 215, 209, 0.4);
@@ -301,7 +311,7 @@ input {
   background: url(../images/navDropdownTopGradient.png) repeat-x top, linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
 }
 
-/* line 233, ../scss/styles.scss */
+/* line 250, ../scss/styles.scss */
 .subNavText {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   margin: 0;
@@ -337,37 +347,184 @@ input {
 .subNavText li.last {
   padding-right: 0;
 }
-/* line 240, ../scss/styles.scss */
+/* line 257, ../scss/styles.scss */
 .subNavText a {
   color: #333333;
   text-decoration: none;
 }
 
-/* line 247, ../scss/styles.scss */
+/* line 264, ../scss/styles.scss */
 .subNavTextWrapper {
   border-right: 1px dashed rgba(75, 57, 0, 0.2);
   border-left: 1px dashed rgba(75, 57, 0, 0.2);
   width: 370px;
 }
 
-/* line 257, ../scss/styles.scss */
+/* line 283, ../scss/styles.scss */
 .subNavDropDownSectionTitle {
   color: #1a6c99;
   font-size: 13px;
 }
-/* line 260, ../scss/styles.scss */
+/* line 286, ../scss/styles.scss */
 .subNavDropDownSectionTitle a {
   color: #1a6c99;
   text-decoration: none;
 }
+@media only screen and (max-width: 420px) {
+  /* line 283, ../scss/styles.scss */
+  .subNavDropDownSectionTitle {
+    display: none;
+  }
+}
 
-/* line 267, ../scss/styles.scss */
+/* line 293, ../scss/styles.scss */
 .subNavDropDownSectionAuthor {
   color: #4f3700;
   font-size: 13px;
 }
-/* line 270, ../scss/styles.scss */
+/* line 296, ../scss/styles.scss */
 .subNavDropDownSectionAuthor a {
+  color: #4f3700;
+  text-decoration: none;
+}
+@media only screen and (max-width: 420px) {
+  /* line 293, ../scss/styles.scss */
+  .subNavDropDownSectionAuthor {
+    display: none;
+  }
+}
+
+/* line 303, ../scss/styles.scss */
+.storyTitleText {
+  font-family: "Calibri", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #333333;
+  font-size: 18px;
+  line-height: 18px;
+}
+/* line 309, ../scss/styles.scss */
+.storyTitleText a {
+  color: #333333;
+  text-decoration: none;
+}
+@media only screen and (max-width: 420px) {
+  /* line 303, ../scss/styles.scss */
+  .storyTitleText {
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+/* line 316, ../scss/styles.scss */
+.storySummaryText {
+  color: #333333;
+  font-size: 14px;
+  line-height: 16px;
+  font-family: "Periodico Text", Helvetica, Arial, sans-serif;
+}
+/* line 318, ../scss/styles.scss */
+.storySummaryText a {
+  color: #1a6c99;
+  text-decoration: none;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 316, ../scss/styles.scss */
+  .storySummaryText {
+    width: 258px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  /* line 316, ../scss/styles.scss */
+  .storySummaryText {
+    width: 100%;
+  }
+}
+
+/* line 336, ../scss/styles.scss */
+.footerStreamingText {
+  font-size: 13px;
+  line-height: 24px;
+  color: #1a6c99;
+  font-family: "Calibri", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+/* line 340, ../scss/styles.scss */
+.footerStreamingText a {
+  color: #1a6c99;
+  text-decoration: none;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 336, ../scss/styles.scss */
+  .footerStreamingText {
+    width: 100%;
+  }
+}
+
+/* line 350, ../scss/styles.scss */
+.footerSlogan {
+  color: #4f3700;
+  font-weight: bold;
+  font-family: "Calibri", Helvetica, Arial, sans-serif;
+  font-size: 23px;
+  line-height: 24px;
+  text-align: center;
+}
+/* line 352, ../scss/styles.scss */
+.footerSlogan a {
+  color: #4f3700;
+  text-decoration: none;
+}
+
+/* line 364, ../scss/styles.scss */
+.footerUtilityNav {
+  font-family: "Periodico Display", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: medium;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  font-style: italic;
+  color: #4f3700;
+  font-size: 14px;
+  line-height: 16px;
+}
+/* line 60, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.footerUtilityNav li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 48, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.footerUtilityNav li:first-child, .footerUtilityNav li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.footerUtilityNav li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.footerUtilityNav li.last {
+  padding-right: 0;
+}
+/* line 371, ../scss/styles.scss */
+.footerUtilityNav li {
+  padding: 10px 18px;
+  border-right: dashed 1px rgba(102, 102, 102, 0.3);
+}
+/* line 374, ../scss/styles.scss */
+.footerUtilityNav li:last-child {
+  border-right: none;
+}
+/* line 375, ../scss/styles.scss */
+.footerUtilityNav li a {
   color: #4f3700;
   text-decoration: none;
 }

@@ -8,6 +8,7 @@ $orange: #F79101;
 $mainNavText: rgba(#4D3800, 0.9);
 $navDividingLine: rgba(#4B3900, 0.2);
 $subNavText: #333333;
+$grayText: #333333;
 $blueText: #1A6C99;
 $brownText: #4F3700;
 
@@ -77,8 +78,24 @@ $break-large: 1024px;
 {height: 300px; width: 300px;}
 
 // for development only
+.addLeftSpace
+{margin-left: 15px;}
+
+// for development only
+.addTopSpace
+{margin-top: 15px;}
+
+// for development only
 .spacer
 {height: 60px; width: 300px;}
+
+
+
+
+
+// -----------------------------------------------------------------------------------------
+// HEADER
+// -----------------------------------------------------------------------------------------
 
 .headerBG
 {
@@ -253,6 +270,15 @@ input
   @include respond-to(handhelds)      {  }
 }
 
+
+
+
+
+// -----------------------------------------------------------------------------------------
+// DROP DOWN THING
+// -----------------------------------------------------------------------------------------
+
+
 .subNavDropDownSectionTitle
 { 
   color: $blueText;
@@ -260,7 +286,7 @@ input
   a { color: $blueText; text-decoration:none; }
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
+  @include respond-to(handhelds)      { display: none; }
 }
 
 .subNavDropDownSectionAuthor
@@ -268,6 +294,86 @@ input
   color: $brownText;
   font-size: 13px;
   a { color: $brownText; text-decoration:none; }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      { display: none; }
+}
+
+.storyTitleText
+{
+  @include Calibri();
+  font-weight: bold;
+  color: $grayText;
+  font-size: 18px;
+  line-height: 18px;
+  a { color: $grayText; text-decoration:none; }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      { font-size: 24px; line-height: 24px; }
+}
+
+.storySummaryText
+{
+  color: $grayText;
+  a { color: $blueText; text-decoration:none; }
+  font-size: 14px;
+  line-height: 16px;
+  @include PeriodicoText();
+  @include respond-to(wide-screens)   { width: 258px; }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      { width: 100% }
+}
+
+
+
+
+
+// -----------------------------------------------------------------------------------------
+// FOOTER
+// -----------------------------------------------------------------------------------------
+
+.footerStreamingText
+{
+  font-size: 13px;
+  line-height: 24px;
+  color: $blueText;
+  a { color: $blueText; text-decoration:none; }
+  @include Calibri();
+  font-weight: bold;
+  text-align: center;
+  @include respond-to(wide-screens)   { width: 100%; }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.footerSlogan
+{
+  color: $brownText;
+  a { color: $brownText; text-decoration:none; }
+  font-weight: bold;
+  @include Calibri();
+  font-size: 23px;
+  line-height: 24px;
+  text-align: center;
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.footerUtilityNav
+{
+  @include PeriodicoDisplay();
+  @include horizontal-list();
+  font-style: italic;
+  color: $brownText;
+  font-size: 14px;
+  line-height: 16px;
+  li {   
+    padding: 10px 18px;
+    border-right: dashed 1px $lightGrayImageBorder;
+    &:last-child { border-right: none; };
+    a { color: $brownText; text-decoration:none; }
+  }
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
