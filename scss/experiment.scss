@@ -1,0 +1,39 @@
+@import "compass/css3/border-radius"; 
+@import "compass/css3/box-shadow";
+@import "compass/typography/lists/bullets";
+@import "compass/typography/links/unstyled-link";
+@import "compass/css3/images";
+@import "compass/css3";
+
+@mixin media($type) {
+
+  @if $type == tablet {
+
+      @media only screen and (min-width:768px) and (max-width:991px) {
+          @content;
+      }
+
+  }
+  @else if $type == mobile {
+
+      @media only screen and (max-width:767px) {
+          @content;
+      }
+
+  }
+
+}
+
+#content {
+
+  width:960px;
+
+  @include media(tablet) {
+      width:720px;
+  }
+
+  @include media(mobile) {
+      width:90%;
+  } 
+
+}

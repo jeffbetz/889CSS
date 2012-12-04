@@ -1,0 +1,274 @@
+$lightGrayImageBorder: rgba(#666666, 0.3);
+$darkBrown: #4D3800; 
+$tan: #E6E3DC;
+$searchBox: rgba(#E6E3DC, 0.47);
+$searchBoxText: rgba(#4D3800, 0.4);
+$tanOverlay: rgba(#DBD7D1, 0.4);
+$orange: #F79101;
+$mainNavText: rgba(#4D3800, 0.9);
+$navDividingLine: rgba(#4B3900, 0.2);
+$subNavText: #333333;
+$blueText: #1A6C99;
+$brownText: #4F3700;
+
+@import "compass/css3/border-radius"; 
+@import "compass/css3/box-shadow";
+@import "compass/typography/lists/bullets";
+@import "compass/typography/links/unstyled-link";
+@import "compass/typography";
+@import "compass/css3/images";
+@import "compass/css3";
+
+/* support */
+$experimental-support-for-khtml: false;
+$experimental-support-for-opera: false;
+$experimental-support-for-microsoft: false;
+
+$break-small: 420px; // should be 320px
+$break-large: 1024px;
+
+@mixin respond-to($media) {
+  @if $media == handhelds {
+    @media only screen and (max-width: $break-small) { @content; }
+  }
+  @else if $media == medium-screens {
+    @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
+  }
+  @else if $media == wide-screens {
+    @media only screen and (min-width: $break-large) { @content; }
+  }
+}
+
+@mixin PeriodicoDisplay(){
+  font-family: "Periodico Display", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: medium;
+}
+
+@mixin PeriodicoText(){
+  font-family: "Periodico Text", Helvetica, Arial, sans-serif;
+}
+
+@mixin Calibri(){
+  font-family: "Calibri", Helvetica, Arial, sans-serif;
+}
+
+@mixin txt($thisColor: #333333,$thisSize: 14, $thisLineHeight: auto, $thisAlign: left) {
+  color: #{$thisColor};
+  font-size: #{$thisSize};
+  line-height: #{$thisLineHeight};
+  text-align: #{$thisAlign};
+}
+
+@mixin size($thisWidth: 100%, $thisHeight: 100px) {
+  width: #{$thisWidth};
+  height: #{$thisHeight}; 
+}
+
+.plainBG
+{@include background(url(../images/texturebg.png));}
+
+// for development only
+.paddIt
+{padding: 20px;}
+
+// for development only
+.sizeIt
+{height: 300px; width: 300px;}
+
+// for development only
+.spacer
+{height: 60px; width: 300px;}
+
+.headerBG
+{
+  width: 100%;
+  @include background(url(../images/texturebg.png));
+  @include respond-to(wide-screens)   { height: 162px; }
+  @include respond-to(medium-screens) { height: 142px; }
+  @include respond-to(handhelds)      { height: 67px; }
+}
+
+.dashedBorder
+{
+  padding: 4px;
+  border: dashed 1px $lightGrayImageBorder;
+}
+
+.utilityNavText
+{
+  @include PeriodicoDisplay();
+  font-size: 13px;
+  line-height: 15px;
+  color: $darkBrown;
+  border-right: dashed 1px $lightGrayImageBorder;
+  a { color: $darkBrown; text-decoration:none; }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+// for the searchbox
+input
+{
+  @include size(218px, 28px);
+  border: 1px solid $tan;
+  background-color: $searchBox;
+  // @include opacity(0.95);
+  padding-left: 10px; 
+  padding-right: 10px;
+  @include background(url(../images/searchIcon.png) no-repeat right center, linear-gradient(top, $searchBox, $searchBox) );
+  -webkit-background-origin: content-box;
+  background-origin: content-box;
+  @include Calibri();
+  color: $searchBoxText;
+  font-size: 14px;
+}
+
+.tanOverlay
+{
+  
+  width: 100%;
+  background-color: $tanOverlay;
+  overflow: visible;
+  // border-bottom: 10px solid transparent;
+  background-clip: border-box;
+  @include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
+  @include respond-to(wide-screens)   { height: 58px; }
+  @include respond-to(medium-screens) { height: 40px; }
+  @include respond-to(handhelds)      {  } 
+  // maybe display:none for mobile
+}
+
+.brownBar
+{
+  width: 100%;
+  background-color: $darkBrown;
+  @include respond-to(wide-screens)   { height: 36px; }
+  @include respond-to(medium-screens) { height: 36px; }
+  @include respond-to(handhelds)      { display: none; } 
+}
+
+.brownBarArtist
+{
+  @include PeriodicoDisplay();
+  color: white;
+  @include respond-to(wide-screens)   { line-height: 36px; font-size: 13px; }
+  @include respond-to(medium-screens) { line-height: 36px; font-size: 11px; margin-left: 15px; }
+  @include respond-to(handhelds)      {  }
+}
+
+.brownBarSong
+{
+  @include PeriodicoDisplay();
+  color: $orange;
+  font-size: 11px;
+  margin-left: 5px;
+  @include respond-to(wide-screens)   { line-height: 36px; font-size: 13px; }
+  @include respond-to(medium-screens) { line-height: 36px; font-size: 11px; }
+  @include respond-to(handhelds)      {  }
+}
+
+.brownBarSponsor
+{
+  @include PeriodicoDisplay();
+  color: white;
+  font-size: 11px;
+  text-align: right;
+  float: right;
+  @include respond-to(wide-screens)   { line-height: 36px; font-size: 13px; }
+  @include respond-to(medium-screens) { line-height: 36px; font-size: 11px; margin-right: 15px;}
+  @include respond-to(handhelds)      {  }
+}
+
+.mainNav
+{
+  color: $mainNavText;
+  @include PeriodicoDisplay();
+  display: inline;
+  padding: 6px 12px;
+  overflow: visible;
+  a { color: $mainNavText; text-decoration:none; height: 58px; }
+  @include respond-to(wide-screens)   
+  { 
+    font-size: 17px;
+    border-right: 1px dashed $navDividingLine;
+    line-height: 58px;
+    height: 150px;
+    &:last-child { border-right: none; };
+  }
+  @include respond-to(medium-screens) 
+  { 
+    line-height: 40px;font-size: 14px; border-right: 1px dashed $navDividingLine; line-height: 40px; height: 40px;
+    &:last-child { border-right: none; }; 
+  }
+  @include respond-to(handhelds)      { font-size: 17px; }
+}
+
+.mainNavSelected
+{
+  background-color: rgba(white, 1); // Old browsers
+  overflow: visible;
+  background-origin: border-box;
+  padding: 12px 15px 20px 15px;
+  margin: 0 -12px 0 -16px;
+  @include filter-gradient(rgba(gray, 0.5), rgba(gray, 0.5), vertical); // IE6-9
+  @include respond-to(wide-screens)   { @include background(url(../images/selectedNavArrow.png) no-repeat center 56px, linear-gradient(top, rgba(white, 0.94) 0%, rgba(white, 0.99) 10%, rgba(white, 0.0) 50%, rgba(white, 1.0) 83%, rgba(white, 0.0) 83%)); padding: 18px 15px 32px 15px; margin: 0 -12px 0 -16px; }
+  @include respond-to(medium-screens) { @include background(url(../images/selectedNavArrow.png) no-repeat center 39px, linear-gradient(top, rgba(white, 0.94) 0%, rgba(white, 0.99) 10%, rgba(white, 0.0) 50%, rgba(white, 1.0) 83%, rgba(white, 0.0) 83%)); padding: 12px 15px 20px 15px; margin: 0 -12px 0 -16px;  }
+  @include respond-to(handhelds)      {  }
+}
+
+.subNavBG
+{
+  width: 100%;
+  background-color: $tanOverlay;
+  padding: 15px;
+  @include background(url(../images/navDropdownTopGradient.png) repeat-x top, linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  } 
+}
+
+.subNavText
+{
+  @include Calibri();
+  @include horizontal-list();
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: $subNavText;
+  a { color: $subNavText; text-decoration:none; }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.subNavTextWrapper
+{
+  border-right: 1px dashed $navDividingLine;
+  border-left: 1px dashed $navDividingLine;
+  width: 370px;
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.subNavDropDownSectionTitle
+{ 
+  color: $blueText;
+  font-size: 13px;
+  a { color: $blueText; text-decoration:none; }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.subNavDropDownSectionAuthor
+{ 
+  color: $brownText;
+  font-size: 13px;
+  a { color: $brownText; text-decoration:none; }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}

@@ -1,0 +1,517 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"h",
+				"height=  (attribute)"
+			],
+			[
+				"b",
+				"background"
+			],
+			[
+				"f",
+				"for	for (…) {…}"
+			],
+			[
+				"blac",
+				"black-button"
+			],
+			[
+				"col",
+				"background-color"
+			],
+			[
+				"back",
+				"background-image"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
+				"bs",
+				"bs	border-style: hidden"
+			],
+			[
+				"r",
+				"rgba()"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"fon",
+				"font-size"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "<html>\n	<head>\n		<link rel=\"stylesheet\" href=\"css/styles.css\" type=\"text/css\" media=\"screen\" />\n	</head>\n	<body bgcolor=\"#ccc\" >\n<img class=\"myPic\" src=\"reference_images/2012-11-21-23939.png\" width=\"222\" height=\"165\" />\n<img class=\"myPic\" src=\"reference_images/2012-11-21-23931.png\" width=\"479\" height=\"193\" />\n		<img class=\"myPic\" src=\"reference_images/2012-11-21-23945.png\" >\n			<img class=\"myPic\" src=\"reference_images/2012-11-21-23931.png\" height=\"193\" width=\"479\" >\n	</body>\n</html>\n	\n\n\n\n			\n		\n	\n",
+			"file": "test.html",
+			"file_size": 452,
+			"file_write_time": 1353542043000000,
+			"settings":
+			{
+				"buffer_size": 502,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/styles.scss",
+			"settings":
+			{
+				"buffer_size": 1030,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scss/experiment.scss",
+			"settings":
+			{
+				"buffer_size": 622,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/styles.css",
+			"settings":
+			{
+				"buffer_size": 845,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/experiment.css",
+			"settings":
+			{
+				"buffer_size": 333,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"image",
+				"Emmet: Update Image Size"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"upda",
+				"Emmet: Update Image Size"
+			],
+			[
+				"",
+				"Emmet: Reflect CSS Value"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: List Packages"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"z",
+				"Set Syntax: ZenCoding"
+			],
+			[
+				"tag",
+				"Tag: Auto-Format Tags on Document"
+			],
+			[
+				"wrap",
+				"HTML: Wrap Selection With Tag"
+			],
+			[
+				"jav",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"box",
+				"Snippet: box-shadow"
+			]
+		],
+		"width": 467.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/Emmet/README.md",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/Emmet/Emmet.sublime-settings",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/User/Emmet.sublime-settings",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/Prefixr/readme.creole",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/ImageMagick/README.md",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/SASS Build/readme.md",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/Alignment/Default (OSX).sublime-keymap",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/Sublime File Navigator/README.md",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/Users/jbetz/clients/88nine-radio-milwaukee/responsive-site-2012/rip_css/reference_images/2012-11-21-23931.png",
+		"/Users/jbetz/clients/88nine-radio-milwaukee/responsive-site-2012/rip_css/reference_images/2012-11-21-23945.png",
+		"/Users/jbetz/clients/88nine-radio-milwaukee/responsive-site-2012/rip_css/reference_images/2012-11-21-23939.png",
+		"/Users/jbetz/clients/88nine-radio-milwaukee/responsive-site-2012/rip_css/test.html",
+		"/Users/jbetz/clients/88nine-radio-milwaukee/responsive-site-2012/rip_css/reference_images/Screen Shot 2012-11-21 at 2.18.37 PM.png",
+		"/Users/jbetz/clients/88nine-radio-milwaukee/responsive-site-2012/rip_css/reference_images/Screen Shot 2012-11-21 at 2.18.26 PM.png",
+		"/Users/jbetz/clients/88nine-radio-milwaukee/responsive-site-2012/rip_css/reference_images/Screen Shot 2012-11-21 at 2.18.04 PM.png",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/Default (OSX).sublime-keymap",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/SublimeCodeIntel/README.rst",
+		"/Users/jbetz/clients/88nine-radio-milwaukee/responsive-site-2012/rip_css/css/styles.css",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/User/zen-coding.sublime-settings",
+		"/Users/jbetz/clients/88nine-radio-milwaukee/responsive-site-2012/rip_css/scss/styles.scss",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/LiveReload/LiveReload.sublime-settings",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/LiveReload/README.md",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/User/LiveReload.sublime-settings",
+		"/Users/jbetz/clients/GE/multivendor-from-John/build/main-map_edgePreload.js",
+		"/Users/jbetz/clients/GE/multivendorTOEC/build/main-map_edge.js",
+		"/Users/jbetz/clients/GE/multivendorTOEC/build/main-map_edgeActions.js",
+		"/Users/jbetz/clients/GE/multivendorTOEC/build/SASS/multivendor.sass",
+		"/Users/jbetz/clients/GE/multivendorTOEC/toecbuild/CSS/multivendor.css",
+		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/jbetz/clients/masterlock/vault-college-safty-tips/styles-handoff-ml-college/images/landing-page-logo-2x.png"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"			\n",
+			"\n",
+			"width",
+			"screen",
+			"@media only screen and (min-width: 1024px) {",
+			"@media only screen and (min-width: 1024px)",
+			"media",
+			"23939",
+			"style",
+			".snowConditions .mapInstructions\n\n\n",
+			".\n\n\n\n",
+			"statechange\n\n\n\n",
+			"statechange\n\n\n",
+			"statechange",
+			"media",
+			"/***********************",
+			".css",
+			"im",
+			"im+'",
+			"'~/media/Images/Services/Multi-Vendor/",
+			"symbol: 'popUp",
+			"container",
+			"ge.com",
+			"?rel=0\"",
+			"reverse",
+			"css",
+			"landing-search-text",
+			"images",
+			"hi",
+			"Lorem"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"width",
+			"im+'"
+		],
+		"reverse": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "test.html",
+					"settings":
+					{
+						"buffer_size": 502,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								489,
+								489
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "scss/styles.scss",
+					"settings":
+					{
+						"buffer_size": 1030,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1030,
+								1030
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SASS/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "scss/experiment.scss",
+					"settings":
+					{
+						"buffer_size": 622,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								597,
+								597
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/SASS/Syntaxes/Sass.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "css/styles.css",
+					"settings":
+					{
+						"buffer_size": 845,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								845,
+								845
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "css/experiment.css",
+					"settings":
+					{
+						"buffer_size": 333,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								333,
+								333
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				2,
+				0,
+				3,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.375924964466,
+			0.66,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"s",
+				"css/styles.css"
+			],
+			[
+				"mai",
+				"/Users/jbetz/clients/GE/multivendor-mass-replace/build/main-map_edgePreload.js"
+			],
+			[
+				"",
+				"untitled"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

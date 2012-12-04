@@ -1,0 +1,373 @@
+/* support */
+/* line 69, ../scss/styles.scss */
+.plainBG {
+  background: url(../images/texturebg.png);
+}
+
+/* line 73, ../scss/styles.scss */
+.paddIt {
+  padding: 20px;
+}
+
+/* line 77, ../scss/styles.scss */
+.sizeIt {
+  height: 300px;
+  width: 300px;
+}
+
+/* line 81, ../scss/styles.scss */
+.spacer {
+  height: 60px;
+  width: 300px;
+}
+
+/* line 84, ../scss/styles.scss */
+.headerBG {
+  width: 100%;
+  background: url(../images/texturebg.png);
+}
+@media only screen and (min-width: 1024px) {
+  /* line 84, ../scss/styles.scss */
+  .headerBG {
+    height: 162px;
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 84, ../scss/styles.scss */
+  .headerBG {
+    height: 142px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  /* line 84, ../scss/styles.scss */
+  .headerBG {
+    height: 67px;
+  }
+}
+
+/* line 93, ../scss/styles.scss */
+.dashedBorder {
+  padding: 4px;
+  border: dashed 1px rgba(102, 102, 102, 0.3);
+}
+
+/* line 99, ../scss/styles.scss */
+.utilityNavText {
+  font-family: "Periodico Display", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: medium;
+  font-size: 13px;
+  line-height: 15px;
+  color: #4d3800;
+  border-right: dashed 1px rgba(102, 102, 102, 0.3);
+}
+/* line 105, ../scss/styles.scss */
+.utilityNavText a {
+  color: #4d3800;
+  text-decoration: none;
+}
+
+/* line 113, ../scss/styles.scss */
+input {
+  width: 218px;
+  height: 28px;
+  border: 1px solid #e6e3dc;
+  background-color: rgba(230, 227, 220, 0.47);
+  padding-left: 10px;
+  padding-right: 10px;
+  background: url(../images/searchIcon.png) no-repeat right center, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(230, 227, 220, 0.47)), color-stop(100%, rgba(230, 227, 220, 0.47)));
+  background: url(../images/searchIcon.png) no-repeat right center, -webkit-linear-gradient(top, rgba(230, 227, 220, 0.47), rgba(230, 227, 220, 0.47));
+  background: url(../images/searchIcon.png) no-repeat right center, -moz-linear-gradient(top, rgba(230, 227, 220, 0.47), rgba(230, 227, 220, 0.47));
+  background: url(../images/searchIcon.png) no-repeat right center, linear-gradient(top, rgba(230, 227, 220, 0.47), rgba(230, 227, 220, 0.47));
+  -webkit-background-origin: content-box;
+  background-origin: content-box;
+  font-family: "Calibri", Helvetica, Arial, sans-serif;
+  color: rgba(77, 56, 0, 0.4);
+  font-size: 14px;
+}
+
+/* line 129, ../scss/styles.scss */
+.tanOverlay {
+  width: 100%;
+  background-color: rgba(219, 215, 209, 0.4);
+  overflow: visible;
+  background-clip: border-box;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(219, 215, 209, 0.4)), color-stop(100%, rgba(219, 215, 209, 0.4))), url(../images/texturebg.png);
+  background: -webkit-linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
+  background: -moz-linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
+  background: linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
+}
+@media only screen and (min-width: 1024px) {
+  /* line 129, ../scss/styles.scss */
+  .tanOverlay {
+    height: 58px;
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 129, ../scss/styles.scss */
+  .tanOverlay {
+    height: 40px;
+  }
+}
+
+/* line 144, ../scss/styles.scss */
+.brownBar {
+  width: 100%;
+  background-color: #4d3800;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 144, ../scss/styles.scss */
+  .brownBar {
+    height: 36px;
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 144, ../scss/styles.scss */
+  .brownBar {
+    height: 36px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  /* line 144, ../scss/styles.scss */
+  .brownBar {
+    display: none;
+  }
+}
+
+/* line 153, ../scss/styles.scss */
+.brownBarArtist {
+  font-family: "Periodico Display", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: medium;
+  color: white;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 153, ../scss/styles.scss */
+  .brownBarArtist {
+    line-height: 36px;
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 153, ../scss/styles.scss */
+  .brownBarArtist {
+    line-height: 36px;
+    font-size: 11px;
+    margin-left: 15px;
+  }
+}
+
+/* line 162, ../scss/styles.scss */
+.brownBarSong {
+  font-family: "Periodico Display", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: medium;
+  color: #f79101;
+  font-size: 11px;
+  margin-left: 5px;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 162, ../scss/styles.scss */
+  .brownBarSong {
+    line-height: 36px;
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 162, ../scss/styles.scss */
+  .brownBarSong {
+    line-height: 36px;
+    font-size: 11px;
+  }
+}
+
+/* line 173, ../scss/styles.scss */
+.brownBarSponsor {
+  font-family: "Periodico Display", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: medium;
+  color: white;
+  font-size: 11px;
+  text-align: right;
+  float: right;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 173, ../scss/styles.scss */
+  .brownBarSponsor {
+    line-height: 36px;
+    font-size: 13px;
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 173, ../scss/styles.scss */
+  .brownBarSponsor {
+    line-height: 36px;
+    font-size: 11px;
+    margin-right: 15px;
+  }
+}
+
+/* line 185, ../scss/styles.scss */
+.mainNav {
+  color: rgba(77, 56, 0, 0.9);
+  font-family: "Periodico Display", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: medium;
+  display: inline;
+  padding: 6px 12px;
+  overflow: visible;
+}
+/* line 191, ../scss/styles.scss */
+.mainNav a {
+  color: rgba(77, 56, 0, 0.9);
+  text-decoration: none;
+  height: 58px;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 185, ../scss/styles.scss */
+  .mainNav {
+    font-size: 17px;
+    border-right: 1px dashed rgba(75, 57, 0, 0.2);
+    line-height: 58px;
+    height: 150px;
+  }
+  /* line 198, ../scss/styles.scss */
+  .mainNav:last-child {
+    border-right: none;
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 185, ../scss/styles.scss */
+  .mainNav {
+    line-height: 40px;
+    font-size: 14px;
+    border-right: 1px dashed rgba(75, 57, 0, 0.2);
+    line-height: 40px;
+    height: 40px;
+  }
+  /* line 203, ../scss/styles.scss */
+  .mainNav:last-child {
+    border-right: none;
+  }
+}
+@media only screen and (max-width: 420px) {
+  /* line 185, ../scss/styles.scss */
+  .mainNav {
+    font-size: 17px;
+  }
+}
+
+/* line 209, ../scss/styles.scss */
+.mainNavSelected {
+  background-color: white;
+  overflow: visible;
+  background-origin: border-box;
+  padding: 12px 15px 20px 15px;
+  margin: 0 -12px 0 -16px;
+  *zoom: 1;
+  filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#80808080', endColorstr='#80808080');
+}
+@media only screen and (min-width: 1024px) {
+  /* line 209, ../scss/styles.scss */
+  .mainNavSelected {
+    background: url(../images/selectedNavArrow.png) no-repeat center 56px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.94)), color-stop(10%, rgba(255, 255, 255, 0.99)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(83%, #ffffff), color-stop(83%, rgba(255, 255, 255, 0)));
+    background: url(../images/selectedNavArrow.png) no-repeat center 56px, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.99) 10%, rgba(255, 255, 255, 0) 50%, #ffffff 83%, rgba(255, 255, 255, 0) 83%);
+    background: url(../images/selectedNavArrow.png) no-repeat center 56px, -moz-linear-gradient(top, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.99) 10%, rgba(255, 255, 255, 0) 50%, #ffffff 83%, rgba(255, 255, 255, 0) 83%);
+    background: url(../images/selectedNavArrow.png) no-repeat center 56px, linear-gradient(top, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.99) 10%, rgba(255, 255, 255, 0) 50%, #ffffff 83%, rgba(255, 255, 255, 0) 83%);
+    padding: 18px 15px 32px 15px;
+    margin: 0 -12px 0 -16px;
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 209, ../scss/styles.scss */
+  .mainNavSelected {
+    background: url(../images/selectedNavArrow.png) no-repeat center 39px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.94)), color-stop(10%, rgba(255, 255, 255, 0.99)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(83%, #ffffff), color-stop(83%, rgba(255, 255, 255, 0)));
+    background: url(../images/selectedNavArrow.png) no-repeat center 39px, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.99) 10%, rgba(255, 255, 255, 0) 50%, #ffffff 83%, rgba(255, 255, 255, 0) 83%);
+    background: url(../images/selectedNavArrow.png) no-repeat center 39px, -moz-linear-gradient(top, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.99) 10%, rgba(255, 255, 255, 0) 50%, #ffffff 83%, rgba(255, 255, 255, 0) 83%);
+    background: url(../images/selectedNavArrow.png) no-repeat center 39px, linear-gradient(top, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.99) 10%, rgba(255, 255, 255, 0) 50%, #ffffff 83%, rgba(255, 255, 255, 0) 83%);
+    padding: 12px 15px 20px 15px;
+    margin: 0 -12px 0 -16px;
+  }
+}
+
+/* line 222, ../scss/styles.scss */
+.subNavBG {
+  width: 100%;
+  background-color: rgba(219, 215, 209, 0.4);
+  padding: 15px;
+  background: url(../images/navDropdownTopGradient.png) repeat-x top, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(219, 215, 209, 0.4)), color-stop(100%, rgba(219, 215, 209, 0.4))), url(../images/texturebg.png);
+  background: url(../images/navDropdownTopGradient.png) repeat-x top, -webkit-linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
+  background: url(../images/navDropdownTopGradient.png) repeat-x top, -moz-linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
+  background: url(../images/navDropdownTopGradient.png) repeat-x top, linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
+}
+
+/* line 233, ../scss/styles.scss */
+.subNavText {
+  font-family: "Calibri", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  *zoom: 1;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: #333333;
+}
+/* line 60, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.subNavText li {
+  list-style-image: none;
+  list-style-type: none;
+  margin-left: 0;
+  white-space: nowrap;
+  display: inline;
+  float: left;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+/* line 48, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.subNavText li:first-child, .subNavText li.first {
+  padding-left: 0;
+}
+/* line 49, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.subNavText li:last-child {
+  padding-right: 0;
+}
+/* line 50, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
+.subNavText li.last {
+  padding-right: 0;
+}
+/* line 240, ../scss/styles.scss */
+.subNavText a {
+  color: #333333;
+  text-decoration: none;
+}
+
+/* line 247, ../scss/styles.scss */
+.subNavTextWrapper {
+  border-right: 1px dashed rgba(75, 57, 0, 0.2);
+  border-left: 1px dashed rgba(75, 57, 0, 0.2);
+  width: 370px;
+}
+
+/* line 257, ../scss/styles.scss */
+.subNavDropDownSectionTitle {
+  color: #1a6c99;
+  font-size: 13px;
+}
+/* line 260, ../scss/styles.scss */
+.subNavDropDownSectionTitle a {
+  color: #1a6c99;
+  text-decoration: none;
+}
+
+/* line 267, ../scss/styles.scss */
+.subNavDropDownSectionAuthor {
+  color: #4f3700;
+  font-size: 13px;
+}
+/* line 270, ../scss/styles.scss */
+.subNavDropDownSectionAuthor a {
+  color: #4f3700;
+  text-decoration: none;
+}
