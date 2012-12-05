@@ -20,6 +20,7 @@ $brownText: #4F3700;
 @import "compass/css3/images";
 @import "compass/css3";
 @import "compass/reset";
+@import "compass/utilities/general/clearfix";
 
 /* support */
 $experimental-support-for-khtml: false;
@@ -401,8 +402,10 @@ input
 
 .footerNavWrapper
 { 
-  @include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
+  @include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../images/texturebg.png));
   padding: 30px 15px;
+  // height: 500px;
+  @include clearfix();
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
@@ -423,16 +426,25 @@ input
 }
 
 // widths for fat footer sections.
-.width5Wide {width: 20%; float: left;}
-.width4Wide {width: 25%; float: left;}
-.width3Wide {width: 32%; float: left;}
-.width2Wide {width: 50%; float: left;}
+.width6Wide {width: 16%; float: left; }
+.width5Wide {width: 20%; float: left; }
+.width4Wide {width: 25%; float: left; }
+.width3Wide {width: 32%; float: left; }
+.width2Wide {width: 50%; float: left; }
+.width1Wide {width: 100%; float: left; }
+
+.col1Wide {float: left; width: 20%; }
+.col2Wide {float: left; width: 20%*2;}
+.col3Wide {float: left; width: 20%*3;}
+.col4Wide {float: left; width: 20%*4;}
+.col5Wide {float: left; width: 20%*5;}
 
 .footerNavListWrapper
 {
   border-top: dashed 1px $lightGrayImageBorder;
   // background-origin: content-box;
   margin-right: 15px;
+
   // float: left;
   // background-color: red;
   @include respond-to(wide-screens)   {  }
@@ -460,7 +472,8 @@ input
 .footerLeftSide
 {
   float: left;
-  border: 1px solid red;
+  // @include clearfix();
+  // border: 1px solid red;
   width: 80%;
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
@@ -471,7 +484,6 @@ input
 {
   width: 16%;
   float: left;
-  border: 1px solid green;
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }

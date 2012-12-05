@@ -129,69 +129,69 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   display: block;
 }
 
-/* line 71, ../scss/styles.scss */
+/* line 72, ../scss/styles.scss */
 .plainBG {
   background: url(../images/texturebg.png);
 }
 
-/* line 75, ../scss/styles.scss */
+/* line 76, ../scss/styles.scss */
 .paddIt {
   padding: 20px;
 }
 
-/* line 79, ../scss/styles.scss */
+/* line 80, ../scss/styles.scss */
 .sizeIt {
   height: 300px;
   width: 300px;
 }
 
-/* line 83, ../scss/styles.scss */
+/* line 84, ../scss/styles.scss */
 .addLeftSpace {
   margin-left: 15px;
 }
 
-/* line 87, ../scss/styles.scss */
+/* line 88, ../scss/styles.scss */
 .addTopSpace {
   margin-top: 15px;
 }
 
-/* line 91, ../scss/styles.scss */
+/* line 92, ../scss/styles.scss */
 .spacer {
   height: 60px;
   width: 300px;
 }
 
-/* line 102, ../scss/styles.scss */
+/* line 103, ../scss/styles.scss */
 .headerBG {
   width: 100%;
   background: url(../images/texturebg.png);
 }
 @media only screen and (min-width: 1024px) {
-  /* line 102, ../scss/styles.scss */
+  /* line 103, ../scss/styles.scss */
   .headerBG {
     height: 162px;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 102, ../scss/styles.scss */
+  /* line 103, ../scss/styles.scss */
   .headerBG {
     height: 142px;
   }
 }
 @media only screen and (max-width: 420px) {
-  /* line 102, ../scss/styles.scss */
+  /* line 103, ../scss/styles.scss */
   .headerBG {
     height: 67px;
   }
 }
 
-/* line 111, ../scss/styles.scss */
+/* line 112, ../scss/styles.scss */
 .dashedBorder {
   padding: 4px;
   border: dashed 1px rgba(102, 102, 102, 0.3);
 }
 
-/* line 117, ../scss/styles.scss */
+/* line 118, ../scss/styles.scss */
 .utilityNavText {
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -199,13 +199,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: #4d3800;
   border-right: dashed 1px rgba(102, 102, 102, 0.3);
 }
-/* line 123, ../scss/styles.scss */
+/* line 124, ../scss/styles.scss */
 .utilityNavText a {
   color: #4d3800;
   text-decoration: none;
 }
 
-/* line 131, ../scss/styles.scss */
+/* line 132, ../scss/styles.scss */
 input {
   width: 218px;
   height: 28px;
@@ -224,7 +224,7 @@ input {
   font-size: 14px;
 }
 
-/* line 147, ../scss/styles.scss */
+/* line 148, ../scss/styles.scss */
 .tanOverlay {
   width: 100%;
   background-color: rgba(219, 215, 209, 0.4);
@@ -236,56 +236,56 @@ input {
   background: linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
 }
 @media only screen and (min-width: 1024px) {
-  /* line 147, ../scss/styles.scss */
+  /* line 148, ../scss/styles.scss */
   .tanOverlay {
     height: 58px;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 147, ../scss/styles.scss */
+  /* line 148, ../scss/styles.scss */
   .tanOverlay {
     height: 40px;
   }
 }
 
-/* line 162, ../scss/styles.scss */
+/* line 163, ../scss/styles.scss */
 .brownBar {
   width: 100%;
   background-color: #4d3800;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 162, ../scss/styles.scss */
+  /* line 163, ../scss/styles.scss */
   .brownBar {
     height: 36px;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 162, ../scss/styles.scss */
+  /* line 163, ../scss/styles.scss */
   .brownBar {
     height: 36px;
   }
 }
 @media only screen and (max-width: 420px) {
-  /* line 162, ../scss/styles.scss */
+  /* line 163, ../scss/styles.scss */
   .brownBar {
     display: none;
   }
 }
 
-/* line 171, ../scss/styles.scss */
+/* line 172, ../scss/styles.scss */
 .brownBarArtist {
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
   color: white;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 171, ../scss/styles.scss */
+  /* line 172, ../scss/styles.scss */
   .brownBarArtist {
     line-height: 36px;
     font-size: 13px;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 171, ../scss/styles.scss */
+  /* line 172, ../scss/styles.scss */
   .brownBarArtist {
     line-height: 36px;
     font-size: 11px;
@@ -293,7 +293,7 @@ input {
   }
 }
 
-/* line 180, ../scss/styles.scss */
+/* line 181, ../scss/styles.scss */
 .brownBarSong {
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
   color: #f79101;
@@ -301,21 +301,21 @@ input {
   margin-left: 5px;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 180, ../scss/styles.scss */
+  /* line 181, ../scss/styles.scss */
   .brownBarSong {
     line-height: 36px;
     font-size: 13px;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 180, ../scss/styles.scss */
+  /* line 181, ../scss/styles.scss */
   .brownBarSong {
     line-height: 36px;
     font-size: 11px;
   }
 }
 
-/* line 191, ../scss/styles.scss */
+/* line 192, ../scss/styles.scss */
 .brownBarSponsor {
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
   color: white;
@@ -324,14 +324,14 @@ input {
   float: right;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 191, ../scss/styles.scss */
+  /* line 192, ../scss/styles.scss */
   .brownBarSponsor {
     line-height: 36px;
     font-size: 13px;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 191, ../scss/styles.scss */
+  /* line 192, ../scss/styles.scss */
   .brownBarSponsor {
     line-height: 36px;
     font-size: 11px;
@@ -339,7 +339,7 @@ input {
   }
 }
 
-/* line 203, ../scss/styles.scss */
+/* line 204, ../scss/styles.scss */
 .mainNav {
   color: rgba(77, 56, 0, 0.9);
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
@@ -347,27 +347,27 @@ input {
   padding: 6px 12px;
   overflow: visible;
 }
-/* line 209, ../scss/styles.scss */
+/* line 210, ../scss/styles.scss */
 .mainNav a {
   color: rgba(77, 56, 0, 0.9);
   text-decoration: none;
   height: 58px;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 203, ../scss/styles.scss */
+  /* line 204, ../scss/styles.scss */
   .mainNav {
     font-size: 17px;
     border-right: 1px dashed rgba(75, 57, 0, 0.2);
     line-height: 58px;
     height: 150px;
   }
-  /* line 216, ../scss/styles.scss */
+  /* line 217, ../scss/styles.scss */
   .mainNav:last-child {
     border-right: none;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 203, ../scss/styles.scss */
+  /* line 204, ../scss/styles.scss */
   .mainNav {
     line-height: 40px;
     font-size: 14px;
@@ -375,19 +375,19 @@ input {
     line-height: 40px;
     height: 40px;
   }
-  /* line 221, ../scss/styles.scss */
+  /* line 222, ../scss/styles.scss */
   .mainNav:last-child {
     border-right: none;
   }
 }
 @media only screen and (max-width: 420px) {
-  /* line 203, ../scss/styles.scss */
+  /* line 204, ../scss/styles.scss */
   .mainNav {
     font-size: 17px;
   }
 }
 
-/* line 227, ../scss/styles.scss */
+/* line 228, ../scss/styles.scss */
 .mainNavSelected {
   background-color: white;
   overflow: visible;
@@ -398,7 +398,7 @@ input {
   filter: progid:DXImageTransform.Microsoft.gradient(gradientType=0, startColorstr='#80808080', endColorstr='#80808080');
 }
 @media only screen and (min-width: 1024px) {
-  /* line 227, ../scss/styles.scss */
+  /* line 228, ../scss/styles.scss */
   .mainNavSelected {
     background: url(../images/selectedNavArrow.png) no-repeat center 56px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.94)), color-stop(10%, rgba(255, 255, 255, 0.99)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(83%, #ffffff), color-stop(83%, rgba(255, 255, 255, 0)));
     background: url(../images/selectedNavArrow.png) no-repeat center 56px, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.99) 10%, rgba(255, 255, 255, 0) 50%, #ffffff 83%, rgba(255, 255, 255, 0) 83%);
@@ -409,7 +409,7 @@ input {
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 227, ../scss/styles.scss */
+  /* line 228, ../scss/styles.scss */
   .mainNavSelected {
     background: url(../images/selectedNavArrow.png) no-repeat center 39px, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.94)), color-stop(10%, rgba(255, 255, 255, 0.99)), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(83%, #ffffff), color-stop(83%, rgba(255, 255, 255, 0)));
     background: url(../images/selectedNavArrow.png) no-repeat center 39px, -webkit-linear-gradient(top, rgba(255, 255, 255, 0.94) 0%, rgba(255, 255, 255, 0.99) 10%, rgba(255, 255, 255, 0) 50%, #ffffff 83%, rgba(255, 255, 255, 0) 83%);
@@ -420,7 +420,7 @@ input {
   }
 }
 
-/* line 240, ../scss/styles.scss */
+/* line 241, ../scss/styles.scss */
 .subNavBG {
   width: 100%;
   background-color: rgba(219, 215, 209, 0.4);
@@ -431,7 +431,7 @@ input {
   background: url(../images/navDropdownTopGradient.png) repeat-x top, linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
 }
 
-/* line 251, ../scss/styles.scss */
+/* line 252, ../scss/styles.scss */
 .subNavText {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   margin: 0;
@@ -467,54 +467,54 @@ input {
 .subNavText li.last {
   padding-right: 0;
 }
-/* line 258, ../scss/styles.scss */
+/* line 259, ../scss/styles.scss */
 .subNavText a {
   color: #333333;
   text-decoration: none;
 }
 
-/* line 265, ../scss/styles.scss */
+/* line 266, ../scss/styles.scss */
 .subNavTextWrapper {
   border-right: 1px dashed rgba(75, 57, 0, 0.2);
   border-left: 1px dashed rgba(75, 57, 0, 0.2);
   width: 370px;
 }
 
-/* line 284, ../scss/styles.scss */
+/* line 285, ../scss/styles.scss */
 .subNavDropDownSectionTitle {
   color: #1a6c99;
   font-size: 13px;
 }
-/* line 287, ../scss/styles.scss */
+/* line 288, ../scss/styles.scss */
 .subNavDropDownSectionTitle a {
   color: #1a6c99;
   text-decoration: none;
 }
 @media only screen and (max-width: 420px) {
-  /* line 284, ../scss/styles.scss */
+  /* line 285, ../scss/styles.scss */
   .subNavDropDownSectionTitle {
     display: none;
   }
 }
 
-/* line 294, ../scss/styles.scss */
+/* line 295, ../scss/styles.scss */
 .subNavDropDownSectionAuthor {
   color: #4f3700;
   font-size: 13px;
 }
-/* line 297, ../scss/styles.scss */
+/* line 298, ../scss/styles.scss */
 .subNavDropDownSectionAuthor a {
   color: #4f3700;
   text-decoration: none;
 }
 @media only screen and (max-width: 420px) {
-  /* line 294, ../scss/styles.scss */
+  /* line 295, ../scss/styles.scss */
   .subNavDropDownSectionAuthor {
     display: none;
   }
 }
 
-/* line 304, ../scss/styles.scss */
+/* line 305, ../scss/styles.scss */
 .storyTitleText {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -522,45 +522,45 @@ input {
   font-size: 18px;
   line-height: 18px;
 }
-/* line 310, ../scss/styles.scss */
+/* line 311, ../scss/styles.scss */
 .storyTitleText a {
   color: #333333;
   text-decoration: none;
 }
 @media only screen and (max-width: 420px) {
-  /* line 304, ../scss/styles.scss */
+  /* line 305, ../scss/styles.scss */
   .storyTitleText {
     font-size: 24px;
     line-height: 24px;
   }
 }
 
-/* line 317, ../scss/styles.scss */
+/* line 318, ../scss/styles.scss */
 .storySummaryText {
   color: #333333;
   font-size: 14px;
   line-height: 16px;
   font-family: "Periodico Text", Helvetica, Arial, sans-serif;
 }
-/* line 319, ../scss/styles.scss */
+/* line 320, ../scss/styles.scss */
 .storySummaryText a {
   color: #1a6c99;
   text-decoration: none;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 317, ../scss/styles.scss */
+  /* line 318, ../scss/styles.scss */
   .storySummaryText {
     width: 258px;
   }
 }
 @media only screen and (max-width: 420px) {
-  /* line 317, ../scss/styles.scss */
+  /* line 318, ../scss/styles.scss */
   .storySummaryText {
     width: 100%;
   }
 }
 
-/* line 337, ../scss/styles.scss */
+/* line 338, ../scss/styles.scss */
 .footerStreamingText {
   font-size: 13px;
   line-height: 24px;
@@ -569,19 +569,19 @@ input {
   font-weight: bold;
   text-align: center;
 }
-/* line 341, ../scss/styles.scss */
+/* line 342, ../scss/styles.scss */
 .footerStreamingText a {
   color: #1a6c99;
   text-decoration: none;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 337, ../scss/styles.scss */
+  /* line 338, ../scss/styles.scss */
   .footerStreamingText {
     width: 100%;
   }
 }
 
-/* line 351, ../scss/styles.scss */
+/* line 352, ../scss/styles.scss */
 .footerSlogan {
   color: #4f3700;
   font-weight: bold;
@@ -590,13 +590,13 @@ input {
   line-height: 24px;
   text-align: center;
 }
-/* line 353, ../scss/styles.scss */
+/* line 354, ../scss/styles.scss */
 .footerSlogan a {
   color: #4f3700;
   text-decoration: none;
 }
 
-/* line 365, ../scss/styles.scss */
+/* line 366, ../scss/styles.scss */
 .footerUtilityNav {
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
   margin: 0;
@@ -632,42 +632,44 @@ input {
 .footerUtilityNav li.last {
   padding-right: 0;
 }
-/* line 372, ../scss/styles.scss */
+/* line 373, ../scss/styles.scss */
 .footerUtilityNav li {
   padding: 10px 18px;
   border-right: dashed 1px rgba(102, 102, 102, 0.3);
 }
-/* line 375, ../scss/styles.scss */
+/* line 376, ../scss/styles.scss */
 .footerUtilityNav li:last-child {
   border-right: none;
 }
-/* line 376, ../scss/styles.scss */
+/* line 377, ../scss/styles.scss */
 .footerUtilityNav li a {
   color: #4f3700;
   text-decoration: none;
 }
-/* line 377, ../scss/styles.scss */
+/* line 378, ../scss/styles.scss */
 .footerUtilityNav li.footerUtilityDonate {
   color: red;
   background: url(../images/donate-heart.png) no-repeat 17px 11px;
   padding-left: 36px;
 }
 
-/* line 385, ../scss/styles.scss */
+/* line 386, ../scss/styles.scss */
 .footerUtilityWrapper {
   background: url(../images/texturebg.png);
   padding: 15px;
 }
 
-/* line 403, ../scss/styles.scss */
+/* line 404, ../scss/styles.scss */
 .footerNavWrapper {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(219, 215, 209, 0.4)), color-stop(100%, rgba(219, 215, 209, 0.4))), url(../images/texturebg.png);
   background: -webkit-linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
   background: -moz-linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
   background: linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
   padding: 30px 15px;
+  overflow: hidden;
+  *zoom: 1;
 }
-/* line 411, ../scss/styles.scss */
+/* line 414, ../scss/styles.scss */
 .footerNavWrapper h3 {
   color: #4f3700;
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
@@ -675,57 +677,99 @@ input {
   font-weight: medium;
   padding-bottom: 4px;
 }
-/* line 413, ../scss/styles.scss */
+/* line 416, ../scss/styles.scss */
 .footerNavWrapper h3 a {
   color: #4f3700;
   text-decoration: none;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 411, ../scss/styles.scss */
+  /* line 414, ../scss/styles.scss */
   .footerNavWrapper h3 {
     font-size: 17px;
     line-height: 20px;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 411, ../scss/styles.scss */
+  /* line 414, ../scss/styles.scss */
   .footerNavWrapper h3 {
     font-size: 14px;
     line-height: 17px;
   }
 }
 
-/* line 426, ../scss/styles.scss */
+/* line 429, ../scss/styles.scss */
+.width6Wide {
+  width: 16%;
+  float: left;
+}
+
+/* line 430, ../scss/styles.scss */
 .width5Wide {
   width: 20%;
   float: left;
 }
 
-/* line 427, ../scss/styles.scss */
+/* line 431, ../scss/styles.scss */
 .width4Wide {
   width: 25%;
   float: left;
 }
 
-/* line 428, ../scss/styles.scss */
+/* line 432, ../scss/styles.scss */
 .width3Wide {
   width: 32%;
   float: left;
 }
 
-/* line 429, ../scss/styles.scss */
+/* line 433, ../scss/styles.scss */
 .width2Wide {
   width: 50%;
   float: left;
 }
 
-/* line 432, ../scss/styles.scss */
+/* line 434, ../scss/styles.scss */
+.width1Wide {
+  width: 100%;
+  float: left;
+}
+
+/* line 436, ../scss/styles.scss */
+.col1Wide {
+  float: left;
+  width: 20%;
+}
+
+/* line 437, ../scss/styles.scss */
+.col2Wide {
+  float: left;
+  width: 40%;
+}
+
+/* line 438, ../scss/styles.scss */
+.col3Wide {
+  float: left;
+  width: 60%;
+}
+
+/* line 439, ../scss/styles.scss */
+.col4Wide {
+  float: left;
+  width: 80%;
+}
+
+/* line 440, ../scss/styles.scss */
+.col5Wide {
+  float: left;
+  width: 100%;
+}
+
+/* line 443, ../scss/styles.scss */
 .footerNavListWrapper {
   border-top: dashed 1px rgba(102, 102, 102, 0.3);
   margin-right: 15px;
 }
 
-/* line 444, ../scss/styles.scss */
+/* line 456, ../scss/styles.scss */
 .footerNavListText {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   list-style-image: none;
@@ -737,27 +781,25 @@ input {
   padding-top: 8px;
   color: #4d3800;
 }
-/* line 452, ../scss/styles.scss */
+/* line 464, ../scss/styles.scss */
 .footerNavListText a {
   color: #4d3800;
   text-decoration: none;
 }
-/* line 454, ../scss/styles.scss */
+/* line 466, ../scss/styles.scss */
 .footerNavListText ul {
   float: left;
   display: block;
 }
 
-/* line 461, ../scss/styles.scss */
+/* line 473, ../scss/styles.scss */
 .footerLeftSide {
   float: left;
-  border: 1px solid red;
   width: 80%;
 }
 
-/* line 471, ../scss/styles.scss */
+/* line 484, ../scss/styles.scss */
 .footerRightSide {
   width: 16%;
   float: left;
-  border: 1px solid green;
 }
