@@ -414,7 +414,7 @@ input
     @include PeriodicoDisplay();
     font-style: italic;
     font-weight: medium;
-    padding-bottom: 8px;
+    padding-bottom: 4px;
     @include respond-to(wide-screens)   { font-size: 17px; line-height: 20px; }
     @include respond-to(medium-screens) { font-size: 14px; line-height: 17px; }
     @include respond-to(handhelds)      {  }
@@ -423,7 +423,7 @@ input
 }
 
 // widths for fat footer sections.
-.width5Wide {width: 20%;}
+.width5Wide {width: 200px;}
 .width4Wide {width: 25%;}
 .width3Wide {width: 32%;}
 .width2Wide {width: 50%;}
@@ -459,7 +459,7 @@ input
   color: $darkBrown;
   a { color: $darkBrown; text-decoration:none; }
   li {}
-  ul {  }
+  ul { float: left; display: block; }
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }

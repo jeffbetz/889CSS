@@ -673,7 +673,7 @@ input {
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: medium;
-  padding-bottom: 8px;
+  padding-bottom: 4px;
 }
 /* line 413, ../scss/styles.scss */
 .footerNavWrapper h3 a {
@@ -697,7 +697,7 @@ input {
 
 /* line 426, ../scss/styles.scss */
 .width5Wide {
-  width: 20%;
+  width: 200px;
 }
 
 /* line 427, ../scss/styles.scss */
@@ -743,4 +743,9 @@ input {
 .footerNavListText a {
   color: #4d3800;
   text-decoration: none;
+}
+/* line 462, ../scss/styles.scss */
+.footerNavListText ul {
+  float: left;
+  display: block;
 }
