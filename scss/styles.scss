@@ -19,6 +19,7 @@ $brownText: #4F3700;
 @import "compass/typography";
 @import "compass/css3/images";
 @import "compass/css3";
+@import "compass/reset";
 
 /* support */
 $experimental-support-for-khtml: false;
@@ -42,8 +43,6 @@ $break-large: 1024px;
 
 @mixin PeriodicoDisplay(){
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
-  font-style: italic;
-  font-weight: medium;
 }
 
 @mixin PeriodicoText(){
@@ -65,6 +64,8 @@ $break-large: 1024px;
   width: #{$thisWidth};
   height: #{$thisHeight}; 
 }
+
+@include global-reset();
 
 .plainBG
 {@include background(url(../images/texturebg.png));}
@@ -384,6 +385,81 @@ input
 {
   @include background(url(../images/texturebg.png));
   padding: 15px;
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+
+
+
+
+
+// -----------------------------------------------------------------------------------------
+// FAT FOOTER
+// -----------------------------------------------------------------------------------------
+
+.footerNavWrapper
+{ 
+  @include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
+  padding: 30px 15px;
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+
+  h3
+  {
+    color: $brownText;
+    a { color: $brownText; text-decoration:none; }
+    @include PeriodicoDisplay();
+    font-style: italic;
+    font-weight: medium;
+    padding-bottom: 8px;
+    @include respond-to(wide-screens)   { font-size: 17px; line-height: 20px; }
+    @include respond-to(medium-screens) { font-size: 14px; line-height: 17px; }
+    @include respond-to(handhelds)      {  }
+  }
+
+}
+
+// widths for fat footer sections.
+.width5Wide {width: 20%;}
+.width4Wide {width: 25%;}
+.width3Wide {width: 32%;}
+.width2Wide {width: 50%;}
+
+.footerNavRightColumn
+{
+  width: 140px;
+  float: right;
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.footerNavListWrapper
+{
+  border-top: dashed 1px $lightGrayImageBorder;
+  // background-origin: content-box;
+  margin-right: 15px;
+  // background-color: red;
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.footerNavListText
+{
+  @include Calibri();
+  @include no-bullet();
+  font-weight: bold;
+  font-size: 13px; 
+  line-height: 24px;
+  padding-top: 8px;
+  color: $darkBrown;
+  a { color: $darkBrown; text-decoration:none; }
+  li {}
+  ul {  }
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
