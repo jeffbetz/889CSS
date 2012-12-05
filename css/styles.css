@@ -697,37 +697,35 @@ input {
 
 /* line 426, ../scss/styles.scss */
 .width5Wide {
-  width: 200px;
+  width: 20%;
+  float: left;
 }
 
 /* line 427, ../scss/styles.scss */
 .width4Wide {
   width: 25%;
+  float: left;
 }
 
 /* line 428, ../scss/styles.scss */
 .width3Wide {
   width: 32%;
+  float: left;
 }
 
 /* line 429, ../scss/styles.scss */
 .width2Wide {
   width: 50%;
+  float: left;
 }
 
 /* line 432, ../scss/styles.scss */
-.footerNavRightColumn {
-  width: 140px;
-  float: right;
-}
-
-/* line 441, ../scss/styles.scss */
 .footerNavListWrapper {
   border-top: dashed 1px rgba(102, 102, 102, 0.3);
   margin-right: 15px;
 }
 
-/* line 452, ../scss/styles.scss */
+/* line 444, ../scss/styles.scss */
 .footerNavListText {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   list-style-image: none;
@@ -739,13 +737,27 @@ input {
   padding-top: 8px;
   color: #4d3800;
 }
-/* line 460, ../scss/styles.scss */
+/* line 452, ../scss/styles.scss */
 .footerNavListText a {
   color: #4d3800;
   text-decoration: none;
 }
-/* line 462, ../scss/styles.scss */
+/* line 454, ../scss/styles.scss */
 .footerNavListText ul {
   float: left;
   display: block;
+}
+
+/* line 461, ../scss/styles.scss */
+.footerLeftSide {
+  float: left;
+  border: 1px solid red;
+  width: 80%;
+}
+
+/* line 471, ../scss/styles.scss */
+.footerRightSide {
+  width: 16%;
+  float: left;
+  border: 1px solid green;
 }
