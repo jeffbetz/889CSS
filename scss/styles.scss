@@ -21,6 +21,7 @@ $brownText: #4F3700;
 @import "compass/css3";
 @import "compass/reset";
 @import "compass/utilities/general/clearfix";
+@import "compass/typography/text/ellipsis";
 
 /* support */
 $experimental-support-for-khtml: false;
@@ -400,6 +401,27 @@ input
 // FAT FOOTER
 // -----------------------------------------------------------------------------------------
 
+.deskTopFooter
+{
+  @include respond-to(wide-screens)   { display: block; }
+  @include respond-to(medium-screens) { display: none; }
+  @include respond-to(handhelds)      { display: none; }
+}
+
+.tabletFooter
+{
+  @include respond-to(wide-screens)   { display: none; }
+  @include respond-to(medium-screens) { display: block; }
+  @include respond-to(handhelds)      { display: none; }
+}
+
+.mobileFooter
+{
+  @include respond-to(wide-screens)   { display: none; }
+  @include respond-to(medium-screens) { display: none; }
+  @include respond-to(handhelds)      { display: block; }
+}
+
 .footerNavWrapper
 { 
   @include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../images/texturebg.png));
@@ -413,6 +435,7 @@ input
   h3
   {
     color: $brownText;
+    @include ellipsis();
     a { color: $brownText; text-decoration:none; }
     @include PeriodicoDisplay();
     font-style: italic;
@@ -462,18 +485,21 @@ input
   padding-top: 8px;
   color: $darkBrown;
   a { color: $darkBrown; text-decoration:none; }
-  li {}
+  li {@include ellipsis(); padding-right: 3px;}
   ul { float: left; display: block; }
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
 }
 
+$footerRowSpacing: 30px;
+
 .footerLeftSide
 {
   float: left;
   // @include clearfix();
   // border: 1px solid red;
+  margin-top: $footerRowSpacing;
   width: 80%;
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
@@ -484,6 +510,7 @@ input
 {
   width: 16%;
   float: left;
+  margin-top: $footerRowSpacing;
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
