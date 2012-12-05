@@ -793,43 +793,75 @@ input {
   float: left;
 }
 
-/* line 459, ../scss/styles.scss */
-.col1Wide {
-  float: left;
-  width: 20%;
-}
+@media only screen and (min-width: 1024px) {
+  /* line 461, ../scss/styles.scss */
+  .col1Wide {
+    float: left;
+    width: 20%;
+  }
 
-/* line 460, ../scss/styles.scss */
-.col2Wide {
-  float: left;
-  width: 40%;
-}
+  /* line 462, ../scss/styles.scss */
+  .col2Wide {
+    float: left;
+    width: 40%;
+  }
 
-/* line 461, ../scss/styles.scss */
-.col3Wide {
-  float: left;
-  width: 60%;
-}
+  /* line 463, ../scss/styles.scss */
+  .col3Wide {
+    float: left;
+    width: 60%;
+  }
 
-/* line 462, ../scss/styles.scss */
-.col4Wide {
-  float: left;
-  width: 80%;
-}
+  /* line 464, ../scss/styles.scss */
+  .col4Wide {
+    float: left;
+    width: 80%;
+  }
 
-/* line 463, ../scss/styles.scss */
-.col5Wide {
-  float: left;
-  width: 100%;
+  /* line 465, ../scss/styles.scss */
+  .col5Wide {
+    float: left;
+    width: 100%;
+  }
 }
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 469, ../scss/styles.scss */
+  .col1Wide {
+    float: left;
+    width: 25%;
+  }
 
-/* line 466, ../scss/styles.scss */
+  /* line 470, ../scss/styles.scss */
+  .col2Wide {
+    float: left;
+    width: 50%;
+  }
+
+  /* line 471, ../scss/styles.scss */
+  .col3Wide {
+    float: left;
+    width: 75%;
+  }
+
+  /* line 472, ../scss/styles.scss */
+  .col4Wide {
+    float: left;
+    width: 100%;
+  }
+
+  /* line 473, ../scss/styles.scss */
+  .col5Wide {
+    float: left;
+    width: 125%;
+  }
+}
+/* line 477, ../scss/styles.scss */
 .footerNavListWrapper {
   border-top: dashed 1px rgba(102, 102, 102, 0.3);
-  margin-right: 15px;
+  margin-right: 20px;
 }
 
-/* line 479, ../scss/styles.scss */
+/* line 491, ../scss/styles.scss */
 .footerNavListText {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   list-style-image: none;
@@ -841,34 +873,57 @@ input {
   padding-top: 8px;
   color: #4d3800;
 }
-/* line 487, ../scss/styles.scss */
+/* line 499, ../scss/styles.scss */
 .footerNavListText a {
   color: #4d3800;
   text-decoration: none;
 }
-/* line 488, ../scss/styles.scss */
+/* line 500, ../scss/styles.scss */
 .footerNavListText li {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding-right: 3px;
 }
-/* line 489, ../scss/styles.scss */
+/* line 501, ../scss/styles.scss */
 .footerNavListText ul {
   float: left;
   display: block;
 }
 
-/* line 498, ../scss/styles.scss */
+/* line 510, ../scss/styles.scss */
 .footerLeftSide {
   float: left;
   margin-top: 30px;
-  width: 80%;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 510, ../scss/styles.scss */
+  .footerLeftSide {
+    width: 80%;
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 510, ../scss/styles.scss */
+  .footerLeftSide {
+    width: 75%;
+  }
 }
 
-/* line 510, ../scss/styles.scss */
+/* line 522, ../scss/styles.scss */
 .footerRightSide {
   width: 16%;
   float: left;
   margin-top: 30px;
+}
+@media only screen and (min-width: 1024px) {
+  /* line 522, ../scss/styles.scss */
+  .footerRightSide {
+    width: 16%;
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 522, ../scss/styles.scss */
+  .footerRightSide {
+    width: 25%;
+  }
 }
