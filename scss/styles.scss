@@ -11,6 +11,7 @@ $subNavText: #333333;
 $grayText: #333333;
 $blueText: #1A6C99;
 $brownText: #4F3700;
+$lightGrayText: #666666;
 
 @import "compass/css3/border-radius"; 
 @import "compass/css3/box-shadow";
@@ -535,6 +536,19 @@ $footerRowSpacing: 30px;
 .mobilePhoneImage
 {
   margin: 11px 0 -2px 0;
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.copyrightText
+{
+  @include Calibri();
+  font-weight: bold;
+  font-size: 15px;
+  line-height: 18px;
+  color: $lightGrayText;
+  a { color: $lightGrayText; text-decoration:none; }
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
