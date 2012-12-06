@@ -726,6 +726,13 @@ input {
   overflow: hidden;
   *zoom: 1;
 }
+@media only screen and (max-width: 420px) {
+  /* line 427, ../scss/styles.scss */
+  .footerNavWrapper {
+    border-bottom: dashed 1px rgba(102, 102, 102, 0.3);
+    padding: 0;
+  }
+}
 /* line 437, ../scss/styles.scss */
 .footerNavWrapper h3 {
   color: #4f3700;
@@ -756,106 +763,133 @@ input {
     line-height: 17px;
   }
 }
+@media only screen and (max-width: 420px) {
+  /* line 437, ../scss/styles.scss */
+  .footerNavWrapper h3 {
+    font-size: 14px;
+    line-height: 35px;
+    padding-top: 5px;
+    padding-left: 15px;
+    background: url(../images/texturebg.png);
+    background-origin: content-box;
+  }
+}
+@media only screen and (max-width: 420px) {
+  /* line 451, ../scss/styles.scss */
+  .footerNavWrapper li {
+    font-family: "Calibri", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 35px;
+    color: #4f3700;
+    border-bottom: dashed 1px rgba(102, 102, 102, 0.3);
+    background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(219, 215, 209, 0.4)), color-stop(100%, rgba(219, 215, 209, 0.4))), url(../images/texturebg.png);
+    background: -webkit-linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
+    background: -moz-linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
+    background: linear-gradient(top, rgba(219, 215, 209, 0.4), rgba(219, 215, 209, 0.4)), url(../images/texturebg.png);
+    padding-left: 15px;
+  }
+}
 
-/* line 453, ../scss/styles.scss */
+/* line 468, ../scss/styles.scss */
 .width6Wide {
   width: 16%;
   float: left;
 }
 
-/* line 454, ../scss/styles.scss */
+/* line 469, ../scss/styles.scss */
 .width5Wide {
   width: 20%;
   float: left;
 }
 
-/* line 455, ../scss/styles.scss */
+/* line 470, ../scss/styles.scss */
 .width4Wide {
   width: 25%;
   float: left;
 }
 
-/* line 456, ../scss/styles.scss */
+/* line 471, ../scss/styles.scss */
 .width3Wide {
   width: 32%;
   float: left;
 }
 
-/* line 457, ../scss/styles.scss */
+/* line 472, ../scss/styles.scss */
 .width2Wide {
   width: 50%;
   float: left;
 }
 
-/* line 458, ../scss/styles.scss */
+/* line 473, ../scss/styles.scss */
 .width1Wide {
   width: 100%;
   float: left;
 }
 
 @media only screen and (min-width: 1024px) {
-  /* line 464, ../scss/styles.scss */
+  /* line 479, ../scss/styles.scss */
   .col1Wide {
     float: left;
     width: 20%;
   }
 
-  /* line 465, ../scss/styles.scss */
+  /* line 480, ../scss/styles.scss */
   .col2Wide {
     float: left;
     width: 40%;
   }
 
-  /* line 466, ../scss/styles.scss */
+  /* line 481, ../scss/styles.scss */
   .col3Wide {
     float: left;
     width: 60%;
   }
 
-  /* line 467, ../scss/styles.scss */
+  /* line 482, ../scss/styles.scss */
   .col4Wide {
     float: left;
     width: 80%;
   }
 
-  /* line 468, ../scss/styles.scss */
+  /* line 483, ../scss/styles.scss */
   .col5Wide {
     float: left;
     width: 100%;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 472, ../scss/styles.scss */
+  /* line 487, ../scss/styles.scss */
   .col1Wide {
     float: left;
     width: 32%;
   }
 
-  /* line 473, ../scss/styles.scss */
+  /* line 488, ../scss/styles.scss */
   .col2Wide {
     float: left;
     width: 64%;
   }
 
-  /* line 474, ../scss/styles.scss */
+  /* line 489, ../scss/styles.scss */
   .col3Wide {
     float: left;
     width: 96%;
   }
 
-  /* line 475, ../scss/styles.scss */
+  /* line 490, ../scss/styles.scss */
   .col4Wide {
     float: left;
     width: 128%;
   }
 
-  /* line 476, ../scss/styles.scss */
+  /* line 491, ../scss/styles.scss */
   .col5Wide {
     float: left;
     width: 160%;
   }
 }
-/* line 480, ../scss/styles.scss */
+/* line 495, ../scss/styles.scss */
 .footerNavListWrapper {
   border-top: dashed 1px rgba(102, 102, 102, 0.3);
   margin-right: 20px;
@@ -864,7 +898,7 @@ input {
   *zoom: 1;
 }
 
-/* line 496, ../scss/styles.scss */
+/* line 511, ../scss/styles.scss */
 .footerNavListText {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   list-style-image: none;
@@ -876,67 +910,67 @@ input {
   padding-top: 8px;
   color: #4d3800;
 }
-/* line 504, ../scss/styles.scss */
+/* line 519, ../scss/styles.scss */
 .footerNavListText a {
   color: #4d3800;
   text-decoration: none;
 }
-/* line 505, ../scss/styles.scss */
+/* line 520, ../scss/styles.scss */
 .footerNavListText li {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   padding-right: 3px;
 }
-/* line 506, ../scss/styles.scss */
+/* line 521, ../scss/styles.scss */
 .footerNavListText ul {
   float: left;
   display: block;
 }
 
-/* line 515, ../scss/styles.scss */
+/* line 530, ../scss/styles.scss */
 .footerLeftSide {
   float: left;
   margin-top: 30px;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 515, ../scss/styles.scss */
+  /* line 530, ../scss/styles.scss */
   .footerLeftSide {
     width: 80%;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 515, ../scss/styles.scss */
+  /* line 530, ../scss/styles.scss */
   .footerLeftSide {
     width: 75%;
   }
 }
 
-/* line 527, ../scss/styles.scss */
+/* line 542, ../scss/styles.scss */
 .footerRightSide {
   width: 16%;
   float: left;
   margin-top: 30px;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 527, ../scss/styles.scss */
+  /* line 542, ../scss/styles.scss */
   .footerRightSide {
     width: 16%;
   }
 }
 @media only screen and (min-width: 421px) and (max-width: 1023px) {
-  /* line 527, ../scss/styles.scss */
+  /* line 542, ../scss/styles.scss */
   .footerRightSide {
     width: 23%;
   }
 }
 
-/* line 537, ../scss/styles.scss */
+/* line 552, ../scss/styles.scss */
 .mobilePhoneImage {
   margin: 11px 0 -2px 0;
 }
 
-/* line 545, ../scss/styles.scss */
+/* line 560, ../scss/styles.scss */
 .copyrightText {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -944,7 +978,7 @@ input {
   line-height: 18px;
   color: #666666;
 }
-/* line 551, ../scss/styles.scss */
+/* line 566, ../scss/styles.scss */
 .copyrightText a {
   color: #666666;
   text-decoration: none;

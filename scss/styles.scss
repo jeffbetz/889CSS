@@ -431,7 +431,7 @@ input
   @include clearfix();
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
+  @include respond-to(handhelds)      { border-bottom: dashed 1px $lightGrayImageBorder; padding: 0;}
 
   h3
   {
@@ -444,7 +444,22 @@ input
     padding-bottom: 4px;
     @include respond-to(wide-screens)   { font-size: 17px; line-height: 20px; }
     @include respond-to(medium-screens) { font-size: 14px; line-height: 17px; }
-    @include respond-to(handhelds)      {  }
+    @include respond-to(handhelds)      { font-size: 14px; line-height: 35px; padding-top: 5px; padding-left: 15px; @include background(url(../images/texturebg.png)); background-origin: content-box;}
+  }
+
+  li
+  {
+    @include respond-to(handhelds)      
+    { 
+      @include Calibri();
+      font-weight: bold;
+      font-size: 13px;
+      line-height: 35px;
+      color: $brownText;
+      border-bottom: dashed 1px $lightGrayImageBorder;
+      @include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../images/texturebg.png));
+      padding-left: 15px;
+    }
   }
 
 }
