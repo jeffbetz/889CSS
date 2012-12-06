@@ -1,6 +1,6 @@
 $lightGrayImageBorder: rgba(#666666, 0.3);
 $darkBrown: #4D3800; 
-$tan: #E6E3DC;
+$tan: #E6E3DC; 
 $searchBox: rgba(#E6E3DC, 0.47);
 $searchBoxText: rgba(#4D3800, 0.4);
 $tanOverlay: rgba(#DBD7D1, 0.4);
@@ -12,6 +12,9 @@ $grayText: #333333;
 $blueText: #1A6C99;
 $brownText: #4F3700;
 $lightGrayText: #666666;
+$tan: #E6E3DC;
+$blackPicOverlay: rgba(#231F20, 0.6);
+$grayBorder: #d3d2d2;
 
 @import "compass/css3/border-radius"; 
 @import "compass/css3/box-shadow";
@@ -23,6 +26,7 @@ $lightGrayText: #666666;
 @import "compass/reset";
 @import "compass/utilities/general/clearfix";
 @import "compass/typography/text/ellipsis";
+
 
 /* support */
 $experimental-support-for-khtml: false;
@@ -568,3 +572,134 @@ $footerRowSpacing: 30px;
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
 }
+
+
+// -----------------------------------------------------------------------------------------
+// AD COLUMN
+// -----------------------------------------------------------------------------------------
+
+
+
+.adColumnRight
+{
+  background-color: $tan;
+  padding: 8px;
+  width: 308px;
+  // @include background-origin(); 
+  @include box-sizing(border-box);
+  img { margin-bottom: 8px; 
+    &:last-child { margin-bottom: 0px;  };
+  }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+
+
+
+// -----------------------------------------------------------------------------------------
+// BIG SHOW IMAGE
+// -----------------------------------------------------------------------------------------
+
+$featuredShowContainerHeight: 360px;
+$featuredShowDivBarHeight: 84px;
+
+
+.featuredShowSlider
+{
+  // border: 1px solid red;
+  width: 641px;
+  height: $featuredShowContainerHeight;
+  // padding-top: $featuredShowContainerHeight - $featuredShowDivBarHeight;
+  @include background-origin(); 
+  @include background(url(../images/placeholder-big-show-image.png) no-repeat bottom left );
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+  div {
+    background-color: $blackPicOverlay;
+    // background-color: white;
+    @include background-origin(); 
+    padding: 10px;
+    width: 621px;
+    height: $featuredShowDivBarHeight;
+    position: absolute;
+    // bottom: 0px;
+    // margin-top: $featuredShowContainerHeight - $featuredShowDivBarHeight;
+    margin-top: 256px;
+  }
+  h3 {
+    @include Calibri();
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 24px;
+    color: white;
+  }
+
+  h4 {
+    @include PeriodicoText();
+    font-size: 14px;
+    line-height: 16px;
+    color: white;
+  }
+}
+
+
+// -----------------------------------------------------------------------------------------
+// STORY BLOCK
+// -----------------------------------------------------------------------------------------
+
+.storyBlock
+{
+  width: 324px;
+  height: 340px;
+  border: 1px solid $grayBorder;
+  border-top: 6px solid $tan;
+  padding: 10px;
+  @include box-sizing(border-box);
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+
+  .sectionTitle {
+    @include Calibri();
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 24px;
+    color: $blueText;
+    width: 45%;
+    float: left;
+    @include clearfix();
+    a { color: $blueText; text-decoration:none; }
+  }
+
+  .authorName {
+    @include Calibri();
+    font-size: 13px;
+    line-height: 18px;
+    float: right;
+    @include clearfix();
+    color: $grayText;
+    text-align: right;
+    width: 45%;
+    a { color: $grayText; text-decoration:none; }    
+  }
+
+  .storyName {
+    @include Calibri();
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 18px;
+    color: $grayText;
+    a { color: $grayText; text-decoration:none; }
+  }
+
+  .storyDescription {
+    @include PeriodicoText();
+    font-size: 14px;
+    line-height: 16px;
+    color: $grayText;
+  }
+}
+
