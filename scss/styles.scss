@@ -456,6 +456,8 @@ input
 .width2Wide {width: 50%; float: left; }
 .width1Wide {width: 100%; float: left; }
 
+
+
 @include respond-to(wide-screens)   
 {  
   .col1Wide {float: left; width: 20%; }
@@ -466,11 +468,11 @@ input
 }
 @include respond-to(medium-screens) 
 {  
-  .col1Wide {float: left; width: 25%; }
-  .col2Wide {float: left; width: 25%*2;}
-  .col3Wide {float: left; width: 25%*3;}
-  .col4Wide {float: left; width: 25%*4;}
-  .col5Wide {float: left; width: 25%*5;}
+  .col1Wide {float: left; width: 32%; }
+  .col2Wide {float: left; width: 32%*2;}
+  .col3Wide {float: left; width: 32%*3;}
+  .col4Wide {float: left; width: 32%*4;}
+  .col5Wide {float: left; width: 32%*5;}
 }
 
 .footerNavListWrapper
@@ -478,6 +480,8 @@ input
   border-top: dashed 1px $lightGrayImageBorder;
   // background-origin: content-box;
   margin-right: 20px;
+  margin-bottom: 25px;
+  @include clearfix();
   // margin-right: 2%;
 
   // float: left;
@@ -524,6 +528,14 @@ $footerRowSpacing: 30px;
   float: left;
   margin-top: $footerRowSpacing;
   @include respond-to(wide-screens)   { width: 16%; }
-  @include respond-to(medium-screens) { width: 25%; }
+  @include respond-to(medium-screens) { width: 23%; }
+  @include respond-to(handhelds)      {  }
+}
+
+.mobilePhoneImage
+{
+  margin: 11px 0 -2px 0;
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
 }
