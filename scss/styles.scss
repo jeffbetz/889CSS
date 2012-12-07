@@ -15,6 +15,7 @@ $lightGrayText: #666666;
 $tan: #E6E3DC;
 $blackPicOverlay: rgba(#231F20, 0.6);
 $grayBorder: #d3d2d2;
+$socialBlockColor: #F4F4F4;
 
 @import "compass/css3/border-radius"; 
 @import "compass/css3/box-shadow";
@@ -653,12 +654,14 @@ $featuredShowDivBarHeight: 84px;
 .storyBlock
 {
   width: 324px;
-  height: 340px;
+  min-height: 340px;
   border: 1px solid $grayBorder;
   border-top: 6px solid $tan;
   padding: 10px;
+  float: left;
+  @include clearfix();
   @include box-sizing(border-box);
-  @include respond-to(wide-screens)   {  }
+  @include respond-to(wide-screens)   { margin-right: 10px; }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
 
@@ -668,6 +671,7 @@ $featuredShowDivBarHeight: 84px;
     font-size: 13px;
     line-height: 24px;
     color: $blueText;
+    margin-bottom: 3px;
     width: 45%;
     float: left;
     @include clearfix();
@@ -681,6 +685,7 @@ $featuredShowDivBarHeight: 84px;
     float: right;
     @include clearfix();
     color: $grayText;
+    margin-bottom: 3px;
     text-align: right;
     width: 45%;
     a { color: $grayText; text-decoration:none; }    
@@ -692,6 +697,7 @@ $featuredShowDivBarHeight: 84px;
     font-size: 18px;
     line-height: 18px;
     color: $grayText;
+    margin-bottom: 5px;
     a { color: $grayText; text-decoration:none; }
   }
 
@@ -700,6 +706,15 @@ $featuredShowDivBarHeight: 84px;
     font-size: 14px;
     line-height: 16px;
     color: $grayText;
+    margin-bottom: 6px;
+    a { color: $blueText; text-decoration:none; }
+  }
+
+  .socialBlock{
+    background-color: $socialBlockColor;
+    // background-color: red;
+    height: 40px;
+    width: 100%;
   }
 }
 
