@@ -98,6 +98,11 @@ $break-large: 1024px;
 .spacer
 {height: 60px; width: 300px;}
 
+.clearBoth {
+  clear: both;
+  @include clearfix();
+}
+
 
 
 
@@ -652,6 +657,29 @@ $featuredShowDivBarHeight: 84px;
 
 
 // -----------------------------------------------------------------------------------------
+// GLOBAL STYLES
+// -----------------------------------------------------------------------------------------
+
+.sectionTitle {
+  @include Calibri();
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+  color: $blueText;
+  a { color: $blueText; text-decoration:none; }
+}
+
+.storyName {
+  @include Calibri();
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: $grayText;
+  a { color: $grayText; text-decoration:none; }
+}
+
+
+// -----------------------------------------------------------------------------------------
 // STORY BLOCK
 // -----------------------------------------------------------------------------------------
 
@@ -668,18 +696,17 @@ $featuredShowDivBarHeight: 84px;
   @include respond-to(wide-screens)   { margin-right: 10px; }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
-
+  
+  
   .sectionTitle {
-    @include Calibri();
-    font-weight: bold;
-    font-size: 13px;
-    line-height: 24px;
-    color: $blueText;
     margin-bottom: 3px;
     width: 45%;
     float: left;
     @include clearfix();
-    a { color: $blueText; text-decoration:none; }
+  }
+
+  .storyName {
+    margin-bottom: 5px;
   }
 
   .authorName {
@@ -693,16 +720,6 @@ $featuredShowDivBarHeight: 84px;
     text-align: right;
     width: 45%;
     a { color: $grayText; text-decoration:none; }    
-  }
-
-  .storyName {
-    @include Calibri();
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 18px;
-    color: $grayText;
-    margin-bottom: 5px;
-    a { color: $grayText; text-decoration:none; }
   }
 
   .storyDescription {
@@ -722,3 +739,34 @@ $featuredShowDivBarHeight: 84px;
   }
 }
 
+
+
+
+// -----------------------------------------------------------------------------------------
+// FEATURED ARTIST SLIDER
+// -----------------------------------------------------------------------------------------
+
+
+.featuredArtistSlider
+{
+  @include background(url(../images/texturebg.png));
+  width: 320px;
+  padding: 9px;
+  @include box-sizing(border-box);
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+  
+  img {margin-bottom: 0px;}
+
+  .sectionTitle {
+    margin-top: 5px;
+    margin-bottom: 0px;
+  }
+
+  .storyName {
+    margin-top: -5px;
+    @include ellipsis();
+  }
+
+}
