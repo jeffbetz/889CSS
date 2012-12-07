@@ -228,7 +228,7 @@ input
     line-height: 40px;font-size: 14px; border-right: 1px dashed $navDividingLine; line-height: 40px; height: 40px;
     &:last-child { border-right: none; }; 
   }
-  @include respond-to(handhelds)      { font-size: 17px; }
+  @include respond-to(handhelds)      { font-size: 17px; display: none;}
 }
 
 .mainNavSelected
@@ -613,11 +613,12 @@ $featuredShowDivBarHeight: 84px;
   width: 641px;
   height: $featuredShowContainerHeight;
   // padding-top: $featuredShowContainerHeight - $featuredShowDivBarHeight;
-  @include background-origin(); 
+  padding-top: 256px;
+  @include box-sizing(border-box);
   @include background(url(../images/placeholder-big-show-image.png) no-repeat bottom left );
   @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
+  @include respond-to(medium-screens) { width: 100%; background-size: cover; background-position: center; }
+  @include respond-to(handhelds)      { width: 100%; background-size: cover; background-position: center; }
   div {
     background-color: $blackPicOverlay;
     // background-color: white;
@@ -625,10 +626,12 @@ $featuredShowDivBarHeight: 84px;
     padding: 10px;
     width: 621px;
     height: $featuredShowDivBarHeight;
-    position: absolute;
-    // bottom: 0px;
+    // position: absolute;
+    bottom: 0px;
     // margin-top: $featuredShowContainerHeight - $featuredShowDivBarHeight;
-    margin-top: 256px;
+    // margin-top: 256px;
+    @include respond-to(medium-screens) { width: 100%; }
+    @include respond-to(handhelds)      { width: 100%; }
   }
   h3 {
     @include Calibri();
@@ -643,6 +646,7 @@ $featuredShowDivBarHeight: 84px;
     font-size: 14px;
     line-height: 16px;
     color: white;
+    @include respond-to(handhelds) { display: none; }
   }
 }
 

@@ -384,6 +384,7 @@ input {
   /* line 211, ../scss/styles.scss */
   .mainNav {
     font-size: 17px;
+    display: none;
   }
 }
 
@@ -1006,12 +1007,29 @@ input {
 .featuredShowSlider {
   width: 641px;
   height: 360px;
-  -webkit-background-origin: content;
-  -moz-background-origin: content;
-  background-origin: content-box;
+  padding-top: 256px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   background: url(../images/placeholder-big-show-image.png) no-repeat bottom left;
 }
-/* line 621, ../scss/styles.scss */
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 611, ../scss/styles.scss */
+  .featuredShowSlider {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media only screen and (max-width: 420px) {
+  /* line 611, ../scss/styles.scss */
+  .featuredShowSlider {
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+  }
+}
+/* line 622, ../scss/styles.scss */
 .featuredShowSlider div {
   background-color: rgba(35, 31, 32, 0.6);
   -webkit-background-origin: content;
@@ -1020,10 +1038,21 @@ input {
   padding: 10px;
   width: 621px;
   height: 84px;
-  position: absolute;
-  margin-top: 256px;
+  bottom: 0px;
 }
-/* line 633, ../scss/styles.scss */
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 622, ../scss/styles.scss */
+  .featuredShowSlider div {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 420px) {
+  /* line 622, ../scss/styles.scss */
+  .featuredShowSlider div {
+    width: 100%;
+  }
+}
+/* line 636, ../scss/styles.scss */
 .featuredShowSlider h3 {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -1031,15 +1060,21 @@ input {
   line-height: 24px;
   color: white;
 }
-/* line 641, ../scss/styles.scss */
+/* line 644, ../scss/styles.scss */
 .featuredShowSlider h4 {
   font-family: "Periodico Text", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 16px;
   color: white;
 }
+@media only screen and (max-width: 420px) {
+  /* line 644, ../scss/styles.scss */
+  .featuredShowSlider h4 {
+    display: none;
+  }
+}
 
-/* line 655, ../scss/styles.scss */
+/* line 659, ../scss/styles.scss */
 .storyBlock {
   width: 324px;
   min-height: 340px;
@@ -1054,12 +1089,12 @@ input {
   box-sizing: border-box;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 655, ../scss/styles.scss */
+  /* line 659, ../scss/styles.scss */
   .storyBlock {
     margin-right: 10px;
   }
 }
-/* line 668, ../scss/styles.scss */
+/* line 672, ../scss/styles.scss */
 .storyBlock .sectionTitle {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -1072,12 +1107,12 @@ input {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 678, ../scss/styles.scss */
+/* line 682, ../scss/styles.scss */
 .storyBlock .sectionTitle a {
   color: #1a6c99;
   text-decoration: none;
 }
-/* line 681, ../scss/styles.scss */
+/* line 685, ../scss/styles.scss */
 .storyBlock .authorName {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -1090,12 +1125,12 @@ input {
   text-align: right;
   width: 45%;
 }
-/* line 691, ../scss/styles.scss */
+/* line 695, ../scss/styles.scss */
 .storyBlock .authorName a {
   color: #333333;
   text-decoration: none;
 }
-/* line 694, ../scss/styles.scss */
+/* line 698, ../scss/styles.scss */
 .storyBlock .storyName {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -1104,12 +1139,12 @@ input {
   color: #333333;
   margin-bottom: 5px;
 }
-/* line 701, ../scss/styles.scss */
+/* line 705, ../scss/styles.scss */
 .storyBlock .storyName a {
   color: #333333;
   text-decoration: none;
 }
-/* line 704, ../scss/styles.scss */
+/* line 708, ../scss/styles.scss */
 .storyBlock .storyDescription {
   font-family: "Periodico Text", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -1117,12 +1152,12 @@ input {
   color: #333333;
   margin-bottom: 6px;
 }
-/* line 710, ../scss/styles.scss */
+/* line 714, ../scss/styles.scss */
 .storyBlock .storyDescription a {
   color: #1a6c99;
   text-decoration: none;
 }
-/* line 713, ../scss/styles.scss */
+/* line 717, ../scss/styles.scss */
 .storyBlock .socialBlock {
   background-color: #f4f4f4;
   height: 40px;
