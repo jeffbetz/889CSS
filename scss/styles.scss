@@ -4,6 +4,7 @@ $tan: #E6E3DC;
 $searchBox: rgba(#E6E3DC, 0.47);
 $searchBoxText: rgba(#4D3800, 0.4);
 $tanOverlay: rgba(#DBD7D1, 0.4);
+$grayOverlay: rgba(#333333, 0.1);
 $orange: #F79101;
 $mainNavText: rgba(#4D3800, 0.9);
 $navDividingLine: rgba(#4B3900, 0.2);
@@ -749,9 +750,11 @@ $featuredShowDivBarHeight: 84px;
 
 .featuredArtistSlider
 {
-  @include background(url(../images/texturebg.png));
+  // @include background(url(../images/texturebg.png));
+  @include background(linear-gradient(top, $grayOverlay, $grayOverlay),url(../images/texturebg.png));
   width: 320px;
   padding: 9px;
+  min-height: 225px;
   @include box-sizing(border-box);
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
