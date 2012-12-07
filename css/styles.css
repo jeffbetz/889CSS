@@ -1131,7 +1131,6 @@ input {
   border: 1px solid #d3d2d2;
   background-color: white;
   border-top: 6px solid #e6e3dc;
-  padding: 10px;
   float: left;
   overflow: hidden;
   *zoom: 1;
@@ -1145,7 +1144,11 @@ input {
     margin-right: 10px;
   }
 }
-/* line 714, ../scss/styles.scss */
+/* line 713, ../scss/styles.scss */
+.storyBlock .storyWrapper {
+  padding: 10px;
+}
+/* line 718, ../scss/styles.scss */
 .storyBlock .sectionTitle {
   margin-bottom: 3px;
   width: 45%;
@@ -1153,11 +1156,11 @@ input {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 721, ../scss/styles.scss */
+/* line 725, ../scss/styles.scss */
 .storyBlock .storyName {
   margin-bottom: 5px;
 }
-/* line 725, ../scss/styles.scss */
+/* line 729, ../scss/styles.scss */
 .storyBlock .authorName {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-size: 13px;
@@ -1170,19 +1173,20 @@ input {
   text-align: right;
   width: 45%;
 }
-/* line 735, ../scss/styles.scss */
+/* line 739, ../scss/styles.scss */
 .storyBlock .authorName a {
   color: #333333;
   text-decoration: none;
 }
-/* line 738, ../scss/styles.scss */
+/* line 742, ../scss/styles.scss */
 .storyBlock .socialBlock {
   background-color: #f4f4f4;
+  background-origin: content-box;
   height: 40px;
   width: 100%;
 }
 
-/* line 755, ../scss/styles.scss */
+/* line 760, ../scss/styles.scss */
 .featuredArtistSlider {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(51, 51, 51, 0.1)), color-stop(100%, rgba(51, 51, 51, 0.1))), url(../images/texturebg.png);
   background: -webkit-linear-gradient(top, rgba(51, 51, 51, 0.1), rgba(51, 51, 51, 0.1)), url(../images/texturebg.png);
@@ -1195,16 +1199,16 @@ input {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 766, ../scss/styles.scss */
+/* line 771, ../scss/styles.scss */
 .featuredArtistSlider img {
   margin-bottom: 0px;
 }
-/* line 768, ../scss/styles.scss */
+/* line 773, ../scss/styles.scss */
 .featuredArtistSlider .sectionTitle {
   margin-top: 5px;
   margin-bottom: 0px;
 }
-/* line 773, ../scss/styles.scss */
+/* line 778, ../scss/styles.scss */
 .featuredArtistSlider .storyName {
   margin-top: -5px;
   white-space: nowrap;
@@ -1212,7 +1216,7 @@ input {
   text-overflow: ellipsis;
 }
 
-/* line 789, ../scss/styles.scss */
+/* line 794, ../scss/styles.scss */
 .musicPlayer {
   width: 320px;
   height: 158px;
@@ -1230,41 +1234,41 @@ input {
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 802, ../scss/styles.scss */
+/* line 807, ../scss/styles.scss */
 .musicPlayer .storyName {
   margin-top: -5px;
 }
-/* line 806, ../scss/styles.scss */
+/* line 811, ../scss/styles.scss */
 .musicPlayer .textArea {
   margin-left: 150px;
   margin-top: 20px;
   width: 160px;
   min-height: 40px;
 }
-/* line 814, ../scss/styles.scss */
+/* line 819, ../scss/styles.scss */
 .musicPlayer .storyDescription {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
-/* line 815, ../scss/styles.scss */
+/* line 820, ../scss/styles.scss */
 .musicPlayer .storyDescription a {
   color: #333333;
   text-decoration: none;
 }
-/* line 819, ../scss/styles.scss */
+/* line 824, ../scss/styles.scss */
 .musicPlayer .rightMusicArrow {
   position: absolute;
   bottom: 0px;
   right: 10px;
 }
-/* line 825, ../scss/styles.scss */
+/* line 830, ../scss/styles.scss */
 .musicPlayer .leftMusicArrow {
   position: absolute;
   bottom: 0px;
   left: 10px;
 }
-/* line 831, ../scss/styles.scss */
+/* line 836, ../scss/styles.scss */
 .musicPlayer .votingBox {
   width: 103px;
   height: 39px;
@@ -1276,7 +1280,7 @@ input {
   position: relative;
   background: url(../images/up-voting-arrow.png) no-repeat 70% center;
 }
-/* line 841, ../scss/styles.scss */
+/* line 846, ../scss/styles.scss */
 .musicPlayer .voteText {
   position: absolute;
   left: 12px;
@@ -1287,7 +1291,7 @@ input {
   border-right: 1px dashed #d3d2d2;
   padding-right: 12px;
 }
-/* line 852, ../scss/styles.scss */
+/* line 857, ../scss/styles.scss */
 .musicPlayer .voteNumber {
   position: absolute;
   right: 12px;
