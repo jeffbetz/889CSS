@@ -17,6 +17,7 @@ $tan: #E6E3DC;
 $blackPicOverlay: rgba(#231F20, 0.6);
 $grayBorder: #d3d2d2;
 $socialBlockColor: #F4F4F4;
+$lightGradientBottom: #f5f5f5;
 
 @import "compass/css3/border-radius"; 
 @import "compass/css3/box-shadow";
@@ -679,6 +680,16 @@ $featuredShowDivBarHeight: 84px;
   a { color: $grayText; text-decoration:none; }
 }
 
+.storyDescription {
+  @include PeriodicoText();
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 100;
+  color: $grayText;
+  margin-bottom: 6px;
+  a { color: $blueText; text-decoration:none; }
+}
+
 
 // -----------------------------------------------------------------------------------------
 // STORY BLOCK
@@ -689,6 +700,7 @@ $featuredShowDivBarHeight: 84px;
   width: 324px;
   min-height: 340px;
   border: 1px solid $grayBorder;
+  background-color: white;
   border-top: 6px solid $tan;
   padding: 10px;
   float: left;
@@ -721,15 +733,6 @@ $featuredShowDivBarHeight: 84px;
     text-align: right;
     width: 45%;
     a { color: $grayText; text-decoration:none; }    
-  }
-
-  .storyDescription {
-    @include PeriodicoText();
-    font-size: 14px;
-    line-height: 16px;
-    color: $grayText;
-    margin-bottom: 6px;
-    a { color: $blueText; text-decoration:none; }
   }
 
   .socialBlock{
@@ -770,6 +773,89 @@ $featuredShowDivBarHeight: 84px;
   .storyName {
     margin-top: -5px;
     @include ellipsis();
+  }
+
+}
+
+
+
+
+// -----------------------------------------------------------------------------------------
+// MUSIC PLAYER
+// -----------------------------------------------------------------------------------------
+
+
+.musicPlayer
+{
+  width: 320px;
+  height: 158px;
+  border: 1px solid $grayBorder;
+  padding: 10px;
+  position: relative;
+  @include box-sizing(border-box);
+  @include background(linear-gradient(top, white 20%, $lightGradientBottom 70%));
+  @include border-radius(10px);
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+
+  .storyName {
+    margin-top: -5px;
+  }
+
+  .textArea {
+    margin-left: 150px;
+    margin-top: 20px;
+    width: 160px;
+    // border: 1px solid red;
+    min-height: 40px;
+  }
+
+  .storyDescription {
+    a { color: $grayText; text-decoration:none; }
+    @include ellipsis();
+  }
+
+  .rightMusicArrow {
+    position: absolute;
+    bottom: 0px;
+    right: 10px;
+  }
+  
+  .leftMusicArrow {
+    position: absolute;
+    bottom: 0px;
+    left: 10px;
+  }
+
+  .votingBox{
+    width: 103px;
+    height: 39px;
+    border: 1px dashed $grayBorder;
+    @include box-sizing(border-box);
+    padding: 5px;
+    position: relative;
+    @include background(url(../images/up-voting-arrow.png) no-repeat 70% center);
+  }
+
+  .voteText{
+    position: absolute;
+    left: 12px;
+    top: 8px;
+    @include Calibri();
+    font-weight: bold;
+    font-size: 14px;
+    border-right: 1px dashed $grayBorder;
+    padding-right: 12px; 
+  }
+
+  .voteNumber {
+    position: absolute;
+    right: 12px;
+    top: 8px;
+    @include Calibri();
+    font-weight: bold;
+    font-size: 14px;
   }
 
 }
