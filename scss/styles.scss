@@ -698,7 +698,7 @@ $featuredShowDivBarHeight: 84px;
 .storyBlock
 {
   width: 324px;
-  min-height: 340px;
+  height: 340px;
   border: 1px solid $grayBorder;
   background-color: white;
   border-top: 6px solid $tan;
@@ -745,6 +745,10 @@ $featuredShowDivBarHeight: 84px;
     background-origin: content-box;
     height: 40px;
     width: 100%;
+  }
+
+  .storyDescription{
+    height: 80px;
   }
 }
 
@@ -818,7 +822,10 @@ $featuredShowDivBarHeight: 84px;
 
   .storyDescription {
     a { color: $grayText; text-decoration:none; }
-    @include ellipsis();
+    height: 20px;
+    // white-space: nowrap;
+    // width: 100%;
+    //@include ellipsis();
   }
 
   .rightMusicArrow {
@@ -863,4 +870,50 @@ $featuredShowDivBarHeight: 84px;
     font-size: 14px;
   }
 
+  // .noBorder {
+  //   border: none;
+  // }
+
 }
+
+
+
+// -----------------------------------------------------------------------------------------
+// PROGRAM LISTING
+// -----------------------------------------------------------------------------------------
+
+
+.programListing
+{
+  width: 280px;
+  padding: 14px 0px;
+  border-bottom: 1px dashed $grayBorder;
+
+  &:last-child {   border-bottom: 1px dashed $grayBorder; };
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+  // @include ellipsis();
+  // white-space: wrap;
+
+  .sectionTitle {
+    margin-bottom: -2px;
+  }
+
+  .storyDescription {
+    height: 50px;
+    // border: 1px solid red;
+    // overflow: hidden;
+  }
+
+  .storyName {
+    height: 42px;
+    // overflow: hidden;
+    // a { height: 20px; }
+  }  
+
+}
+
+  .noBorder {
+    border: none;
+  }

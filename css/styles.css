@@ -1127,7 +1127,7 @@ input {
 /* line 699, ../scss/styles.scss */
 .storyBlock {
   width: 324px;
-  min-height: 340px;
+  height: 340px;
   border: 1px solid #d3d2d2;
   background-color: white;
   border-top: 6px solid #e6e3dc;
@@ -1185,8 +1185,12 @@ input {
   height: 40px;
   width: 100%;
 }
+/* line 750, ../scss/styles.scss */
+.storyBlock .storyDescription {
+  height: 80px;
+}
 
-/* line 760, ../scss/styles.scss */
+/* line 764, ../scss/styles.scss */
 .featuredArtistSlider {
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(51, 51, 51, 0.1)), color-stop(100%, rgba(51, 51, 51, 0.1))), url(../images/texturebg.png);
   background: -webkit-linear-gradient(top, rgba(51, 51, 51, 0.1), rgba(51, 51, 51, 0.1)), url(../images/texturebg.png);
@@ -1199,16 +1203,16 @@ input {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 771, ../scss/styles.scss */
+/* line 775, ../scss/styles.scss */
 .featuredArtistSlider img {
   margin-bottom: 0px;
 }
-/* line 773, ../scss/styles.scss */
+/* line 777, ../scss/styles.scss */
 .featuredArtistSlider .sectionTitle {
   margin-top: 5px;
   margin-bottom: 0px;
 }
-/* line 778, ../scss/styles.scss */
+/* line 782, ../scss/styles.scss */
 .featuredArtistSlider .storyName {
   margin-top: -5px;
   white-space: nowrap;
@@ -1216,7 +1220,7 @@ input {
   text-overflow: ellipsis;
 }
 
-/* line 794, ../scss/styles.scss */
+/* line 798, ../scss/styles.scss */
 .musicPlayer {
   width: 320px;
   height: 158px;
@@ -1234,41 +1238,39 @@ input {
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-/* line 807, ../scss/styles.scss */
+/* line 811, ../scss/styles.scss */
 .musicPlayer .storyName {
   margin-top: -5px;
 }
-/* line 811, ../scss/styles.scss */
+/* line 815, ../scss/styles.scss */
 .musicPlayer .textArea {
   margin-left: 150px;
   margin-top: 20px;
   width: 160px;
   min-height: 40px;
 }
-/* line 819, ../scss/styles.scss */
+/* line 823, ../scss/styles.scss */
 .musicPlayer .storyDescription {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  height: 20px;
 }
-/* line 820, ../scss/styles.scss */
+/* line 824, ../scss/styles.scss */
 .musicPlayer .storyDescription a {
   color: #333333;
   text-decoration: none;
 }
-/* line 824, ../scss/styles.scss */
+/* line 831, ../scss/styles.scss */
 .musicPlayer .rightMusicArrow {
   position: absolute;
   bottom: 0px;
   right: 10px;
 }
-/* line 830, ../scss/styles.scss */
+/* line 837, ../scss/styles.scss */
 .musicPlayer .leftMusicArrow {
   position: absolute;
   bottom: 0px;
   left: 10px;
 }
-/* line 836, ../scss/styles.scss */
+/* line 843, ../scss/styles.scss */
 .musicPlayer .votingBox {
   width: 103px;
   height: 39px;
@@ -1280,7 +1282,7 @@ input {
   position: relative;
   background: url(../images/up-voting-arrow.png) no-repeat 70% center;
 }
-/* line 846, ../scss/styles.scss */
+/* line 853, ../scss/styles.scss */
 .musicPlayer .voteText {
   position: absolute;
   left: 12px;
@@ -1291,7 +1293,7 @@ input {
   border-right: 1px dashed #d3d2d2;
   padding-right: 12px;
 }
-/* line 857, ../scss/styles.scss */
+/* line 864, ../scss/styles.scss */
 .musicPlayer .voteNumber {
   position: absolute;
   right: 12px;
@@ -1299,4 +1301,32 @@ input {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
   font-size: 14px;
+}
+
+/* line 887, ../scss/styles.scss */
+.programListing {
+  width: 280px;
+  padding: 14px 0px;
+  border-bottom: 1px dashed #d3d2d2;
+}
+/* line 892, ../scss/styles.scss */
+.programListing:last-child {
+  border-bottom: 1px dashed #d3d2d2;
+}
+/* line 899, ../scss/styles.scss */
+.programListing .sectionTitle {
+  margin-bottom: -2px;
+}
+/* line 903, ../scss/styles.scss */
+.programListing .storyDescription {
+  height: 50px;
+}
+/* line 909, ../scss/styles.scss */
+.programListing .storyName {
+  height: 42px;
+}
+
+/* line 917, ../scss/styles.scss */
+.noBorder {
+  border: none;
 }
