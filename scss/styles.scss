@@ -770,7 +770,7 @@ $featuredShowDivBarHeight: 84px;
   @include box-sizing(border-box);
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
+  @include respond-to(handhelds)      { @include background(white); }
   
   img {margin-bottom: 0px;}
 
@@ -870,10 +870,6 @@ $featuredShowDivBarHeight: 84px;
     font-size: 14px;
   }
 
-  // .noBorder {
-  //   border: none;
-  // }
-
 }
 
 
@@ -886,13 +882,12 @@ $featuredShowDivBarHeight: 84px;
 .programListing
 {
   width: 280px;
-  padding: 14px 0px;
   border-bottom: 1px dashed $grayBorder;
-
+  @include box-sizing(border-box);
   &:last-child {   border-bottom: 1px dashed $grayBorder; };
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
+  @include respond-to(wide-screens)   { padding: 14px 0px;  }
+  @include respond-to(medium-screens) { padding: 11px 0px; }
+  @include respond-to(handhelds)      { padding: 14px 15px; @include background(url(../images/texturebg.png)); width: 100%; }
   // @include ellipsis();
   // white-space: wrap;
 
@@ -904,6 +899,9 @@ $featuredShowDivBarHeight: 84px;
     height: 50px;
     // border: 1px solid red;
     // overflow: hidden;
+    @include respond-to(wide-screens)   {  }
+    @include respond-to(medium-screens) { display: none; }
+    @include respond-to(handhelds)      {  }
   }
 
   .storyName {
@@ -918,6 +916,3 @@ $featuredShowDivBarHeight: 84px;
     border: none;
   }
 
-  .justTesting {
-    
-  }

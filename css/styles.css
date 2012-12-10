@@ -1203,6 +1203,12 @@ input {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+@media only screen and (max-width: 420px) {
+  /* line 764, ../scss/styles.scss */
+  .featuredArtistSlider {
+    background: white;
+  }
+}
 /* line 775, ../scss/styles.scss */
 .featuredArtistSlider img {
   margin-bottom: 0px;
@@ -1303,30 +1309,58 @@ input {
   font-size: 14px;
 }
 
-/* line 887, ../scss/styles.scss */
+/* line 883, ../scss/styles.scss */
 .programListing {
   width: 280px;
-  padding: 14px 0px;
   border-bottom: 1px dashed #d3d2d2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
-/* line 892, ../scss/styles.scss */
+/* line 887, ../scss/styles.scss */
 .programListing:last-child {
   border-bottom: 1px dashed #d3d2d2;
 }
-/* line 899, ../scss/styles.scss */
+@media only screen and (min-width: 1024px) {
+  /* line 883, ../scss/styles.scss */
+  .programListing {
+    padding: 14px 0px;
+  }
+}
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 883, ../scss/styles.scss */
+  .programListing {
+    padding: 11px 0px;
+  }
+}
+@media only screen and (max-width: 420px) {
+  /* line 883, ../scss/styles.scss */
+  .programListing {
+    padding: 14px 15px;
+    background: url(../images/texturebg.png);
+    width: 100%;
+  }
+}
+/* line 894, ../scss/styles.scss */
 .programListing .sectionTitle {
   margin-bottom: -2px;
 }
-/* line 903, ../scss/styles.scss */
+/* line 898, ../scss/styles.scss */
 .programListing .storyDescription {
   height: 50px;
 }
-/* line 909, ../scss/styles.scss */
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 898, ../scss/styles.scss */
+  .programListing .storyDescription {
+    display: none;
+  }
+}
+/* line 907, ../scss/styles.scss */
 .programListing .storyName {
   height: 42px;
 }
 
-/* line 917, ../scss/styles.scss */
+/* line 915, ../scss/styles.scss */
 .noBorder {
   border: none;
 }
