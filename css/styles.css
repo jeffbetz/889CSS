@@ -1505,48 +1505,36 @@ input {
 .tabbedNav li.last {
   padding-right: 0;
 }
-/* line 977, ../scss/styles.scss */
+/* line 978, ../scss/styles.scss */
 .tabbedNav li {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
   text-transform: lowercase;
   color: #4f3700;
-  padding: 0px 15px;
-  height: 48px;
+  background: url(../images/dotted-bottom-nav-line.png) repeat-x center bottom;
+  padding: 0px 25px;
+  height: 61px;
   line-height: 48px;
-  border-bottom: 1px dashed #92896b;
 }
-/* line 982, ../scss/styles.scss */
+/* line 983, ../scss/styles.scss */
 .tabbedNav li a {
   color: #4f3700;
   text-decoration: none;
 }
-/* line 992, ../scss/styles.scss */
-.tabbedNav .selected {
+@media only screen and (min-width: 1024px) {
+  /* line 978, ../scss/styles.scss */
+  .tabbedNav li {
+    font-size: 13px;
+  }
+}
+/* line 994, ../scss/styles.scss */
+.tabbedNav .active {
   color: #1a6c99;
-  background: url(../images/dotted-arrow-marker.png) no-repeat center 10px;
+  background: url(../images/dotted-arrow-marker.png) no-repeat center bottom, url(../images/dotted-bottom-nav-line.png) repeat-x center bottom;
   overflow: visible;
 }
-/* line 995, ../scss/styles.scss */
-.tabbedNav .selected a {
+/* line 997, ../scss/styles.scss */
+.tabbedNav .active a {
   color: #1a6c99;
   text-decoration: none;
-}
-/* line 999, ../scss/styles.scss */
-.tabbedNav .selected:after {
-  content: "";
-  height: 48px;
-  width: inherit;
-  border: 1px solid red;
-  background-color: red;
-  position: absolute;
-  z-index: -1;
-  bottom: -11px;
-  left: 0px;
-  -moz-border-radius-topleft: 8px;
-  -webkit-border-top-left-radius: 8px;
-  border-top-left-radius: 8px;
-  -moz-border-radius-topright: 8px;
-  -webkit-border-top-right-radius: 8px;
-  border-top-right-radius: 8px;
 }

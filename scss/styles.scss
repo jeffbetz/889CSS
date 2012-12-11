@@ -974,41 +974,31 @@ $featuredShowDivBarHeight: 84px;
 { 
   @include horizontal-list();
   margin-bottom: 20px;
+  
   li {
     @include Calibri();
     font-weight: bold;
     text-transform: lowercase;
     color: $brownText;
     a { color: $brownText; text-decoration:none; }
-    padding: 0px 15px;
-    height: 48px;
+    @include background(url(../images/dotted-bottom-nav-line.png) repeat-x center bottom);
+    padding: 0px 25px;
+    height: 61px;
     line-height: 48px;
-    border-bottom: 1px dashed $brownLine;
-    @include respond-to(wide-screens)   {  }
+    @include respond-to(wide-screens)   { font-size: 13px; }
     @include respond-to(medium-screens) {  }
     @include respond-to(handhelds)      {  }
 
   }
-    .selected{
-      // border-bottom: none;
-      color: $blueText;
-      a { color: $blueText; text-decoration:none; }
-      @include background(url(../images/dotted-arrow-marker.png) no-repeat center 10px);
-      overflow: visible;
-    
-      &:after {
-        content: "";
-        height: 48px; width: inherit;  
-        border: 1px solid red;  
-        background-color: red;
-        // @include background(url(../images/dotted-arrow-marker.png) no-repeat center 10px);
-        position: absolute;
-        z-index: -1;
-        bottom: -11px;
-        left: 0px;
-        @include border-top-radius(8px);
-      }
-    }
+
+  .active{
+    // border-bottom: none;
+    color: $blueText;
+    a { color: $blueText; text-decoration:none; }
+    @include background( url(../images/dotted-arrow-marker.png) no-repeat center bottom, url(../images/dotted-bottom-nav-line.png) repeat-x center bottom);
+    overflow: visible;
+  
+  }
 
 }
 
