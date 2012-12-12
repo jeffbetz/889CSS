@@ -1823,7 +1823,7 @@ input {
   *zoom: 1;
 }
 
-/* line 1312, ../scss/styles.scss */
+/* line 1320, ../scss/styles.scss */
 .storyAudioPlayer {
   border-left: 1px solid #d3d2d2;
   border-bottom: 1px solid #d3d2d2;
@@ -1837,19 +1837,21 @@ input {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 1323, ../scss/styles.scss */
+/* line 1331, ../scss/styles.scss */
 .storyAudioPlayer .rightMusicArrow {
   float: right;
   display: block;
   margin: 11px 12px 0px 0px;
+  cursor: pointer;
 }
-/* line 1329, ../scss/styles.scss */
+/* line 1338, ../scss/styles.scss */
 .storyAudioPlayer .leftMusicArrow {
   float: right;
   display: block;
   margin: 12px 0px 0px 0px;
+  cursor: pointer;
 }
-/* line 1335, ../scss/styles.scss */
+/* line 1345, ../scss/styles.scss */
 .storyAudioPlayer .storyName {
   color: #333333;
   font-family: "Calibri", Helvetica, Arial, sans-serif;
@@ -1857,13 +1859,15 @@ input {
   font-size: 18px;
   margin-left: 74px;
   margin-top: 14px;
+  width: 194px;
+  height: 20px;
 }
-/* line 1337, ../scss/styles.scss */
+/* line 1347, ../scss/styles.scss */
 .storyAudioPlayer .storyName a {
   color: #333333;
   text-decoration: none;
 }
-/* line 1345, ../scss/styles.scss */
+/* line 1357, ../scss/styles.scss */
 .storyAudioPlayer .storyDescription {
   color: #333333;
   font-family: "Periodico Text", Helvetica, Arial, sans-serif;
@@ -1873,8 +1877,64 @@ input {
   height: 20px;
   margin-left: 74px;
 }
-/* line 1347, ../scss/styles.scss */
+/* line 1359, ../scss/styles.scss */
 .storyAudioPlayer .storyDescription a {
   color: #333333;
+  text-decoration: none;
+}
+
+/* line 1384, ../scss/styles.scss */
+.field img {
+  padding: 4px;
+  border: dashed 1px rgba(102, 102, 102, 0.3);
+}
+
+/* line 1396, ../scss/styles.scss */
+.flexSliderImageWrapper {
+  min-width: 30px;
+  display: inline-block;
+}
+
+/* line 1405, ../scss/styles.scss */
+.flexSliderImage {
+  width: 292px;
+  height: 292px;
+  position: relative;
+  margin: 0 auto;
+  background: url(../images/placeholder-flex-slider-image.png) no-repeat center;
+  padding: 4px;
+  border: dashed 1px rgba(102, 102, 102, 0.3);
+}
+/* line 1417, ../scss/styles.scss */
+.flexSliderImage img {
+  margin-bottom: 0;
+}
+/* line 1421, ../scss/styles.scss */
+.flexSliderImage .rightArrow {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+/* line 1428, ../scss/styles.scss */
+.flexSliderImage .leftArrow {
+  cursor: pointer;
+  position: absolute;
+  bottom: 15px;
+  left: 15px;
+}
+
+/* line 1437, ../scss/styles.scss */
+.photoCaption {
+  font-family: "Calibri", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+  color: #4f3700;
+  text-align: center;
+}
+/* line 1444, ../scss/styles.scss */
+.photoCaption a {
+  color: #4f3700;
   text-decoration: none;
 }

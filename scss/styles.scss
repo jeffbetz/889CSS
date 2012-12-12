@@ -1308,6 +1308,14 @@ $featuredShowDivBarHeight: 84px;
   @include respond-to(handhelds)      {  }
 }
 
+
+
+
+// -----------------------------------------------------------------------------------------
+// STORY AUDIO PLAYER - LONG
+// -----------------------------------------------------------------------------------------
+
+
 .storyAudioPlayer
 {
   border-left: 1px solid $grayBorder;
@@ -1324,12 +1332,14 @@ $featuredShowDivBarHeight: 84px;
     float: right;
     display: block;
     margin: 11px 12px 0px 0px;
+    cursor: pointer;
   }
   
   .leftMusicArrow {
     float: right;
     display: block;
     margin: 12px 0px 0px 0px;
+    cursor: pointer;
   }
 
   .storyName {
@@ -1340,6 +1350,8 @@ $featuredShowDivBarHeight: 84px;
     font-size: 18px;
     margin-left: 74px;
     margin-top: 14px;
+    width: 194px;
+    height: 20px;
   }
 
   .storyDescription {
@@ -1358,3 +1370,79 @@ $featuredShowDivBarHeight: 84px;
   @include respond-to(handhelds)      {  }
 }
 
+
+
+// -----------------------------------------------------------------------------------------
+// STORY CONTENT
+// -----------------------------------------------------------------------------------------
+
+
+// I think this is the content from every section of the live site
+.field 
+{ 
+
+  img {
+    padding: 4px;
+    border: dashed 1px $lightGrayImageBorder;
+
+  }
+
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.flexSliderImageWrapper
+{ 
+  min-width: 30px;
+  display: inline-block;
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.flexSliderImage
+{
+  width: 292px;
+  height: 292px;
+  position: relative;
+  margin: 0 auto;
+  @include background(url(../images/placeholder-flex-slider-image.png) no-repeat center);
+  padding: 4px;
+  border: dashed 1px $lightGrayImageBorder;
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+
+  img {
+    margin-bottom: 0;
+  }
+
+  .rightArrow { 
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+  }
+
+  .leftArrow { 
+    cursor: pointer;
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+  }
+}
+
+.photoCaption
+{
+  @include Calibri();
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+  color: $brownText;
+  text-align: center;
+  a { color: $brownText; text-decoration:none; }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
