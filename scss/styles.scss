@@ -970,7 +970,7 @@ $featuredShowDivBarHeight: 84px;
   font-weight: bold;
   @include respond-to(wide-screens)   { font-size: 32px; line-height: 30px; }
   @include respond-to(medium-screens) { font-size: 32px; line-height: 30px; }
-  @include respond-to(handhelds)      { font-size: 35px; line-height: 32px; }
+  @include respond-to(handhelds)      { font-size: 35px; line-height: 32px; padding: 0px 15px; display: inline-block; }
 }
 
 
@@ -984,7 +984,7 @@ $featuredShowDivBarHeight: 84px;
   @include PeriodicoText();
   @include respond-to(wide-screens)   { font-size: 13px; line-height: 16px; }
   @include respond-to(medium-screens) { font-size: 14px; line-height: 16px; }
-  @include respond-to(handhelds)      { font-size: 14px; line-height: 16px; }
+  @include respond-to(handhelds)      { font-size: 14px; line-height: 16px; padding: 0px 15px; display: inline-block; }
 }
 
 .mainStoryBodyText, .field-items
@@ -996,7 +996,7 @@ $featuredShowDivBarHeight: 84px;
   @include PeriodicoText();
   @include respond-to(wide-screens)   { font-size: 16px; line-height: 24px; }
   @include respond-to(medium-screens) { font-size: 16px; line-height: 24px; }
-  @include respond-to(handhelds)      { font-size: 14px; line-height: 24px; }
+  @include respond-to(handhelds)      { font-size: 14px; line-height: 24px; padding: 0px 15px; display: inline-block; }
 }
 
 
@@ -1081,7 +1081,17 @@ $featuredShowDivBarHeight: 84px;
 
 .sponsorGridWrapper
 {
-  img { margin: 0 auto; display: block; }
+  img { 
+    margin: 0 auto; 
+    display: block; 
+    
+    @include respond-to(handhelds) { 
+      width: 100%;
+      height: auto;
+      @include box-sizing(border-box);
+      padding: 0 15px;
+    }
+  }
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
@@ -1258,6 +1268,10 @@ $featuredShowDivBarHeight: 84px;
 // STORY DATE AND AUTHOR
 // -----------------------------------------------------------------------------------------
 
+// -----------------------------------------------------------------------------------------
+// STORY AUDIO PLAYER - LONG
+// -----------------------------------------------------------------------------------------
+
 .topAudioStoryWrapper
 {
   border: 1px solid $grayBorder;
@@ -1273,7 +1287,7 @@ $featuredShowDivBarHeight: 84px;
 
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
+  @include respond-to(handhelds)      { border: none; }
 }
 
 .storyDate, .submitted
@@ -1288,7 +1302,7 @@ $featuredShowDivBarHeight: 84px;
   a { color: $blueText; text-decoration:none; }
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
+  @include respond-to(handhelds)      { clear: right; @include clearfix(); }
 }
 
 .downloadStoryAudio
@@ -1305,15 +1319,8 @@ $featuredShowDivBarHeight: 84px;
   @include clearfix();
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
+  @include respond-to(handhelds)      { display: none; }
 }
-
-
-
-
-// -----------------------------------------------------------------------------------------
-// STORY AUDIO PLAYER - LONG
-// -----------------------------------------------------------------------------------------
 
 
 .storyAudioPlayer
@@ -1352,6 +1359,7 @@ $featuredShowDivBarHeight: 84px;
     margin-top: 14px;
     width: 194px;
     height: 20px;
+    @include respond-to(handhelds)      { margin-left: 65px;  }
   }
 
   .storyDescription {
@@ -1363,11 +1371,20 @@ $featuredShowDivBarHeight: 84px;
     width: 194px;
     height: 20px;
     margin-left: 74px;
+    @include respond-to(handhelds)      { margin-left: 65px;  }
   }
 
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
+  @include respond-to(handhelds)      { 
+    @include clearfix(); 
+    clear: both; 
+    float: left; 
+    margin: 10px;
+    width: 300px;
+    border-top: 1px solid $grayBorder;
+    border-right: 1px solid $grayBorder;
+  }
 }
 
 
@@ -1446,3 +1463,4 @@ $featuredShowDivBarHeight: 84px;
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
 }
+
