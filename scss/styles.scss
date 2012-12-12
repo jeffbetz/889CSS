@@ -108,13 +108,13 @@ $break-large: 1024px;
 
 
 
-
-
 // -----------------------------------------------------------------------------------------
 // HEADER
 // -----------------------------------------------------------------------------------------
 
-.headerBG
+
+// used to be headerBG
+#zone-branding-wrapper
 {
   width: 100%;
   @include background(url(../images/texturebg.png));
@@ -174,7 +174,9 @@ input
   // maybe display:none for mobile
 }
 
-.brownBar
+
+// previously .brownBar
+#zone-header-wrapper
 {
   width: 100%;
   background-color: $darkBrown;
@@ -215,42 +217,58 @@ input
   @include respond-to(handhelds)      {  }
 }
 
-.mainNav
-{
-  color: $mainNavText;
-  @include PeriodicoDisplay();
-  display: inline;
-  padding: 6px 12px;
-  overflow: visible;
-  a { color: $mainNavText; text-decoration:none; height: 58px; }
-  @include respond-to(wide-screens)   
-  { 
-    font-size: 17px;
-    border-right: 1px dashed $navDividingLine;
-    line-height: 58px;
-    height: 150px;
-    &:last-child { border-right: none; };
-  }
-  @include respond-to(medium-screens) 
-  { 
-    line-height: 40px;font-size: 14px; border-right: 1px dashed $navDividingLine; line-height: 40px; height: 40px;
-    &:last-child { border-right: none; }; 
-  }
-  @include respond-to(handhelds)      { font-size: 17px; display: none;}
+// overwriting drupal classes
+#zone-menu-wrapper{
+  @include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
+
 }
 
-.mainNavSelected
+
+// used to be .mainNav
+#main-menu
 {
-  background-color: rgba(white, 1); // Old browsers
-  overflow: visible;
-  background-origin: border-box;
-  padding: 12px 15px 20px 15px;
-  margin: 0 -12px 0 -16px;
-  @include filter-gradient(rgba(gray, 0.5), rgba(gray, 0.5), vertical); // IE6-9
-  @include respond-to(wide-screens)   { @include background(url(../images/selectedNavArrow.png) no-repeat center 56px, linear-gradient(top, rgba(white, 0.94) 0%, rgba(white, 0.99) 10%, rgba(white, 0.0) 50%, rgba(white, 1.0) 83%, rgba(white, 0.0) 83%)); padding: 18px 15px 32px 15px; margin: 0 -12px 0 -16px; }
-  @include respond-to(medium-screens) { @include background(url(../images/selectedNavArrow.png) no-repeat center 39px, linear-gradient(top, rgba(white, 0.94) 0%, rgba(white, 0.99) 10%, rgba(white, 0.0) 50%, rgba(white, 1.0) 83%, rgba(white, 0.0) 83%)); padding: 12px 15px 20px 15px; margin: 0 -12px 0 -16px;  }
-  @include respond-to(handhelds)      {  }
+  ul { 
+  }
+
+  li {
+    @include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
+    color: $mainNavText;
+    @include PeriodicoDisplay();
+    display: inline;
+    padding: 6px 12px;
+    overflow: visible;
+    margin-right: 0px;
+    a { color: $mainNavText; text-decoration:none; height: 58px; }
+    
+    @include respond-to(wide-screens) { 
+      font-size: 17px;
+      border-right: 1px dashed $navDividingLine;
+      line-height: 58px;
+      height: 150px;
+      &:last-child { border-right: none; };
+    }
+    
+    @include respond-to(medium-screens) { 
+      line-height: 40px;font-size: 14px; border-right: 1px dashed $navDividingLine; line-height: 40px; height: 40px;
+      &:last-child { border-right: none; }; 
+    }
+    
+    @include respond-to(handhelds)      { font-size: 17px; display: none;}
+    
+    .active {
+      background-color: rgba(white, 1); // Old browsers
+      overflow: visible;
+      background-origin: border-box;
+      padding: 12px 15px 20px 15px;
+      margin: 0 -12px 0 -12px;
+      @include filter-gradient(rgba(gray, 0.5), rgba(gray, 0.5), vertical); // IE6-9
+      @include respond-to(wide-screens)   { @include background(url(../images/selectedNavArrow.png) no-repeat center 56px, linear-gradient(top, rgba(white, 0.94) 0%, rgba(white, 0.99) 10%, rgba(white, 0.0) 50%, rgba(white, 1.0) 83%, rgba(white, 0.0) 83%)); padding: 18px 15px 32px 15px; margin: 0 -12px 0 -12px; }
+      @include respond-to(medium-screens) { @include background(url(../images/selectedNavArrow.png) no-repeat center 39px, linear-gradient(top, rgba(white, 0.94) 0%, rgba(white, 0.99) 10%, rgba(white, 0.0) 50%, rgba(white, 1.0) 83%, rgba(white, 0.0) 83%)); padding: 12px 15px 20px 15px; margin: 0 -12px 0 -12px;  }
+      @include respond-to(handhelds)      {  }
+    }
+  }
 }
+
 
 .subNavBG
 {
@@ -970,7 +988,8 @@ $featuredShowDivBarHeight: 84px;
 // -----------------------------------------------------------------------------------------
 
 
-.tabbedNav
+previously .tabbedNav
+#secondary-menu
 { 
   @include horizontal-list();
   margin-bottom: 20px;
