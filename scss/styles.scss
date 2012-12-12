@@ -988,24 +988,37 @@ $featuredShowDivBarHeight: 84px;
 // -----------------------------------------------------------------------------------------
 
 
-previously .tabbedNav
+// previously .tabbedNav
 #secondary-menu
 { 
-  @include horizontal-list();
-  margin-bottom: 20px;
+  @include inline-block-list();
+  display: inline-block;
+  margin-bottom: 0px;
+  clear: left;
+  // border-top: 36px solid $darkBrown;
+  // background-color: white;
   
   li {
+    margin-right: 0px;
+    // &.last { padding-right: 25px };
+    // &.first { padding-left: 25px };
+    background-color: white;
     @include Calibri();
     font-weight: bold;
     text-transform: lowercase;
     color: $brownText;
-    a { color: $brownText; text-decoration:none; }
-    @include background(url(../images/dotted-bottom-nav-line.png) repeat-x center bottom);
+    a { 
+      color: $brownText; text-decoration:none; 
+      .active { 
+        @include background(none); 
+      }
+    }
+    @include background( url(../images/dotted-bottom-nav-line.png) repeat-x center bottom, linear-gradient(top, white, white));
     padding: 0px 25px;
     height: 61px;
     line-height: 48px;
     @include respond-to(wide-screens)   { font-size: 13px; }
-    @include respond-to(medium-screens) {  }
+    @include respond-to(medium-screens) { display: none; }
     @include respond-to(handhelds)      {  }
 
   }
@@ -1013,8 +1026,8 @@ previously .tabbedNav
   .active{
     // border-bottom: none;
     color: $blueText;
-    a { color: $blueText; text-decoration:none; }
-    @include background( url(../images/dotted-arrow-marker.png) no-repeat center bottom, url(../images/dotted-bottom-nav-line.png) repeat-x center bottom);
+    a { color: $blueText; text-decoration:none; @include background(none); }
+    @include background( url(../images/dotted-arrow-marker.png) no-repeat center bottom, url(../images/dotted-bottom-nav-line.png) repeat-x center bottom, linear-gradient(top, white, white));
     overflow: visible;
   
   }

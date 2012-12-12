@@ -1486,78 +1486,78 @@ input {
 }
 
 /* line 993, ../scss/styles.scss */
-previously .tabbedNav
 #secondary-menu {
   margin: 0;
   padding: 0;
   border: 0;
   overflow: hidden;
   *zoom: 1;
-  margin-bottom: 20px;
+  display: inline-block;
+  margin-bottom: 0px;
+  clear: left;
 }
-/* line 60, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-previously .tabbedNav
+/* line 49, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_inline-block-list.scss */
 #secondary-menu li {
   list-style-image: none;
   list-style-type: none;
   margin-left: 0;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
   white-space: nowrap;
-  display: inline;
-  float: left;
-  padding-left: 4px;
-  padding-right: 4px;
 }
-/* line 48, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-previously .tabbedNav
-#secondary-menu li:first-child, previously .tabbedNav
-#secondary-menu li.first {
-  padding-left: 0;
-}
-/* line 49, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-previously .tabbedNav
-#secondary-menu li:last-child {
-  padding-right: 0;
-}
-/* line 50, ../../../../../../../Applications/Scout.app/Contents/Resources/vendor/gems/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/typography/lists/_horizontal-list.scss */
-previously .tabbedNav
-#secondary-menu li.last {
-  padding-right: 0;
-}
-/* line 997, ../scss/styles.scss */
-previously .tabbedNav
+/* line 1001, ../scss/styles.scss */
 #secondary-menu li {
+  margin-right: 0px;
+  background-color: white;
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
   text-transform: lowercase;
   color: #4f3700;
-  background: url(../images/dotted-bottom-nav-line.png) repeat-x center bottom;
+  background: url(../images/dotted-bottom-nav-line.png) repeat-x center bottom, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #ffffff));
+  background: url(../images/dotted-bottom-nav-line.png) repeat-x center bottom, -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background: url(../images/dotted-bottom-nav-line.png) repeat-x center bottom, -moz-linear-gradient(top, #ffffff, #ffffff);
+  background: url(../images/dotted-bottom-nav-line.png) repeat-x center bottom, linear-gradient(top, #ffffff, #ffffff);
   padding: 0px 25px;
   height: 61px;
   line-height: 48px;
 }
-/* line 1002, ../scss/styles.scss */
-previously .tabbedNav
+/* line 1010, ../scss/styles.scss */
 #secondary-menu li a {
   color: #4f3700;
   text-decoration: none;
 }
+/* line 1012, ../scss/styles.scss */
+#secondary-menu li a .active {
+  background: none;
+}
 @media only screen and (min-width: 1024px) {
-  /* line 997, ../scss/styles.scss */
-  previously .tabbedNav
+  /* line 1001, ../scss/styles.scss */
   #secondary-menu li {
     font-size: 13px;
   }
 }
-/* line 1013, ../scss/styles.scss */
-previously .tabbedNav
+@media only screen and (min-width: 421px) and (max-width: 1023px) {
+  /* line 1001, ../scss/styles.scss */
+  #secondary-menu li {
+    display: none;
+  }
+}
+/* line 1026, ../scss/styles.scss */
 #secondary-menu .active {
   color: #1a6c99;
-  background: url(../images/dotted-arrow-marker.png) no-repeat center bottom, url(../images/dotted-bottom-nav-line.png) repeat-x center bottom;
+  background: url(../images/dotted-arrow-marker.png) no-repeat center bottom, url(../images/dotted-bottom-nav-line.png) repeat-x center bottom, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ffffff), color-stop(100%, #ffffff));
+  background: url(../images/dotted-arrow-marker.png) no-repeat center bottom, url(../images/dotted-bottom-nav-line.png) repeat-x center bottom, -webkit-linear-gradient(top, #ffffff, #ffffff);
+  background: url(../images/dotted-arrow-marker.png) no-repeat center bottom, url(../images/dotted-bottom-nav-line.png) repeat-x center bottom, -moz-linear-gradient(top, #ffffff, #ffffff);
+  background: url(../images/dotted-arrow-marker.png) no-repeat center bottom, url(../images/dotted-bottom-nav-line.png) repeat-x center bottom, linear-gradient(top, #ffffff, #ffffff);
   overflow: visible;
 }
-/* line 1016, ../scss/styles.scss */
-previously .tabbedNav
+/* line 1029, ../scss/styles.scss */
 #secondary-menu .active a {
   color: #1a6c99;
   text-decoration: none;
+  background: none;
 }
