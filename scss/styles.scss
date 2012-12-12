@@ -17,7 +17,8 @@ $tan: #E6E3DC;
 $blackPicOverlay: rgba(#231F20, 0.6);
 $grayBorder: #d3d2d2;
 $socialBlockColor: #F4F4F4;
-$lightGradientBottom: #f5f5f5;
+$lightGradientBottom: #f5f5f5; 
+$buttonGradientBottom: #e5e2da;
 $brownLine: #92896b;
 
 @import "compass/css3/border-radius"; 
@@ -1020,6 +1021,7 @@ $featuredShowDivBarHeight: 84px;
     @include respond-to(wide-screens)   { font-size: 13px; }
     @include respond-to(medium-screens) { display: none; }
     @include respond-to(handhelds)      {  }
+    background-origin: border-box;
 
   }
 
@@ -1034,3 +1036,72 @@ $featuredShowDivBarHeight: 84px;
 
 }
 
+
+
+
+
+
+// -----------------------------------------------------------------------------------------
+// ADS
+// -----------------------------------------------------------------------------------------
+
+.expandButton
+{
+  @include PeriodicoDisplay();
+  font-style: italic;
+  font-weight: 100;
+  color: $brownText;
+  @include border-radius(5px);
+  width: 95px;
+  height: 27px;
+  line-height: 27px;
+  padding-left: 10px;
+  border: 1px solid $grayBorder;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  @include box-sizing(border-box);
+  @include background(url(../images/arrow-down.png) no-repeat 90% 50%, linear-gradient(top, $buttonGradientBottom, white));
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.closeButton
+{
+  @include PeriodicoDisplay();
+  font-style: italic;
+  font-weight: 100;
+  color: $brownText;
+  @include border-radius(5px);
+  width: 95px;
+  height: 27px;
+  line-height: 27px;
+  padding-left: 22px;
+  border: 1px solid $grayBorder;
+  position: absolute;
+  @include box-sizing(border-box);
+  top: 10px;
+  right: 10px;
+  // display: none;
+  @include background(url(../images/arrow-up.png) no-repeat 90% 50%, linear-gradient(top, $buttonGradientBottom, white));
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+// 440 tall 980 120
+
+.expandMegaAd
+{
+  border: 1px solid $grayBorder;
+  width: 980px;
+  height: 120px;
+  position: relative;
+  cursor: pointer;
+  @include single-transition(all);
+  @include background( url(../images/placeholder-mega-sponsor.png) no-repeat top center );
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
