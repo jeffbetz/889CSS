@@ -1572,14 +1572,16 @@ input {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  width: 95px;
+  width: 80px;
   height: 27px;
   line-height: 27px;
   padding-left: 10px;
   border: 1px solid #d3d2d2;
   position: absolute;
+  text-transform: lowercase;
   top: 10px;
   right: 10px;
+  font-size: 13px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -1589,33 +1591,35 @@ input {
   background: url(../images/arrow-down.png) no-repeat 90% 50%, linear-gradient(top, #e5e2da, #ffffff);
 }
 
-/* line 1071, ../scss/styles.scss */
+/* line 1073, ../scss/styles.scss */
 .closeButton {
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
   font-style: italic;
   font-weight: 100;
   color: #4f3700;
+  text-transform: lowercase;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  width: 95px;
+  width: 80px;
   height: 27px;
   line-height: 27px;
-  padding-left: 22px;
+  padding-left: 18px;
   border: 1px solid #d3d2d2;
   position: absolute;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  font-size: 15px;
   top: 10px;
   right: 10px;
-  background: url(../images/arrow-up.png) no-repeat 90% 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e5e2da), color-stop(100%, #ffffff));
-  background: url(../images/arrow-up.png) no-repeat 90% 50%, -webkit-linear-gradient(top, #e5e2da, #ffffff);
-  background: url(../images/arrow-up.png) no-repeat 90% 50%, -moz-linear-gradient(top, #e5e2da, #ffffff);
-  background: url(../images/arrow-up.png) no-repeat 90% 50%, linear-gradient(top, #e5e2da, #ffffff);
+  background: url(../images/arrow-up.png) no-repeat 85% 50%, -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e5e2da), color-stop(100%, #ffffff));
+  background: url(../images/arrow-up.png) no-repeat 85% 50%, -webkit-linear-gradient(top, #e5e2da, #ffffff);
+  background: url(../images/arrow-up.png) no-repeat 85% 50%, -moz-linear-gradient(top, #e5e2da, #ffffff);
+  background: url(../images/arrow-up.png) no-repeat 85% 50%, linear-gradient(top, #e5e2da, #ffffff);
 }
 
-/* line 1096, ../scss/styles.scss */
+/* line 1100, ../scss/styles.scss */
 .expandMegaAd {
   border: 1px solid #d3d2d2;
   width: 980px;
@@ -1626,4 +1630,30 @@ input {
   -moz-transition: all 1s;
   transition: all 1s;
   background: url(../images/placeholder-mega-sponsor.png) no-repeat top center;
+}
+
+/* line 1122, ../scss/styles.scss */
+.loadMoreButton {
+  font-family: "Periodico Display", Helvetica, Arial, sans-serif;
+  font-style: italic;
+  font-weight: 100;
+  color: #4f3700;
+  text-transform: lowercase;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 227px;
+  height: 50px;
+  text-align: center;
+  margin: 15px auto;
+  padding: 10px;
+  border: 2px solid #d3d2d2;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 25px;
+  background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #e5e2da), color-stop(100%, #ffffff));
+  background: -webkit-linear-gradient(top, #e5e2da, #ffffff);
+  background: -moz-linear-gradient(top, #e5e2da, #ffffff);
+  background: linear-gradient(top, #e5e2da, #ffffff);
 }

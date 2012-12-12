@@ -1042,7 +1042,7 @@ $featuredShowDivBarHeight: 84px;
 
 
 // -----------------------------------------------------------------------------------------
-// ADS
+// MEGA AD
 // -----------------------------------------------------------------------------------------
 
 .expandButton
@@ -1052,14 +1052,16 @@ $featuredShowDivBarHeight: 84px;
   font-weight: 100;
   color: $brownText;
   @include border-radius(5px);
-  width: 95px;
+  width: 80px;
   height: 27px;
   line-height: 27px;
   padding-left: 10px;
   border: 1px solid $grayBorder;
   position: absolute;
+  text-transform: lowercase;
   top: 10px;
   right: 10px;
+  font-size: 13px;
   @include box-sizing(border-box);
   @include background(url(../images/arrow-down.png) no-repeat 90% 50%, linear-gradient(top, $buttonGradientBottom, white));
   @include respond-to(wide-screens)   {  }
@@ -1073,24 +1075,26 @@ $featuredShowDivBarHeight: 84px;
   font-style: italic;
   font-weight: 100;
   color: $brownText;
+  text-transform: lowercase;
   @include border-radius(5px);
-  width: 95px;
+  width: 80px;
   height: 27px;
   line-height: 27px;
-  padding-left: 22px;
+  padding-left: 18px; 
   border: 1px solid $grayBorder;
   position: absolute;
   @include box-sizing(border-box);
+  font-size: 15px;
   top: 10px;
   right: 10px;
   // display: none;
-  @include background(url(../images/arrow-up.png) no-repeat 90% 50%, linear-gradient(top, $buttonGradientBottom, white));
+  @include background(url(../images/arrow-up.png) no-repeat 85% 50%, linear-gradient(top, $buttonGradientBottom, white));
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
 }
 
-// 440 tall 980 120
+
 
 .expandMegaAd
 {
@@ -1101,6 +1105,39 @@ $featuredShowDivBarHeight: 84px;
   cursor: pointer;
   @include single-transition(all);
   @include background( url(../images/placeholder-mega-sponsor.png) no-repeat top center );
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+
+
+
+// -----------------------------------------------------------------------------------------
+// LOAD MORE BUTTON
+// -----------------------------------------------------------------------------------------
+
+
+.loadMoreButton
+{
+   @include PeriodicoDisplay();
+  font-style: italic;
+  font-weight: 100;
+  color: $brownText;
+  text-transform: lowercase;
+  @include border-radius(10px);
+  width: 227px;
+  height: 50px;
+  text-align: center;
+  // margin-top: 15px;
+  margin: 15px auto;
+  // line-height: 50px;
+  padding: 10px;
+  border: 2px solid $grayBorder;
+  @include box-sizing(border-box);
+  font-size: 25px;
+  // display: none;
+  @include background(linear-gradient(top, $buttonGradientBottom, white));
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
