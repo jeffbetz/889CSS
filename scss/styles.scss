@@ -20,6 +20,7 @@ $socialBlockColor: #F4F4F4;
 $lightGradientBottom: #f5f5f5; 
 $buttonGradientBottom: #e5e2da;
 $brownLine: #92896b;
+$socialLinkText: #404041;
 
 @import "compass/css3/border-radius"; 
 @import "compass/css3/box-shadow";
@@ -63,6 +64,10 @@ $break-large: 1024px;
 
 @mixin Calibri(){
   font-family: "Calibri", Helvetica, Arial, sans-serif;
+}
+
+@mixin Helvetica(){
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @mixin txt($thisColor: #333333,$thisSize: 14, $thisLineHeight: auto, $thisAlign: left) {
@@ -400,6 +405,7 @@ input
 {
   @include PeriodicoDisplay();
   @include horizontal-list();
+
   font-style: italic;
   color: $brownText;
   font-size: 14px;
@@ -409,8 +415,16 @@ input
     border-right: dashed 1px $lightGrayImageBorder;
     &:last-child { border-right: none; };
     a { color: $brownText; text-decoration:none; };
-    &.footerUtilityDonate {color: red; @include background(url(../images/donate-heart.png) no-repeat 17px 11px); padding-left: 36px;}; 
+    &.footerUtilityDonate { @include background(url(../images/donate-heart.png) no-repeat 17px 11px); padding-left: 36px;}; 
   }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.footerUtilityNavWrapper
+{
+  margin: 0 auto;
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
@@ -611,16 +625,19 @@ $footerRowSpacing: 30px;
 .adColumnRight
 {
   background-color: $tan;
-  padding: 8px;
-  width: 308px;
+  padding: 4px;
   // @include background-origin(); 
-  @include box-sizing(border-box);
-  img { margin-bottom: 8px; 
+
+  // @include box-sizing(border-box);
+  img { 
+    margin-bottom: 0px; 
+    padding: 4px;
+    @include respond-to(handhelds)  { display: block; margin: 0 auto;  }
     &:last-child { margin-bottom: 0px;  };
   }
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
+  @include respond-to(wide-screens)   { width: 315px; }
+  @include respond-to(medium-screens) { width: 634px; }
+  @include respond-to(handhelds)      { width: 100%;  }
 }
 
 
@@ -1042,6 +1059,37 @@ $featuredShowDivBarHeight: 84px;
 
 
 // -----------------------------------------------------------------------------------------
+// SPONSOR GRID
+// -----------------------------------------------------------------------------------------
+
+.learnAboutSponsorText
+{
+  @include Calibri();
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+  text-transform: lowercase;
+  text-align: center;
+  color: $blueText;
+  a { color: $blueText; text-decoration:none; }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.sponsorGridWrapper
+{
+  img { margin: 0 auto; display: block; }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+
+
+
+
+// -----------------------------------------------------------------------------------------
 // MEGA AD
 // -----------------------------------------------------------------------------------------
 
@@ -1106,8 +1154,8 @@ $featuredShowDivBarHeight: 84px;
   @include single-transition(all);
   @include background( url(../images/placeholder-mega-sponsor.png) no-repeat top center );
   @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
+  @include respond-to(medium-screens) { display: none; }
+  @include respond-to(handhelds)      { display: none; }
 }
 
 
@@ -1133,11 +1181,43 @@ $featuredShowDivBarHeight: 84px;
   margin: 15px auto;
   // line-height: 50px;
   padding: 10px;
+  cursor: pointer;
   border: 2px solid $grayBorder;
   @include box-sizing(border-box);
   font-size: 25px;
   // display: none;
   @include background(linear-gradient(top, $buttonGradientBottom, white));
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+
+
+
+
+// -----------------------------------------------------------------------------------------
+// SOCIAL LINKS ON TOP OF STORY PAGES
+// -----------------------------------------------------------------------------------------
+
+.socialStoryLinkTextWrapper
+{
+  height: 41px;
+  border-top: 1px dashed $grayBorder;
+  border-bottom: 1px dashed $grayBorder;
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.socialStoryLinkText
+{
+  color: $socialLinkText;
+  @include Helvetica();
+  font-size: 11px;
+  line-height: 41px;
+  a { color: $socialLinkText; text-decoration:none; }
+  &:hover { color: $blueText; text-decoration: none; };
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
