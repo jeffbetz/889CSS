@@ -961,7 +961,7 @@ $featuredShowDivBarHeight: 84px;
 // -----------------------------------------------------------------------------------------
 
 
-.mainStoryHeading // this could be an h1
+.mainStoryHeading, .node-title, #page-title // this could be an h1
 {
   color: $grayText;
   a { color: $grayText; text-decoration:none; }
@@ -972,6 +972,8 @@ $featuredShowDivBarHeight: 84px;
   @include respond-to(medium-screens) { font-size: 32px; line-height: 30px; }
   @include respond-to(handhelds)      { font-size: 35px; line-height: 32px; }
 }
+
+
 
 .mainStoryBlurbText
 {
@@ -985,7 +987,7 @@ $featuredShowDivBarHeight: 84px;
   @include respond-to(handhelds)      { font-size: 14px; line-height: 16px; }
 }
 
-.mainStoryBodyText
+.mainStoryBodyText, .field-items
 {
   color: $grayText;
   font-weight: 100;
@@ -1222,3 +1224,137 @@ $featuredShowDivBarHeight: 84px;
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
 }
+
+
+
+// -----------------------------------------------------------------------------------------
+// BREADCRUMBS
+// -----------------------------------------------------------------------------------------
+
+
+.breadcrumb
+{
+  @include Calibri();
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 36px;
+  color: $brownText;
+  text-transform: lowercase;
+  a { 
+    color: $brownText; text-decoration:none; 
+    &:hover { color: $blueText; text-decoration: none; };
+    &:last-child { color: $blueText; text-decoration: none; };
+    // display: block;
+    padding: 0 5px;
+  }
+  @include respond-to(wide-screens)   { display: none; }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+
+
+// -----------------------------------------------------------------------------------------
+// STORY DATE AND AUTHOR
+// -----------------------------------------------------------------------------------------
+
+.topAudioStoryWrapper
+{
+  border: 1px solid $grayBorder;
+  width: 640px;
+  height: 63px;
+  @include box-sizing(border-box);
+
+  img {
+    float: left;
+    display: block;
+    margin: 3px;
+  }
+
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.storyDate, .submitted
+{
+  @include Calibri();
+  float: left;
+  width: 130px;
+  margin: 10px;
+  font-weight: bold;
+  font-size: 13px;
+  color: $brownText;
+  a { color: $blueText; text-decoration:none; }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.downloadStoryAudio
+{
+  border-left: 1px solid $grayBorder;
+  border-bottom: 1px solid $grayBorder;
+  height: 62px;
+  width: 60px;
+  @include box-sizing(border-box);
+  // background-color: red;
+  @include background( url(../images/icon-download.png) no-repeat center, url(../images/texturebg.png));
+
+  float: right;
+  @include clearfix();
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
+.storyAudioPlayer
+{
+  border-left: 1px solid $grayBorder;
+  border-bottom: 1px solid $grayBorder;
+  height: 62px;
+  width: 360px;
+  @include box-sizing(border-box);
+  // background-color: red;
+  @include background( url(../images/texturebg.png));
+  float: right;
+  @include clearfix();
+
+  .rightMusicArrow {
+    float: right;
+    display: block;
+    margin: 11px 12px 0px 0px;
+  }
+  
+  .leftMusicArrow {
+    float: right;
+    display: block;
+    margin: 12px 0px 0px 0px;
+  }
+
+  .storyName {
+    color: $grayText;
+    a { color: $grayText; text-decoration:none; }
+    @include Calibri();
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 74px;
+    margin-top: 14px;
+  }
+
+  .storyDescription {
+    color: $grayText;
+    a { color: $grayText; text-decoration:none; }
+    @include PeriodicoText();
+    font-weight: 100;
+    font-size: 12px;
+    width: 194px;
+    height: 20px;
+    margin-left: 74px;
+  }
+
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+
