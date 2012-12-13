@@ -37,7 +37,7 @@ $socialLinkText: #404041;
 /* support */
 $experimental-support-for-khtml: false;
 $experimental-support-for-opera: false;
-$experimental-support-for-microsoft: false;
+$experimental-support-for-microsoft: true;
 
 $break-small: 420px; // should be 320px
 $break-large: 1024px;
@@ -123,7 +123,7 @@ $break-large: 1024px;
 #zone-branding-wrapper
 {
   width: 100%;
-  @include background(url(../images/texturebg.png));
+  @include background(url(../images/), url(../images/texturebg.png));
   @include respond-to(wide-screens)   { height: 162px; }
   @include respond-to(medium-screens) { height: 142px; }
   @include respond-to(handhelds)      { height: 67px; }
@@ -1464,3 +1464,14 @@ $featuredShowDivBarHeight: 84px;
   @include respond-to(handhelds)      {  }
 }
 
+.testClass {
+  @include background-image(url(../images/arrow-down.png), linear-gradient(top, black, white))
+}
+
+// background-color: #333;
+//   background-image: -webkit-gradient(linear, left top, left bottom, from(#333), to(#000)); /* Saf4+, Chrome */
+//   background-image: -webkit-linear-gradient(top, #333, #000); /* Chrome 10+, Saf5.1+, iOS 5+ */
+//   background-image:    -moz-linear-gradient(top, #333, #000); /* FF3.6 */
+//   background-image:     -ms-linear-gradient(top, #333, #000); /* IE10 */
+//   background-image:      -o-linear-gradient(top, #333, #000); /* Opera 11.10+ */
+//   background-image:         linear-gradient(to bottom, #333, #000);
