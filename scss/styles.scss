@@ -130,7 +130,7 @@ $break-large: 1024px;
   @include respond-to(handhelds)      { height: 67px; }
 }
 
-.dashedBorder
+.dashedBorder, #zone-branding-wrapper .block-openx img
 {
   padding: 4px;
   border: dashed 1px $lightGrayImageBorder;
@@ -150,20 +150,42 @@ $break-large: 1024px;
 }
 
 // for the searchbox
-input
+.search-wrapper
 {
-  @include size(218px, 28px);
+  @include size(100%, 28px);
   border: 1px solid $tan;
   background-color: $searchBox;
   // @include opacity(0.95);
   padding-left: 10px; 
   padding-right: 10px;
-  @include background(url(../images/searchIcon.png) no-repeat right center, linear-gradient(top, $searchBox, $searchBox) );
-  -webkit-background-origin: content-box;
-  background-origin: content-box;
+ 
   @include Calibri();
   color: $searchBoxText;
   font-size: 14px;
+  display: inline-block !important;
+  margin: 0;
+  padding: 5px;
+
+#edit-search-block-form--2{
+    width:85%;
+  }
+#edit-submit {
+  border:none;
+}
+}
+
+#search-block-form input.form-submit, #search-form input.form-submit {
+     @include background(url(../images/searchIcon.png) no-repeat right center, linear-gradient(top, $searchBox, $searchBox) );
+    -webkit-background-origin: content-box;
+    background-origin: content-box;
+    cursor: pointer;
+    height: 27px;
+    margin-left: 0;
+    margin-right: 0;
+    overflow: hidden;
+    padding: 0;
+    text-indent: -9999px;
+    width: 27px;
 }
 
 .tanOverlay
@@ -183,7 +205,7 @@ input
 
 
 // previously .brownBar
-#zone-header-wrapper
+.brownbar
 {
   width: 100%;
   background-color: $darkBrown;
@@ -232,12 +254,12 @@ input
 
 
 // used to be .mainNav
-#main-menu
+#megamenu-main-menu
 {
   ul { 
   }
 
-  li {
+  li.megamenu-parent {
     @include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
     color: $mainNavText;
     @include PeriodicoDisplay();
@@ -277,7 +299,7 @@ input
 }
 
 
-.subNavBG
+#megamenu-main-menu ul.megamenu-slots-columnar
 {
   width: 100%;
   background-color: $tanOverlay;
@@ -288,7 +310,17 @@ input
   @include respond-to(handhelds)      {  } 
 }
 
-.subNavText
+
+
+#megamenu-main-menu ul li ul
+{
+  border-right: 1px dashed $navDividingLine;
+  border-left: 1px dashed $navDividingLine;
+  width: 370px;
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+  li
 {
   @include Calibri();
   @include horizontal-list();
@@ -301,15 +333,6 @@ input
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
 }
-
-.subNavTextWrapper
-{
-  border-right: 1px dashed $navDividingLine;
-  border-left: 1px dashed $navDividingLine;
-  width: 370px;
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
 }
 
 
@@ -321,7 +344,7 @@ input
 // -----------------------------------------------------------------------------------------
 
 
-.subNavDropDownSectionTitle
+.megamenu-slot-title
 { 
   color: $blueText;
   font-size: 13px;
@@ -411,6 +434,8 @@ input
   color: $brownText;
   font-size: 14px;
   line-height: 16px;
+  margin:0 auto;
+  
   li {   
     padding: 10px 18px;
     border-right: dashed 1px $lightGrayImageBorder;
@@ -431,7 +456,7 @@ input
   @include respond-to(handhelds)      {  }
 }
 
-.footerUtilityWrapper
+.footerutilitywrapper
 {
   @include background(url(../images/texturebg.png));
   padding: 15px;
@@ -470,17 +495,17 @@ input
   @include respond-to(handhelds)      { display: block; }
 }
 
-.footerNavWrapper
+.footernavwrapper
 { 
   @include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../images/texturebg.png));
   padding: 30px 15px;
   // height: 500px;
   @include clearfix();
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      { border-bottom: dashed 1px $lightGrayImageBorder; padding: 0;}
+  @include respond-to(wide-screens)   { }
+  @include respond-to(medium-screens) { }
+  @include respond-to(handhelds)      { }
 
-  h3
+  h2 
   {
     color: $brownText;
     @include ellipsis();
@@ -489,9 +514,9 @@ input
     font-style: italic;
     font-weight: medium;
     padding-bottom: 4px;
-    @include respond-to(wide-screens)   { font-size: 17px; line-height: 20px; }
-    @include respond-to(medium-screens) { font-size: 14px; line-height: 17px; }
-    @include respond-to(handhelds)      { font-size: 14px; line-height: 35px; padding-top: 5px; padding-left: 15px; @include background(url(../images/texturebg.png)); background-origin: content-box;}
+    @include respond-to(wide-screens)   { border-bottom: dashed 1px $lightGrayImageBorder; padding: 0; font-size: 17px; line-height: 20px; }
+    @include respond-to(medium-screens) { border-bottom: dashed 1px $lightGrayImageBorder; padding: 0; font-size: 14px; line-height: 17px; }
+    @include respond-to(handhelds)      { border-bottom: dashed 1px $lightGrayImageBorder; padding: 0; font-size: 14px; line-height: 35px; padding-top: 5px; padding-left: 15px; @include background(url(../images/texturebg.png)); background-origin: content-box;}
   }
 
   li
@@ -512,30 +537,30 @@ input
 }
 
 // widths for fat footer sections.
-.width6Wide {width: 16%; float: left; }
-.width5Wide {width: 20%; float: left; }
-.width4Wide {width: 25%; float: left; }
-.width3Wide {width: 32%; float: left; }
-.width2Wide {width: 50%; float: left; }
-.width1Wide {width: 100%; float: left; }
+.width6wide {width: 16%; float: left; }
+.width5wide {width: 20%; float: left; }
+.width4wide {width: 25%; float: left; }
+.width3wide {width: 32%; float: left; }
+.width2wide {width: 50%; float: left; }
+.width1wide {width: 100%; float: left; }
 
 
 
 @include respond-to(wide-screens)   
 {  
-  .col1Wide {float: left; width: 20%; }
-  .col2Wide {float: left; width: 20%*2;}
-  .col3Wide {float: left; width: 20%*3;}
-  .col4Wide {float: left; width: 20%*4;}
-  .col5Wide {float: left; width: 20%*5;}
+  .col1wide {float: left; width: 20%; }
+  .col2wide {float: left; width: 20%*2;}
+  .col3wide {float: left; width: 20%*3;}
+  .col4wide {float: left; width: 20%*4;}
+  .col5wide {float: left; width: 20%*5;}
 }
 @include respond-to(medium-screens) 
 {  
-  .col1Wide {float: left; width: 32%; }
-  .col2Wide {float: left; width: 32%*2;}
-  .col3Wide {float: left; width: 32%*3;}
-  .col4Wide {float: left; width: 32%*4;}
-  .col5Wide {float: left; width: 32%*5;}
+  .col1wide {float: left; width: 32%; }
+  .col2wide {float: left; width: 32%*2;}
+  .col3wide {float: left; width: 32%*3;}
+  .col4wide {float: left; width: 32%*4;}
+  .col5wide {float: left; width: 32%*5;}
 }
 
 .footerNavListWrapper
@@ -554,7 +579,7 @@ input
   @include respond-to(handhelds)      {  }
 }
 
-.footerNavListText
+.region-footer-second, .region-footer-third
 {
   @include Calibri();
   @include no-bullet();
@@ -564,8 +589,8 @@ input
   padding-top: 8px;
   color: $darkBrown;
   a { color: $darkBrown; text-decoration:none; }
-  li {@include ellipsis(); padding-right: 3px;}
   ul { float: left; display: block; }
+  li {@include ellipsis(); padding-right: 3px; float:left; width:140px;}
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
@@ -735,16 +760,14 @@ $featuredShowDivBarHeight: 84px;
 
 .storyBlock
 {
-  width: 324px;
-  height: 340px;
   border: 1px solid $grayBorder;
   background-color: white;
   border-top: 6px solid $tan;
   // padding: 10px;
   float: left;
   @include clearfix();
-  @include box-sizing(border-box);
-  @include respond-to(wide-screens)   { margin-right: 10px; }
+  // @include box-sizing(border-box);
+  @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
 
@@ -752,7 +775,10 @@ $featuredShowDivBarHeight: 84px;
     padding: 10px;
   }
   
-  
+  .grid-4 {
+    margin:0;
+  }
+
   .sectionTitle {
     margin-bottom: 3px;
     width: 45%;
@@ -1056,7 +1082,9 @@ $featuredShowDivBarHeight: 84px;
 
 }
 
-
+.zone-menu-secondary-wrapper {
+  @include background( url(../images/dotted-bottom-nav-line.png) repeat-x center bottom, linear-gradient(top, white, white));
+}
 
 
 
@@ -1563,3 +1591,10 @@ input[type="submit"] {
   // display: none;
   @include background(linear-gradient(top, $buttonGradientBottom, white));
   }
+
+.logo-img {
+  display: block;
+  float:none;
+  margin: 0 auto;
+  width: 149px;
+}
