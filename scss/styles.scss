@@ -1413,46 +1413,6 @@ $featuredShowDivBarHeight: 84px;
     cursor: pointer;
   }
 
-  .storyName {
-    color: $grayText;
-    a { color: $grayText; text-decoration:none; }
-    @include Calibri();
-    font-weight: bold;
-    font-size: 18px;
-    margin-left: 74px;
-    margin-top: 14px;
-    width: 194px;
-    height: 20px;
-    @include respond-to(handhelds)      { margin-left: 65px;  }
-  }
-
-  .storyDescription {
-    color: $grayText;
-    a { color: $grayText; text-decoration:none; }
-    @include PeriodicoText();
-    font-weight: 100;
-    font-size: 12px;
-    width: 194px;
-    height: 20px;
-    margin-left: 74px;
-    @include respond-to(handhelds)      { margin-left: 65px;  }
-  }
-
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      { 
-    @include clearfix(); 
-    clear: both; 
-    float: left; 
-    margin: 10px;
-    width: 300px;
-    border-top: 1px solid $grayBorder;
-    border-right: 1px solid $grayBorder;
-  }
-}
-
-
-
 // -----------------------------------------------------------------------------------------
 // STORY CONTENT
 // -----------------------------------------------------------------------------------------
@@ -1657,4 +1617,52 @@ input[type="submit"] {
   width: 149px;
 }
 
+
+  .storyName {
+    color: $grayText;
+    a { color: $grayText; text-decoration:none; }
+    @include Calibri();
+    font-weight: bold;
+    font-size: 18px;
+    margin-left: 74px;
+    margin-top: 14px;
+    width: 194px;
+    height: 20px;
+    @include respond-to(handhelds)      { margin-left: 65px;  }
+  }
+
+  .storyDescription {
+    color: $grayText;
+    a { color: $grayText; text-decoration:none; }
+    @include PeriodicoText();
+    font-weight: 100;
+    font-size: 12px;
+    width: 194px;
+    height: 20px;
+    margin-left: 74px;
+    @include respond-to(handhelds)      { margin-left: 65px;  }
+  }
+
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      { 
+    @include clearfix(); 
+    clear: both; 
+    float: left; 
+    margin: 10px;
+    width: 300px;
+    border-top: 1px solid $grayBorder;
+    border-right: 1px solid $grayBorder;
+  }
+}
+
+//===================================================
+// Events
+//===================================================
+.event-list-events {}
+.event-list-date-box {}
+.event-list-date-box-day {}
+.event-list-date-box-month-date {}
+.event-list-date-box-time {}
+.event-list-buy-tickets {}
 
