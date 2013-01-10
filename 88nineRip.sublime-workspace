@@ -119,7 +119,7 @@
 			"file": "scss/styles.scss",
 			"settings":
 			{
-				"buffer_size": 41637,
+				"buffer_size": 41639,
 				"line_ending": "Unix"
 			}
 		},
@@ -143,7 +143,7 @@
 			"file": "css/styles.css",
 			"settings":
 			{
-				"buffer_size": 63832,
+				"buffer_size": 63741,
 				"line_ending": "Unix"
 			}
 		}
@@ -240,6 +240,7 @@
 	},
 	"file_history":
 	[
+		"/Users/jbetz/clients/GE/multivendor-mass-replace/010413_absolute_links/tech-solutions_edgePreload_test.js",
 		"/Users/jbetz/clients/88nine-radio-milwaukee/responsive-site-2012/backups/rip_css/scss/styles.scss",
 		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/User/Default (OSX).sublime-keymap",
 		"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
@@ -301,6 +302,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"storyDescription",
 			"footer",
 			"padding",
 			"margin",
@@ -428,8 +430,8 @@
 						"selection":
 						[
 							[
-								12430,
-								12430
+								11661,
+								11661
 							]
 						],
 						"settings":
@@ -529,8 +531,8 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 270.0,
-						"translation.y": 6790.0,
+						"translation.x": 1.0,
+						"translation.y": 6164.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -671,7 +673,7 @@
 			]
 		},
 		{
-			"selected": 0,
+			"selected": 2,
 			"sheets":
 			[
 				{
@@ -679,7 +681,7 @@
 					"file": "scss/styles.scss",
 					"settings":
 					{
-						"buffer_size": 41637,
+						"buffer_size": 41639,
 						"regions":
 						{
 							"bookmarks":
@@ -693,8 +695,8 @@
 										14948
 									],
 									[
-										26888,
-										26888
+										26890,
+										26890
 									]
 								],
 								"scope": "bookmarks"
@@ -703,8 +705,8 @@
 						"selection":
 						[
 							[
-								3403,
-								3403
+								14994,
+								14994
 							]
 						],
 						"settings":
@@ -805,7 +807,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1902.0,
+						"translation.y": 9332.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1057,15 +1059,15 @@
 					"file": "css/styles.css",
 					"settings":
 					{
-						"buffer_size": 63832,
+						"buffer_size": 63741,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								60456,
-								60456
+								60524,
+								60524
 							]
 						],
 						"settings":
@@ -1165,8 +1167,8 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 8.0,
-						"translation.y": 35793.0,
+						"translation.x": 0.0,
+						"translation.y": 28352.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1209,7 +1211,7 @@
 		[
 			0.0,
 			0.264155661389,
-			0.636439544833,
+			0.751924205874,
 			1.0
 		],
 		"rows":
@@ -1261,6 +1263,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/User/responsive_test.sublime-project"
+			],
 			[
 				"hou",
 				"/Users/jbetz/Documents/hours/hours2/jeffhours.sublime-project"
