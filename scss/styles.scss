@@ -22,6 +22,7 @@ $buttonGradientBottom: #e5e2da;
 $brownLine: #92896b;
 $socialLinkText: #404041;
 $formGradientTop: #f1f2f2;
+$transparent: rgba(white, 0.0);
 
 @import "compass/css3/border-radius"; 
 @import "compass/css3/box-shadow";
@@ -124,21 +125,51 @@ $break-large: 1024px;
 #zone-branding-wrapper
 {
   width: 100%;
-  @include background(url(../images/), url(../images/texturebg.png));
-  @include respond-to(wide-screens)   { height: 162px; }
-  @include respond-to(medium-screens) { height: 142px; }
-  @include respond-to(handhelds)      { height: 67px; }
+  // @include background(url(../images/), url(../images/texturebg.png));
+  // @include respond-to(wide-screens)   { @include background( url(../images/logo_desktop.png) center no-repeat, url(../images/texturebg.png)); height: 162px; }
+  // @include respond-to(medium-screens) { @include background( url(../images/logo_tablet.png) center no-repeat, url(../images/texturebg.png)); height: 142px; }
+  @include respond-to(wide-screens)   { @include background( url(../images/texturebg.png)); height: 162px; }
+  @include respond-to(medium-screens) { @include background( url(../images/texturebg.png)); height: 142px; }
+  @include respond-to(handhelds)      { @include background( url(../images/texturebg.png)); height: 67px; }
 }
 
 .header-ad {
-  border: 1px solid red;
+  // border: 1px solid red;
   width: 234px;
+  display: inline-block;
+  float: left;
+
+  @include respond-to(wide-screens)   { margin-top: 28px; }
+  @include respond-to(medium-screens) { margin-top: 16px; }
+  @include respond-to(handhelds)      { display:none; }
 }
+
+// .zone-branding {
+//   @include respond-to(wide-screens)   {  }
+//   @include respond-to(medium-screens) {   }
+//   @include respond-to(handhelds)      {  }
+// }
+
 .header-logo {
-  border: 1px solid blue;
+  // border: 1px solid blue;
+  display: block;
+  float: none;
+  margin: 0 auto;
+  @include background(url(../images/logo_desktop.png) center); height: 127px; width: 134px;
+  @include respond-to(wide-screens)   { @include background(url(../images/logo_desktop.png) center no-repeat); height: 127px; width: 134px; padding-top: 16px;}
+  @include respond-to(medium-screens) { @include background(url(../images/logo_tablet.png) center no-repeat); height: 100px; width: 95px;padding-top: 20px; }
+  @include respond-to(handhelds)      { @include background(url(../images/logo_mobile.png) center no-repeat); height: 58px; width: 61px;padding-top: 4px; }
 }
+
 .header-search {
-  border: 1px solid green;
+  // float: right;
+  // border: 1px solid green;
+  position: absolute;
+  right: 0;
+  top: 0;
+  @include respond-to(wide-screens)   { margin-top: 10px; }
+  @include respond-to(medium-screens) { margin-top: 10px; }
+  @include respond-to(handhelds)      { display: none; }
 }
 
 .dashedBorder, #zone-branding-wrapper .block-openx img
@@ -163,19 +194,33 @@ $break-large: 1024px;
 // for the searchbox
 .search-wrapper
 {
-  @include size(100%, 28px);
-  border: 1px solid $tan;
-  background-color: $searchBox;
-  // @include opacity(0.95);
-  padding-left: 10px; 
-  padding-right: 10px;
- 
-  @include Calibri();
-  color: $searchBoxText;
-  font-size: 14px;
-  display: inline-block !important;
-  margin: 0;
-  padding: 5px;
+  // input {
+    @include size(100%, 28px);
+    border: 1px solid $tan;
+    background-color: $searchBox;
+    // @include opacity(0.95);
+    padding-left: 10px; 
+    padding-right: 10px;
+   
+    @include Calibri();
+    color: $searchBoxText;
+    font-size: 14px;
+    display: inline-block !important;
+    margin: 10px 0;
+    // padding: 5px;
+  // }
+  input {
+    background-color: $transparent;
+    border: none;
+    @include Calibri();
+    color: $searchBoxText;
+    font-size: 14px;
+    &:focus { box-shadow: none; };
+  }
+
+  a {
+    text-transform: lowercase;
+  }
 
 #edit-search-block-form--2{
     width:85%;
@@ -185,6 +230,7 @@ $break-large: 1024px;
 }
 }
 
+// #search-block-form input.form-submit, #search-form input.form-submit {
 #search-block-form input.form-submit, #search-form input.form-submit {
      @include background(url(../images/searchIcon.png) no-repeat right center, linear-gradient(top, $searchBox, $searchBox) );
     -webkit-background-origin: content-box;
