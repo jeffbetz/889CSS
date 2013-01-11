@@ -42,11 +42,15 @@ $experimental-support-for-opera: false;
 $experimental-support-for-microsoft: true;
 
 $break-small: 420px; // should be 320px
+$break-inbetween: 620px; // should be 320px
 $break-large: 1024px;
 
 @mixin respond-to($media) {
   @if $media == handhelds {
     @media only screen and (max-width: $break-small) { @content; }
+  }
+  @if $media == inbetween {
+    @media only screen and (max-width: $break-inbetween) { @content; }
   }
   @else if $media == medium-screens {
     @media only screen and (min-width: $break-small + 1) and (max-width: $break-large - 1) { @content; }
@@ -114,8 +118,6 @@ $break-large: 1024px;
   @include clearfix();
 }
 
-
-
 // -----------------------------------------------------------------------------------------
 // HEADER
 // -----------------------------------------------------------------------------------------
@@ -139,9 +141,9 @@ $break-large: 1024px;
   display: inline-block;
   float: left;
 
-  @include respond-to(wide-screens)   { margin-top: 28px; }
-  @include respond-to(medium-screens) { margin-top: 16px; }
-  @include respond-to(handhelds)      { display:none; }
+  @include respond-to(wide-screens)   { margin-top: 50px; }
+  @include respond-to(medium-screens) { margin-top: 34px; }
+  @include respond-to(inbetween)      { display:none; }
 }
 
 // .zone-branding {
@@ -167,8 +169,9 @@ $break-large: 1024px;
   position: absolute;
   right: 0;
   top: 0;
-  @include respond-to(wide-screens)   { margin-top: 10px; }
-  @include respond-to(medium-screens) { margin-top: 10px; }
+  @include respond-to(wide-screens)   { margin-top: 26px; }
+  @include respond-to(medium-screens) { margin-top: 13px; right: 15px; }
+  @include respond-to(inbetween) { display:none; right: 15px; }
   @include respond-to(handhelds)      { display: none; }
 }
 
@@ -243,6 +246,9 @@ $break-large: 1024px;
     padding: 0;
     text-indent: -9999px;
     width: 27px;
+    input{
+      &:focus { box-shadow: none; };
+    }
 }
 
 .tanOverlay
