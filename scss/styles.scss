@@ -276,6 +276,7 @@ $break-large: 1024px;
   @include respond-to(medium-screens) { height: 36px; }
   @include respond-to(handhelds)      { display: none; } 
 }
+#currentTrack { display:inline; }
 
 .brownBarArtist
 {
@@ -735,12 +736,14 @@ $footerRowSpacing: 30px;
   // @include box-sizing(border-box);
   img { 
     margin-bottom: 0px; 
-    padding: 4px;
+    width:100%;
+    height:auto;
+    padding: 0px;
     @include respond-to(handhelds)  { display: block; margin: 0 auto;  }
-    &:last-child { margin-bottom: 0px;  };
+    &:last-child { padding-bottom: 4px;  };
   }
-  @include respond-to(wide-screens)   { width: 315px; }
-  @include respond-to(medium-screens) { width: 634px; }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      { width: 100%;  }
 }
 
@@ -798,40 +801,6 @@ $featuredShowDivBarHeight: 84px;
   }
 }
 
-
-// -----------------------------------------------------------------------------------------
-// GLOBAL STYLES
-// -----------------------------------------------------------------------------------------
-
-.sectionTitle {
-  @include Calibri();
-  font-weight: bold;
-  font-size: 13px;
-  line-height: 24px;
-  color: $blueText;
-  a { color: $blueText; text-decoration:none; }
-}
-
-.storyName {
-  @include Calibri();
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 18px;
-  color: $grayText;
-  a { color: $grayText; text-decoration:none; }
-}
-
-.storyDescription {
-  @include PeriodicoText();
-  font-size: 14px;
-  line-height: 16px;
-  font-weight: 100;
-  color: $grayText;
-  margin-bottom: 6px;
-  a { color: $blueText; text-decoration:none; }
-}
-
-
 // -----------------------------------------------------------------------------------------
 // STORY BLOCK
 // -----------------------------------------------------------------------------------------
@@ -844,8 +813,10 @@ $featuredShowDivBarHeight: 84px;
   // padding: 10px;
   float: left;
   @include clearfix();
-    @include respond-to(wide-screens)   { margin-bottom: 15px; }
-    @include respond-to(medium-screens) { margin-bottom: 15px; }
+
+margin-right: 10px;
+    @include respond-to(wide-screens)   { margin-bottom: 15px; width: 365px; margin-right: 10px;}
+    @include respond-to(medium-screens) { margin-bottom: 15px; width: 310px; margin-right: 10px;}
     @include respond-to(handhelds)      { margin: 0px; }
   // @include box-sizing(border-box);
 
@@ -909,7 +880,7 @@ $featuredShowDivBarHeight: 84px;
   @include background(linear-gradient(top, $grayOverlay, $grayOverlay),url(../images/texturebg.png));
   width: 320px;
   padding: 9px;
-  min-height: 225px;
+  //min-height: 225px;
   @include box-sizing(border-box);
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
@@ -926,6 +897,15 @@ $featuredShowDivBarHeight: 84px;
     margin-top: -5px;
     @include ellipsis();
   }
+
+  .flexslider {
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 0 0px;
+    position: relative;
+}
 
 }
 
@@ -1028,9 +1008,9 @@ $featuredShowDivBarHeight: 84px;
   border-bottom: 1px dashed $grayBorder;
   @include box-sizing(border-box);
   &:last-child {   border-bottom: 1px dashed $grayBorder; };
-  @include respond-to(wide-screens)   { padding: 14px 0px;  }
-  @include respond-to(medium-screens) { padding: 11px 0px; }
-  @include respond-to(handhelds)      { padding: 14px 15px; @include background(url(../images/texturebg.png)); width: 100%; }
+  @include respond-to(wide-screens)   { padding: 0 0 14px 0px;  }
+  @include respond-to(medium-screens) { padding: 0 0 11px 0px; }
+  @include respond-to(handhelds)      { padding: 0 15px 14px 15px; @include background(url(../images/texturebg.png)); width: 100%; }
   // @include ellipsis();
   // white-space: wrap;
 
@@ -1048,8 +1028,8 @@ $featuredShowDivBarHeight: 84px;
   }
 
   .storyName {
-    height: 42px;
-    // overflow: hidden;
+    //height: 42px;
+     overflow: hidden;
     // a { height: 20px; }
   }  
   
@@ -1391,7 +1371,7 @@ $featuredShowDivBarHeight: 84px;
 .topAudioStoryWrapper
 {
   border: 1px solid $grayBorder;
-  width: 640px;
+  //width: 640px;
   height: 63px;
   @include box-sizing(border-box);
 
@@ -1414,6 +1394,7 @@ $featuredShowDivBarHeight: 84px;
   margin: 10px;
   font-weight: bold;
   font-size: 13px;
+  line-height:14px;
   color: $brownText;
   a { color: $blueText; text-decoration:none; }
   @include respond-to(wide-screens)   {  }
@@ -1451,20 +1432,20 @@ $featuredShowDivBarHeight: 84px;
   float: right;
   @include clearfix();
 
-  .rightMusicArrow {
-    float: right;
-    display: block;
-    margin: 11px 12px 0px 0px;
-    cursor: pointer;
-  }
+   .rightMusicArrow {
+     float: right;
+     display: block;
+     margin: 11px 12px 0px 0px;
+     cursor: pointer;
+   }
   
-  .leftMusicArrow {
-    float: right;
-    display: block;
-    margin: 12px 0px 0px 0px;
-    cursor: pointer;
-  }
-
+   .leftMusicArrow {
+     float: right;
+     display: block;
+     margin: 12px 0px 0px 0px;
+     cursor: pointer;
+   }
+}
 // -----------------------------------------------------------------------------------------
 // STORY CONTENT
 // -----------------------------------------------------------------------------------------
@@ -1570,6 +1551,13 @@ $featuredShowDivBarHeight: 84px;
   }
 }
 
+.region-content .field-type-image {
+  float:right;
+  display:block;
+  margin-left:10px;
+  margin-bottom:10px;
+}
+
 // -----------------------------------------------------------------------------------------
 // COMMENT SECTION
 // -----------------------------------------------------------------------------------------
@@ -1669,7 +1657,7 @@ input[type="submit"] {
   width: 149px;
 }
 
-
+/* 
   .storyName {
     color: $grayText;
     a { color: $grayText; text-decoration:none; }
@@ -1706,15 +1694,98 @@ input[type="submit"] {
     border-top: 1px solid $grayBorder;
     border-right: 1px solid $grayBorder;
   }
+} */
+
+//===================================================
+// Playlist
+//===================================================
+.playlist-page-list {
+  padding-bottom:10px;
+  padding-top:10px;
+  border-bottom: dashed 1px $lightGrayImageBorder; 
 }
+
 
 //===================================================
 // Events
 //===================================================
-.event-list-events {}
-.event-list-date-box {}
+.event-list-events {
+  padding-bottom:10px;
+  padding-top:10px;
+  border-bottom: dashed 1px $lightGrayImageBorder; 
+}
+.event-list-date-box {
+  display:block;
+  float:left;
+  width:80px;
+  height:80px;
+  border-right: 2px solid $grayBorder;
+  border-bottom: 2px solid $grayBorder;
+  margin-right:10px;
+  text-align: center;
+}
+
 .event-list-date-box-day {}
 .event-list-date-box-month-date {}
 .event-list-date-box-time {}
 .event-list-buy-tickets {}
 
+.block-events-block-5 {
+  float: left; 
+  @include respond-to(wide-screens)   { width:48%; }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+.block-story-utility-block-3 {
+  float: left; 
+  clear:left;
+  @include respond-to(wide-screens)   { width:48%; }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+.block-story-utility-block-8 {
+  display:block;
+  float:right;
+  @include respond-to(wide-screens)   { width:50%; }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
+a.site-logo {
+  width:140px;
+  height:120px;
+  display:block;
+}
+.front #page-title {
+  display:none;
+}
+// -----------------------------------------------------------------------------------------
+// GLOBAL STYLES
+// -----------------------------------------------------------------------------------------
+
+.sectionTitle {
+  @include Calibri();
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 24px;
+  color: $blueText;
+  a { color: $blueText; text-decoration:none; }
+}
+
+.storyName {
+  @include Calibri();
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  color: $grayText;
+  a { color: $grayText; text-decoration:none; }
+}
+
+.storyDescription {
+  @include PeriodicoText();
+  font-size: 14px;
+  line-height: 16px;
+  font-weight: 100;
+  color: $grayText;
+  margin-bottom: 6px;
+  a { color: $blueText; text-decoration:none; }
+}
