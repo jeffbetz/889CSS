@@ -4,12 +4,40 @@
 		"selected_items":
 		[
 			[
-				"wi",
-				"width"
+				"mar",
+				"margin-right"
+			],
+			[
+				"box",
+				"box-shadow"
 			],
 			[
 				"dis",
-				"display"
+				"display:none"
+			],
+			[
+				"mt",
+				"margin-top"
+			],
+			[
+				"height",
+				"height:   (property)"
+			],
+			[
+				"log",
+				"logo_mobile.png	w:61 h:58"
+			],
+			[
+				"l",
+				"logo_desktop.png	w:134 h:127"
+			],
+			[
+				"ima",
+				"images/"
+			],
+			[
+				"wi",
+				"width"
 			],
 			[
 				"pa",
@@ -22,10 +50,6 @@
 			[
 				"b",
 				"block"
-			],
-			[
-				"l",
-				"left"
 			],
 			[
 				"fl",
@@ -111,7 +135,7 @@
 			"file": "test.html",
 			"settings":
 			{
-				"buffer_size": 29990,
+				"buffer_size": 30226,
 				"line_ending": "Unix"
 			}
 		},
@@ -119,7 +143,7 @@
 			"file": "scss/styles.scss",
 			"settings":
 			{
-				"buffer_size": 41639,
+				"buffer_size": 44782,
 				"line_ending": "Unix"
 			}
 		},
@@ -132,10 +156,13 @@
 			}
 		},
 		{
+			"contents": "/* CSS Document  */\n\n$searchBox: rgba(#ffffff, 0.9);\n$main-bg-color: #403c29; /* brown  */\n$common-border: #b8b8b8; \n$search-box-border: #e3e3e3;\n$topNavSelectedTopGrad: #e6e6e6;\n$topNavSelectedBottomGrad: #d3d3d4;\n$topNavUnselectedTop: #ffffff;\n$topNavUnselectedBottom: #ebebeb;\n$main-container-bg: #e6e6e6;\n$section-container-border: #d8d8d8;\n$shadow: rgba(#333333, 0.4);\n$shadowSolid: #333333;\n$double-container-top-grad: #ececec;\n$double-container-bottom-grad: #f2f2f2;\n$double-container-inside-border: #e6e6e6;\n$double-container-outside-border: #d6d6d6;\n$dark-grad-top: #f9f9f9;\n$dark-grad-bottom: #cecece;\n$gridbox-top-grad: #2a2a2a;\n$gridbox-bottom-grad: #181818;\n$thinkfinity-top-grad: #f7f7f7;\n$thinkfinity-mid-grad: #fefefe;\n$thinkfinity-bottom-grad: #fbfbfb;\n$divider-line: #cecece;\n$dark-text: #231f20;\n$primary-color: #e36b14; /* orange */\n$homepage-next-wonder-black: rgba(#0d0d0d, 0.8);\n$twitter-feed-blue: #526b94;\n$thinkfinity-bg: #a86f36;\n$wonderizer-topbar-grad-top: #a3a2a3;\n$wonderizer-topbar-grad-bottom: #606060;\n$wonderizer-main-bg-grad-middle: #cacaca;\n$wonderizer-drag-section-bg-top: #e9e9e9;\n$wonderizer-drag-section-bg-bottom: #ffffff;\n$wonderizer-blacknavbar-grad-top: #353535;\n$wonderizer-blacknavbar-grad-bottom: #1d1d1d;\n$wonderizer-bg-color: #3f3b28; /* dark green */\n$wonderizer-catagory-section-bg: #f2f2f2;\n\n@import \"compass/css3/border-radius\";	\n@import \"compass/css3/box-shadow\";\n@import \"compass/css3/images\";\n@import \"compass/utilities/lists/horizontal-list\";\n@import \"compass/css3\";\n\n/* mixins */\n\n@mixin size($thisWidth: 320, $thisHeight: 60) {\n	width: #{$thisWidth}px;\n	height: #{$thisHeight}px;	\n}\n\n@mixin mediumShadow(){\n	@include box-shadow($shadow 2px 2px 4px);\n}\n\n@mixin lightShadow(){\n	@include box-shadow($shadow 1px 1px 4px);\n}\n\n@mixin luc(){\n	font-family: \"Lucida Grande\", \"Lucida Sans Unicode\", \"Lucida Sans\", Verdana, Tahoma, sans-serif;\n}\n\n@mixin txt($thisColor: #333333,$thisSize: 14, $thisLineHeight: auto, $thisAlign: left) {\n	color: #{$thisColor};\n	font-size: #{$thisSize}px;\n	line-height: #{$thisLineHeight}px;\n	text-align: #{$thisAlign};\n}\n\n/* normal styles */\n\n.searchBox\n{\n	@include size(170, 21);\n	background: $searchBox;\n	border: 1px solid $search-box-border;\n	@include border-radius(5px);\n}\n\n.mainNavSelected\n{\n	@include size(90, 30);\n	background-color: $topNavSelectedTopGrad; // Old browsers\n	@include filter-gradient($topNavSelectedTopGrad, $topNavSelectedBottomGrad, vertical); // IE6-9\n	@include background(url(../images/mainNavBottom.png) repeat-x bottom, linear-gradient(top, $topNavSelectedTopGrad, $topNavSelectedBottomGrad));\n	border-right: solid 1px $topNavSelectedBottomGrad;\n	border-left: solid 1px $topNavSelectedBottomGrad;\n}\n\n.mainNavUnselected\n{\n	@include size(90, 30);\n	background-color: $topNavUnselectedTop; // Old browsers\n	@include filter-gradient($topNavUnselectedTop, $topNavUnselectedBottom, vertical); // IE6-9\n	@include background(url(../images/mainNavBottom.png) repeat-x bottom, linear-gradient(top, $topNavUnselectedTop, $topNavUnselectedBottom));\n}\n\n.mainContainerBg\n{\n	@include size(400, 200);\n	background-color: $main-container-bg;\n}\n\n.sectionContainerWhiteBg\n{\n	@include background(url(../images/sectionContainerTopGradient.png) repeat-x top, linear-gradient(top, white, white));\n	border: 1px solid $section-container-border;\n	@include mediumShadow;\n}\n\n.doubleContainerOutside\n{\n	width: 234px;\n	background-color: $double-container-top-grad; // Old browsers\n	padding: 4px;\n	position: relative;\n	@include filter-gradient($double-container-top-grad, $double-container-bottom-grad, vertical); // IE6-9\n	@include background-image(linear-gradient(top, $double-container-top-grad, $double-container-bottom-grad));\n	/*@include box-shadow($shadowSolid 2px 2px 4px);*/\n	/* horizontal offset, vertical offset, optional blur distance and optional spread distance - alpha .1 to 1 */\n  -webkit-box-shadow: 2px 2px 4px 0px rgba(32, 32, 32, .4);\n     -moz-box-shadow: 2px 2px 4px 0px rgba(32, 32, 32, .4);\n          box-shadow: 2px 2px 4px 0px rgba(32, 32, 32, .4);\n		  border: 1px solid $double-container-outside-border;\n}\n\n.doubleContainerInside\n{\n	display: block;\n	margin: 4px;\n	padding: 5px;\n	background-color: white;\n	border: 1px solid $double-container-inside-border;\n}\n\n.familyPostImage\n{\n	position: absolute;\n	top: 18px;\n	right: 0px;\n}\n\n.selectBox\n{\n	@include size(213, 22);\n	border: 1px solid $common-border;\n	background-color: $dark-grad-top; // Old browsers\n	@include filter-gradient($dark-grad-top, $dark-grad-bottom, vertical); // IE6-9\n	@include background-image(linear-gradient(top, $dark-grad-top, $dark-grad-bottom));\n}\n\n.gridBoxBottom\n{\n	@include size(204, 52);\n	background-color: $gridbox-top-grad; // Old browsers\n	@include filter-gradient($gridbox-top-grad, $gridbox-bottom-grad, vertical); // IE6-9\n	@include background(url(../images/grid-divider.png) 43px 9px no-repeat, url(../images/comment-number-bubble.png) 6px 24px no-repeat, linear-gradient(top, $gridbox-top-grad, $gridbox-bottom-grad));\n	border-top: solid 1px $common-border;\n	margin: 0 0 4px 0;\n}\n\n.gridContainerOutside\n{\n	width: 210px;\n	background-color: $double-container-top-grad; // Old browsers\n	padding: 2px;\n	@include filter-gradient($double-container-top-grad, $double-container-bottom-grad, vertical); // IE6-9\n	@include background-image(linear-gradient(top, $double-container-top-grad, $double-container-bottom-grad));\n	border: 1px solid $common-border;\n}\n\n.gridContainerInside\n{\n	display: block;\n	margin: 2px 2px 0 2px;\n	padding: 0px;\n	background-color: black;\n	border: 1px solid $double-container-inside-border;\n	/*@include background(url(../images/bluecheese.jpg) no-repeat top);*/\n}\n\n.thinkfinityBox\n{\n	border: 1px solid $double-container-inside-border;\n	background-color: $thinkfinity-top-grad; // Old browsers\n	@include filter-gradient($thinkfinity-top-grad, $thinkfinity-bottom-grad, vertical); // IE6-9\n	@include background-image(url(images/thinkfinity-logo.png) top 5px center no-repeat, linear-gradient(top, $thinkfinity-top-grad 0%, $thinkfinity-mid-grad 50%, $thinkfinity-bottom-grad 100%));\n	margin: 4px;\n	padding: 10px;\n	\n	\n}\n\n.familyThumbContainerInside\n{\n	display: block;\n	margin: 8px;\n	padding: 0px;\n	/*@include background(url(../images/bluecheese.jpg) no-repeat top);*/\n}\n\n.familyThumbBoxBottom\n{\n	@include size(144, 36);\n	background-color: $gridbox-top-grad; // Old browsers\n	@include filter-gradient($gridbox-top-grad, $gridbox-bottom-grad, vertical); // IE6-9\n	@include background(linear-gradient(top, $gridbox-top-grad, $gridbox-bottom-grad));\n	border-top: solid 1px $common-border;\n	margin: 0 0 4px 0;\n}\n\n.photoBorderLarge\n{\n	@include size(auto, auto);\n	background-color: white;\n	@include background(linear-gradient(top, $dark-grad-bottom 0%, white 15%, white 85%, $dark-grad-bottom 100%));\n	border: 1px solid $common-border;\n	@include mediumShadow;\n	padding: 8px;\n}\n\n.photoBorderSmall\n{\n	padding: 3px;\n	border: 2px solid $common-border;\n	background-color: white;\n}\n\n.dividerLine\n{\n	@include size;\n	border-bottom: solid 1px $divider-line;\n}\n\n/*.tabs\n{\n	height: 50px;\n	border: 1px solid $common-border;\n	color: $dark-text;\n	font-size: 12px;\n	@include luc;\n	text-decoration:none;\n	\n		ul { \n		list-style-type: none;\nbackground-image: url(navi_bg.png);\nheight: 80px;\nwidth: 663px;\nmargin: auto;\n			a { padding-right: 32px;\npadding-left: 32px;\ndisplay: block;\nline-height: 80px;\ntext-decoration: none;\nfont-family: Georgia, \"Times New Roman\", Times, serif;\nfont-size: 21px;\ncolor: #371C1C; }\n		};\n		\n		li{ \n			float: left;\n		}\n}*/\n\n.wonderTabs\n{\n	@include size(632, 34);\n	@include horizontal-list;\n	@include border-top-radius(5px);\n	border: 1px solid $common-border;\n	background-color: $topNavUnselectedTop; // Old browsers\n	@include filter-gradient($topNavUnselectedTop, $topNavUnselectedBottom, vertical); // IE6-9\n	@include background-image(linear-gradient(top, $topNavUnselectedTop, $topNavUnselectedBottom));\n	line-height: 34px;\n	ul {text-decoration: none;}\n	\n	@include txt($dark-text, 11);\n	@include luc;\n	#selected { background-color: white; }\n	a li { color: $dark-text; text-decoration:none; \n		&:hover { color: $primary-color; text-decoration:none;};\n	}\n	li { @include horizontal-list-item(20px); color: $dark-text; text-decoration:none; \n		@include background(url(../images/tab-divider.png) right bottom no-repeat);\n	\n	\n	&:first-child { padding-left: 20px;}\n	&:last-child { padding-right: 20px;}\n		\n	}\n	text-decoration:none;\n	\n	ul a li { text-decoration:none;};\n}\n\n.homepageNextWonderBlack\n{\n	@include size(224, 64);\n	background-color: $homepage-next-wonder-black; \n	padding: 8px;\n}\n\n\n.homeTwitterFeedBg\n{\n	@include size(202, 480);\n	background-color: $twitter-feed-blue;\n	@include background(url(../images/home-twitter-feed-bird.png) right top no-repeat, linear-gradient(top, $twitter-feed-blue, $twitter-feed-blue));\n}\n\n.thinkfinityAd\n{\n	@include size(224, 226);\n	padding: 15px;\n	background-color: $thinkfinity-bg;\n	@include background(url(../images/thinkfinity-ad.png) right bottom no-repeat, linear-gradient(top, $thinkfinity-bg, $thinkfinity-bg));\n}\n\n.mainBg\n{\n	width: 100%;\n	height: 500px;\n	background-color: $main-bg-color;\n	@include background(url(../images/main-bg.jpg) top center no-repeat, linear-gradient(top, $main-bg-color, $main-bg-color));\n}\n\n.wonderizerTopGreyBar\n{\n	@include size(885, 55);\n	background-color: $wonderizer-topbar-grad-top; // Old browsers\n	@include filter-gradient($wonderizer-topbar-grad-top, $wonderizer-topbar-grad-bottom, vertical); // IE6-9\n	@include background-image(linear-gradient(top, $wonderizer-topbar-grad-top 50%, $wonderizer-topbar-grad-bottom 100%));\n}\n\n.wonderizerMainBg\n{\n	@include size(885, 589);\n	background-color: $wonderizer-topbar-grad-top; // Old browsers\n	@include filter-gradient($wonderizer-topbar-grad-top, $wonderizer-main-bg-grad-middle, vertical); // IE6-9\n	@include background-image(linear-gradient(top, $wonderizer-topbar-grad-top 0%, $wonderizer-main-bg-grad-middle 30%, $wonderizer-main-bg-grad-middle 70%, $wonderizer-topbar-grad-top 100%));\n}\n\n.imageGlowTest\n{\n	@include box-shadow($primary-color 2px 2px 4px);\n}\n\n.wonderizerDragSectionBgWrapper\n{\n	@include size(812, 375);\n	position: relative;\n}\n\n.wonderizerDragSectionBg\n{\n	@include size(812, 305);\n	background-color: $wonderizer-drag-section-bg-top; // Old browsers\n	@include filter-gradient($wonderizer-drag-section-bg-top, $wonderizer-drag-section-bg-bottom, vertical); // IE6-9\n	@include background-image(linear-gradient(top, $wonderizer-drag-section-bg-top, $wonderizer-drag-section-bg-bottom));\n	@include border-radius(10px);\n	position: absolute;\n	top: 33px;\n}\n\n.wonderizerDragImage\n{\n	position: absolute;\n	left: 51px;\n	\n}\n\n.wonderizerSaveImage\n{\n	position: absolute;\n	bottom: 18px;\n	right: 20px;\n	\n}\n\n.wonderizerIconHolder\n{\n	@include size(762, 120);\n	position: absolute;\n	top: 140px;\n	left: 33px;\n	@include opacity(0.5);\n	img { margin: 0 7px; \n	/* this transition shouldn't be applied to this, but to the row above; the dragable items. */\n 	@include transition-duration(.1s); \n	@include transition-timing-function(ease-in);\n	&:hover { @include scale(1.1) };\n	};\n}\n\n.wonderizerTopBlackNavBar\n{\n	width: 100%;\n	height: 37px;\n	background-color: $wonderizer-blacknavbar-grad-top; // Old browsers\n	@include filter-gradient($wonderizer-blacknavbar-grad-top, $wonderizer-blacknavbar-grad-bottom, vertical); // IE6-9\n	@include background-image(linear-gradient(top, $wonderizer-blacknavbar-grad-top, $wonderizer-blacknavbar-grad-bottom));\n}\n\n.wonderizerBgColor\n{\n	@include size;\n	background-color: $wonderizer-bg-color;\n}\n\n.wonderizerHeaderBgColor\n{\n	@include size(939, 164);\n	background-color: white;\n}\n\n.wonderizerContainerBg\n{\n	\n	background-color: $main-container-bg;\n	padding: 6px 12px;\n	position: relative;\n}\n\n.wonderizerContainerWhiteBg\n{	\n	@include size(300, 200);\n	position: relative;\n	width: 100%;\n	margin: 6px 0px;\n	@include background(url(../images/sectionContainerTopGradient.png) repeat-x top, linear-gradient(top, white, white));\n	border: 1px solid $section-container-border;\n}\n\n.wonderizerCatagoryGreyOutside\n{\n	position: relative;\n}\n\n\n.wonderizerCatagoryGreyContainer\n{\n	@include size(802, 238);\n	@include background(url(../images/grey-grad-top.png) repeat-x top, linear-gradient(top, $wonderizer-catagory-section-bg, $wonderizer-catagory-section-bg));\n	border: 1px solid $section-container-border;\n	padding: 15px;\n	margin: 0 20px;\n}\n\n.wonderizerCatagoryGreyContainerLine\n{\n	@include size(802, 238);\n	@include background(url(../images/wonderizer-dividing-line.png) 125px 5px no-repeat, url(../images/grey-grad-top.png) repeat-x top, linear-gradient(top, $wonderizer-catagory-section-bg, $wonderizer-catagory-section-bg));\n	border: 1px solid $section-container-border;\n	padding: 15px;\n	margin: 0 20px;\n}\n\n.wonderizerCatagoryContainerArrow\n{\n	position: absolute;\n	left: 0px;\n	top: 30px;\n}",
 			"file": "/Users/jbetz/clients/wonderopolis/website/styles_handoff_wonderopolis/scss/graphicstyles.scss",
+			"file_size": 12828,
+			"file_write_time": 1357926519000000,
 			"settings":
 			{
-				"buffer_size": 12823,
+				"buffer_size": 12826,
 				"line_ending": "Unix"
 			}
 		},
@@ -143,7 +170,7 @@
 			"file": "css/styles.css",
 			"settings":
 			{
-				"buffer_size": 63741,
+				"buffer_size": 67577,
 				"line_ending": "Unix"
 			}
 		}
@@ -302,6 +329,11 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"search",
+			"margin",
+			"blue",
+			"header",
+			"blue",
 			"storyDescription",
 			"footer",
 			"padding",
@@ -415,7 +447,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -430,8 +462,8 @@
 						"selection":
 						[
 							[
-								11661,
-								11661
+								10041,
+								10041
 							]
 						],
 						"settings":
@@ -531,8 +563,8 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 1.0,
-						"translation.y": 6164.0,
+						"translation.x": 0.0,
+						"translation.y": 5671.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -542,7 +574,7 @@
 					"file": "test.html",
 					"settings":
 					{
-						"buffer_size": 29990,
+						"buffer_size": 30226,
 						"regions":
 						{
 							"TagLint":
@@ -552,8 +584,8 @@
 								"regions":
 								[
 									[
-										1744,
-										1750
+										1980,
+										1986
 									]
 								],
 								"scope": "variable.parameter"
@@ -562,8 +594,8 @@
 						"selection":
 						[
 							[
-								0,
-								0
+								715,
+								715
 							]
 						],
 						"settings":
@@ -665,7 +697,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 9071.0,
+						"translation.y": 101.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -673,7 +705,7 @@
 			]
 		},
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -681,7 +713,7 @@
 					"file": "scss/styles.scss",
 					"settings":
 					{
-						"buffer_size": 41639,
+						"buffer_size": 44782,
 						"regions":
 						{
 							"bookmarks":
@@ -691,12 +723,8 @@
 								"regions":
 								[
 									[
-										14948,
-										14948
-									],
-									[
-										26890,
-										26890
+										5290,
+										5290
 									]
 								],
 								"scope": "bookmarks"
@@ -705,8 +733,8 @@
 						"selection":
 						[
 							[
-								14994,
-								14994
+								7060,
+								7060
 							]
 						],
 						"settings":
@@ -807,7 +835,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 9332.0,
+						"translation.y": 3669.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -935,15 +963,15 @@
 					"file": "/Users/jbetz/clients/wonderopolis/website/styles_handoff_wonderopolis/scss/graphicstyles.scss",
 					"settings":
 					{
-						"buffer_size": 12823,
+						"buffer_size": 12826,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1639,
-								1639
+								11558,
+								11564
 							]
 						],
 						"settings":
@@ -1059,15 +1087,15 @@
 					"file": "css/styles.css",
 					"settings":
 					{
-						"buffer_size": 63741,
+						"buffer_size": 67577,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								60524,
-								60524
+								3973,
+								3973
 							]
 						],
 						"settings":
@@ -1167,8 +1195,8 @@
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 28352.0,
+						"translation.x": 6.0,
+						"translation.y": 2612.0,
 						"zoom_level": 1.0
 					},
 					"type": "text"
@@ -1264,12 +1292,16 @@
 		"selected_items":
 		[
 			[
-				"",
-				"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/User/responsive_test.sublime-project"
-			],
-			[
 				"hou",
 				"/Users/jbetz/Documents/hours/hours2/jeffhours.sublime-project"
+			],
+			[
+				"88",
+				"/Users/jbetz/clients/88nine-radio-milwaukee/responsive-site-2012/rip_css/88nineRip.sublime-project"
+			],
+			[
+				"",
+				"/Users/jbetz/Library/Application Support/Sublime Text 2/Packages/User/responsive_test.sublime-project"
 			]
 		],
 		"width": 380.0
