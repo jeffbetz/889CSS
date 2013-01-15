@@ -88,6 +88,18 @@ $break-large: 1024px;
   height: #{$thisHeight}; 
 }
 
+@mixin image-2x($image, $width, $height) {
+  @media (min--moz-device-pixel-ratio: 1.3),
+         (-o-min-device-pixel-ratio: 2.6/2),
+         (-webkit-min-device-pixel-ratio: 1.3),
+         (min-device-pixel-ratio: 1.3),
+         (min-resolution: 1.3dppx) {
+    /* on retina, use image that's scaled by 2 */
+    background-image: url($image);
+    background-size: $width $height;
+  }
+}
+
 @include global-reset();
 
 .plainBG
@@ -117,6 +129,11 @@ $break-large: 1024px;
   clear: both;
   @include clearfix();
 }
+
+// For image replacement
+.ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
+.ir br { display: none; }
+
 
 // -----------------------------------------------------------------------------------------
 // HEADER
@@ -169,7 +186,7 @@ $break-large: 1024px;
   position: absolute;
   right: 0;
   top: 0;
-  @include respond-to(wide-screens)   { margin-top: 26px; }
+  @include respond-to(wide-screens)   { margin-top: 35px; }
   @include respond-to(medium-screens) { margin-top: 13px; right: 15px; }
   @include respond-to(inbetween) { display:none; right: 15px; }
   @include respond-to(handhelds)      { display: none; }
@@ -198,7 +215,8 @@ $break-large: 1024px;
 .search-wrapper
 {
   // input {
-    @include size(100%, 28px);
+    
+    //@include size(100%, 28px);
     border: 1px solid $tan;
     background-color: $searchBox;
     // @include opacity(0.95);
@@ -226,7 +244,7 @@ $break-large: 1024px;
   }
 
 #edit-search-block-form--2{
-    width:85%;
+    width:175px;
   }
 #edit-submit {
   border:none;
@@ -489,7 +507,7 @@ $break-large: 1024px;
   @include respond-to(handhelds)      {  }
 } 
 
-.footerUtilityNav
+.footerUtilityNav.top
 {
   @include PeriodicoDisplay();
   @include horizontal-list();
@@ -498,21 +516,39 @@ $break-large: 1024px;
   color: $brownText;
   font-size: 14px;
   line-height: 16px;
-  margin:0 auto;
-  display: table;
   
-  li {   
-    padding: 10px 18px;
-    border-right: dashed 1px $lightGrayImageBorder;
-    &:last-child { border-right: none; };
-    a { color: $brownText; text-decoration:none; };
-    &.footerUtilityDonate { @include background(url(../images/donate-heart.png) no-repeat 17px 11px); padding-left: 36px;}; 
+  li {
+    padding:0;
+    &:first-child a { padding-left:0; };
+    &:last-child a { border-right: none; };
+    a { color: $brownText; text-decoration:none;padding: 2px 12px;float:left;border-right: dashed 1px $lightGrayImageBorder;};
   }
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
 }
+.footerUtilityNav.bottom
+{
+  @include PeriodicoDisplay();
+  @include horizontal-list();
 
+  font-style: italic;
+  color: $brownText;
+  font-size: 14px;
+  line-height: 16px;
+
+  li {   
+    a { color: $brownText; text-decoration:none; 
+    &.footerUtilityDonate { @include background(url(../images/donate-top.png) no-repeat left center); width:85px;height:29px;@include image-2x("../images/donate-top-2x.png", 85px, 29px);};
+    &.footerUtilityGooglePlus { @include background(url(../images/google-plus-top.png) no-repeat center center);width:29px;height:29px;@include image-2x("../images/google-plus-top-2x.png", 29px, 29px);};
+    &.footerUtilityFacebook { @include background(url(../images/facebook-top.png) no-repeat center center); width:29px;height:29px;@include image-2x("../images/facebook-top-2x.png", 29px, 29px);};
+    &.footerUtilityTwitter { @include background(url(../images/twitter-top.png) no-repeat center center); width:29px;height:29px;@include image-2x("../images/twitter-top-2x.png", 29px, 29px);}; 
+    };
+  }
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(medium-screens) {  }
+  @include respond-to(handhelds)      {  }
+}
 .footerUtilityNavWrapper
 {
   margin: 0 auto;
