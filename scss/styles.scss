@@ -346,6 +346,7 @@ $break-large: 1024px;
 #om-maximenu-main-menu {float:left;}
 .om-menu-ul-wrapper {float:left;}
 .om-maximenu ul.om-menu li.om-leaf {height:auto;}
+.om-maximenu .om-maximenu-middle {background:transparent;}
 #om-maximenu-main-menu > .om-menu-ul-wrapper > ul > li {
     //@include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
     color: $mainNavText;
@@ -354,7 +355,7 @@ $break-large: 1024px;
     overflow: visible;
     margin-right: 0px;
     padding: 10px 0 19px 0;
-    a,span { color: $mainNavText; text-decoration:none; 
+    > a, > span { color: $mainNavText; text-decoration:none; 
       padding: 3px 14px;
       border-right: 1px dashed $navDividingLine;
       text-transform: lowercase;
@@ -365,12 +366,11 @@ $break-large: 1024px;
     
     @include respond-to(wide-screens) { 
       font-size: 17px;
-      line-height: 58px;
       &:last-child { border-right: none; };
     }
     
     @include respond-to(medium-screens) { 
-      line-height: 40px;font-size: 14px; line-height: 40px; height: 40px;
+      font-size: 14px;
       &:last-child { border-right: none; }; 
     }
     
@@ -381,12 +381,96 @@ $break-large: 1024px;
 //      overflow: visible;
   //    background-origin: border-box;
       @include filter-gradient(rgba(gray, 0.5), rgba(gray, 0.5), vertical); // IE6-9
-      @include respond-to(wide-screens)   { @include background(url(../images/selectedNavArrow.png) no-repeat center bottom, linear-gradient(top, rgba(white, 0.94) 0%, rgba(white, 0.99) 10%, rgba(white, 0.0) 50%, rgba(white, 1.0) 83%, rgba(white, 0.0) 83%));}
-      @include respond-to(medium-screens) { @include background(url(../images/selectedNavArrow.png) no-repeat center bottom, linear-gradient(top, rgba(white, 0.94) 0%, rgba(white, 0.99) 10%, rgba(white, 0.0) 50%, rgba(white, 1.0) 83%, rgba(white, 0.0) 83%));}
+      @include respond-to(wide-screens)   { @include background(url(../images/selectedNavArrow.png) no-repeat center bottom, linear-gradient(top, rgba(white, 0.94) 0%, rgba(white, 0.99) 10%, rgba(white, 0.0) 50%, rgba(white, 1.0) 88%, rgba(white, 0.0) 88%));}
+      @include respond-to(medium-screens) { @include background(url(../images/selectedNavArrow.png) no-repeat center bottom, linear-gradient(top, rgba(white, 0.94) 0%, rgba(white, 0.99) 10%, rgba(white, 0.0) 50%, rgba(white, 1.0) 88%, rgba(white, 0.0) 88%));}
+      //@include respond-to(handhelds)      {  }
+    }
+
+    &.open {
+      background-color: rgba(white, 1); // Old browsers
+//      overflow: visible;
+  //    background-origin: border-box;
+      @include filter-gradient(rgba(gray, 0.5), rgba(gray, 0.5), vertical); // IE6-9
+      @include respond-to(wide-screens)   { @include background(url(../images/selectedNavArrow.png) no-repeat center bottom, linear-gradient(top, rgba(white, 1) 0%, rgba(white, 1.0) 88%, rgba(white, 0.0) 88%));}
+      @include respond-to(medium-screens) { @include background(url(../images/selectedNavArrow.png) no-repeat center bottom, linear-gradient(top, rgba(white, 1) 0%, rgba(white, 1.0) 88%, rgba(white, 0.0) 88%));}
       @include respond-to(handhelds)      {  }
     }
 
-    
+    .om-maximenu-content{ 
+      margin-top:-9px;
+      background-color: $tanOverlay;
+      @include background(url(../images/selectedNavArrow.png) no-repeat 35px top, url(../images/navDropdownTopGradient.png) repeat-x top, linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
+      @include respond-to(wide-screens)   {  }
+      @include respond-to(medium-screens) {  }
+      @include respond-to(handhelds)      {  } 
+
+      ul
+      {
+        border-right: 1px dashed $navDividingLine;
+        border-left: 1px dashed $navDividingLine;
+        width: 370px;
+        padding: 0 0 0 20px;
+        @include respond-to(wide-screens)   {  }
+        @include respond-to(medium-screens) {  }
+        @include respond-to(handhelds)      {  }
+        li
+        {
+          @include Calibri();
+          @include horizontal-list();
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 27px;
+          color: $subNavText;
+          width: 162px;
+          padding: 0 20px 0 0;
+          display: inline-block;
+          a { color: $subNavText; text-decoration:none; width:40%;padding:0 2%;}
+          @include respond-to(wide-screens)   {  }
+          @include respond-to(medium-screens) {  }
+          @include respond-to(handhelds)      {  }
+        } 
+      }
+      .view-story-utility {
+
+        .highlightSection {
+          color: $blueText;
+          font-size: 13px;
+          display:inline;
+          a { color: $blueText; text-decoration:none; }
+          @include respond-to(wide-screens)   {  }
+          @include respond-to(medium-screens) {  }
+          @include respond-to(handhelds)      { display: none; }
+        }
+        .highlightAuthor, .higlightDate {
+          color: $brownText;
+          font-size: 13px;
+          display:inline;
+          a { color: $brownText; text-decoration:none; }
+          @include respond-to(wide-screens)   {  }
+          @include respond-to(medium-screens) {  }
+          @include respond-to(handhelds)      { display: none; }}
+        .highlightTitle {@include Calibri();
+          font-weight: bold;
+          color: $grayText;
+          font-size: 18px;
+          line-height: 18px;
+          a { color: $grayText; text-decoration:none; }
+          @include respond-to(wide-screens)   {  }
+          @include respond-to(medium-screens) {  }
+          @include respond-to(handhelds)      { font-size: 24px; line-height: 24px; }}
+        .highlightSummary {
+          color: $grayText;
+          a { color: $grayText; text-decoration:none; }
+          font-size: 14px;
+          line-height: 16px;
+          @include PeriodicoText();
+          @include respond-to(wide-screens)   { width: 258px; }
+          @include respond-to(medium-screens) {  }
+          @include respond-to(handhelds)      { width: 100% }
+        }
+
+      }
+    }
   }
 
   .om-maximenu-no-style .om-maximenu-content {top:66px;}
@@ -402,86 +486,7 @@ $break-large: 1024px;
   @include respond-to(handhelds)      {  } 
 }
 
-
-
-#om-maximenu-main-menu ul li ul
-{
-  border-right: 1px dashed $navDividingLine;
-  border-left: 1px dashed $navDividingLine;
-  width: 370px;
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
-  li
-{
-  @include Calibri();
-  @include horizontal-list();
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 27px;
-  color: $subNavText;
-  a { color: $subNavText; text-decoration:none; }
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
-}
-}
-
 .zone-playing-container-wrapper{margin-top:-8px;}
-
-
-// -----------------------------------------------------------------------------------------
-// DROP DOWN THING
-// -----------------------------------------------------------------------------------------
-
-
-.megamenu-slot-title
-{ 
-  color: $blueText;
-  font-size: 13px;
-  a { color: $blueText; text-decoration:none; }
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      { display: none; }
-}
-
-.subNavDropDownSectionAuthor
-{ 
-  color: $brownText;
-  font-size: 13px;
-  a { color: $brownText; text-decoration:none; }
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      { display: none; }
-}
-
-.storyTitleText
-{
-  @include Calibri();
-  font-weight: bold;
-  color: $grayText;
-  font-size: 18px;
-  line-height: 18px;
-  a { color: $grayText; text-decoration:none; }
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      { font-size: 24px; line-height: 24px; }
-}
-
-.storySummaryText
-{
-  color: $grayText;
-  a { color: $blueText; text-decoration:none; }
-  font-size: 14px;
-  line-height: 16px;
-  @include PeriodicoText();
-  @include respond-to(wide-screens)   { width: 258px; }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      { width: 100% }
-}
-
-
-
 
 
 // -----------------------------------------------------------------------------------------
