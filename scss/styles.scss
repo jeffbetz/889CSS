@@ -1321,8 +1321,7 @@ margin-right: 10px;
 // -----------------------------------------------------------------------------------------
 // LOAD MORE BUTTON
 // -----------------------------------------------------------------------------------------
-.pager li.pager-last,
-.pager li.pager-next.last {
+.pager li, .pager li.pager-last, .pager li.pager-next.last {
   position: absolute;
   top: 0;
   right: 50%;

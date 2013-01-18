@@ -2087,21 +2087,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
-/* line 1325, ../scss/styles.scss */
-.pager li.pager-last,
-.pager li.pager-next.last {
+/* line 1324, ../scss/styles.scss */
+.pager li, .pager li.pager-last, .pager li.pager-next.last {
   position: absolute;
   top: 0;
   right: 50%;
   border: none;
 }
 
-/* line 1331, ../scss/styles.scss */
+/* line 1330, ../scss/styles.scss */
 .pager {
   border: none;
 }
 
-/* line 1336, ../scss/styles.scss */
+/* line 1335, ../scss/styles.scss */
 .pager li.first a {
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -2131,32 +2130,32 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   *zoom: 1;
 }
 
-/* line 1371, ../scss/styles.scss */
+/* line 1370, ../scss/styles.scss */
 .socialStoryLinkTextWrapper {
   height: 41px;
   border-top: 1px dashed #d3d2d2;
   border-bottom: 1px dashed #d3d2d2;
 }
 
-/* line 1381, ../scss/styles.scss */
+/* line 1380, ../scss/styles.scss */
 .socialStoryLinkText {
   color: #404041;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 11px;
   line-height: 41px;
 }
-/* line 1386, ../scss/styles.scss */
+/* line 1385, ../scss/styles.scss */
 .socialStoryLinkText a {
   color: #404041;
   text-decoration: none;
 }
-/* line 1387, ../scss/styles.scss */
+/* line 1386, ../scss/styles.scss */
 .socialStoryLinkText:hover {
   color: #1a6c99;
   text-decoration: none;
 }
 
-/* line 1401, ../scss/styles.scss */
+/* line 1400, ../scss/styles.scss */
 .breadcrumb {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -2165,30 +2164,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: #4f3700;
   text-transform: lowercase;
 }
-/* line 1408, ../scss/styles.scss */
+/* line 1407, ../scss/styles.scss */
 .breadcrumb a {
   color: #4f3700;
   text-decoration: none;
   padding: 0 5px;
 }
-/* line 1410, ../scss/styles.scss */
+/* line 1409, ../scss/styles.scss */
 .breadcrumb a:hover {
   color: #1a6c99;
   text-decoration: none;
 }
-/* line 1411, ../scss/styles.scss */
+/* line 1410, ../scss/styles.scss */
 .breadcrumb a:last-child {
   color: #1a6c99;
   text-decoration: none;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 1401, ../scss/styles.scss */
+  /* line 1400, ../scss/styles.scss */
   .breadcrumb {
     display: none;
   }
 }
 
-/* line 1431, ../scss/styles.scss */
+/* line 1430, ../scss/styles.scss */
 .topAudioStoryWrapper {
   border: 1px solid #d3d2d2;
   height: 63px;
@@ -2196,20 +2195,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
-/* line 1437, ../scss/styles.scss */
+/* line 1436, ../scss/styles.scss */
 .topAudioStoryWrapper img {
   float: left;
   display: block;
   margin: 3px;
 }
 @media only screen and (max-width: 420px) {
-  /* line 1431, ../scss/styles.scss */
+  /* line 1430, ../scss/styles.scss */
   .topAudioStoryWrapper {
     border: none;
   }
 }
 
-/* line 1449, ../scss/styles.scss */
+/* line 1448, ../scss/styles.scss */
 .storyDate, .submitted {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   float: left;
@@ -2220,13 +2219,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   line-height: 14px;
   color: #4f3700;
 }
-/* line 1458, ../scss/styles.scss */
+/* line 1457, ../scss/styles.scss */
 .storyDate a, .submitted a {
   color: #1a6c99;
   text-decoration: none;
 }
 @media only screen and (max-width: 420px) {
-  /* line 1449, ../scss/styles.scss */
+  /* line 1448, ../scss/styles.scss */
   .storyDate, .submitted {
     clear: right;
     overflow: hidden;
@@ -2234,7 +2233,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   }
 }
 
-/* line 1465, ../scss/styles.scss */
+/* line 1464, ../scss/styles.scss */
 .downloadStoryAudio {
   border-left: 1px solid #d3d2d2;
   border-bottom: 1px solid #d3d2d2;
@@ -2249,13 +2248,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   *zoom: 1;
 }
 @media only screen and (max-width: 420px) {
-  /* line 1465, ../scss/styles.scss */
+  /* line 1464, ../scss/styles.scss */
   .downloadStoryAudio {
     display: none;
   }
 }
 
-/* line 1483, ../scss/styles.scss */
+/* line 1482, ../scss/styles.scss */
 .storyAudioPlayer {
   border-left: 1px solid #d3d2d2;
   border-bottom: 1px solid #d3d2d2;
@@ -2269,14 +2268,14 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   overflow: hidden;
   *zoom: 1;
 }
-/* line 1494, ../scss/styles.scss */
+/* line 1493, ../scss/styles.scss */
 .storyAudioPlayer .rightMusicArrow {
   float: right;
   display: block;
   margin: 11px 12px 0px 0px;
   cursor: pointer;
 }
-/* line 1501, ../scss/styles.scss */
+/* line 1500, ../scss/styles.scss */
 .storyAudioPlayer .leftMusicArrow {
   float: right;
   display: block;
@@ -2284,19 +2283,19 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   cursor: pointer;
 }
 
-/* line 1517, ../scss/styles.scss */
+/* line 1516, ../scss/styles.scss */
 .field img {
   padding: 4px;
   border: dashed 1px rgba(102, 102, 102, 0.3);
 }
 
-/* line 1529, ../scss/styles.scss */
+/* line 1528, ../scss/styles.scss */
 .flexSliderImageWrapper {
   min-width: 30px;
   display: inline-block;
 }
 
-/* line 1538, ../scss/styles.scss */
+/* line 1537, ../scss/styles.scss */
 .flexSliderImage {
   width: 292px;
   height: 292px;
@@ -2306,18 +2305,18 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   padding: 4px;
   border: dashed 1px rgba(102, 102, 102, 0.3);
 }
-/* line 1550, ../scss/styles.scss */
+/* line 1549, ../scss/styles.scss */
 .flexSliderImage img {
   margin-bottom: 0;
 }
-/* line 1554, ../scss/styles.scss */
+/* line 1553, ../scss/styles.scss */
 .flexSliderImage .rightArrow {
   position: absolute;
   bottom: 15px;
   right: 15px;
   cursor: pointer;
 }
-/* line 1561, ../scss/styles.scss */
+/* line 1560, ../scss/styles.scss */
 .flexSliderImage .leftArrow {
   cursor: pointer;
   position: absolute;
@@ -2325,7 +2324,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   left: 15px;
 }
 
-/* line 1570, ../scss/styles.scss */
+/* line 1569, ../scss/styles.scss */
 .photoCaption {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -2334,13 +2333,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: #4f3700;
   text-align: center;
 }
-/* line 1577, ../scss/styles.scss */
+/* line 1576, ../scss/styles.scss */
 .photoCaption a {
   color: #4f3700;
   text-decoration: none;
 }
 
-/* line 1583, ../scss/styles.scss */
+/* line 1582, ../scss/styles.scss */
 .testClass {
   background-image: url(../images/arrow-down.png), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #000000), color-stop(100%, #ffffff));
   background-image: url(../images/arrow-down.png), -webkit-linear-gradient(top, #000000, #ffffff);
@@ -2348,7 +2347,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-image: url(../images/arrow-down.png), linear-gradient(top, #000000, #ffffff);
 }
 
-/* line 1587, ../scss/styles.scss */
+/* line 1586, ../scss/styles.scss */
 .flexslider .slide-text {
   position: absolute;
   bottom: 0px;
@@ -2356,7 +2355,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-color: rgba(35, 31, 32, 0.6);
   width: 100%;
 }
-/* line 1594, ../scss/styles.scss */
+/* line 1593, ../scss/styles.scss */
 .flexslider .slide-text h3 a {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -2364,11 +2363,11 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   line-height: 24px;
   color: white;
 }
-/* line 1601, ../scss/styles.scss */
+/* line 1600, ../scss/styles.scss */
 .flexslider .slide-text .slide-inner {
   padding: 12px;
 }
-/* line 1604, ../scss/styles.scss */
+/* line 1603, ../scss/styles.scss */
 .flexslider .slide-text .body-text {
   font-family: "Periodico Text", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -2376,13 +2375,13 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: white;
 }
 @media only screen and (max-width: 420px) {
-  /* line 1604, ../scss/styles.scss */
+  /* line 1603, ../scss/styles.scss */
   .flexslider .slide-text .body-text {
     display: none;
   }
 }
 
-/* line 1613, ../scss/styles.scss */
+/* line 1612, ../scss/styles.scss */
 .region-content .field-type-image {
   float: right;
   display: block;
@@ -2390,7 +2389,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   margin-bottom: 10px;
 }
 
-/* line 1626, ../scss/styles.scss */
+/* line 1625, ../scss/styles.scss */
 .comment-wrapper .title {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -2399,12 +2398,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   line-height: 24px;
   border-bottom: 1px dashed #d3d2d2;
 }
-/* line 1630, ../scss/styles.scss */
+/* line 1629, ../scss/styles.scss */
 .comment-wrapper .title a {
   color: #666666;
   text-decoration: none;
 }
-/* line 1636, ../scss/styles.scss */
+/* line 1635, ../scss/styles.scss */
 .comment-wrapper textarea, .comment-wrapper input, .comment-wrapper select {
   border: 1px dashed #d3d2d2;
   background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f1f2f2), color-stop(50%, #ffffff));
@@ -2417,12 +2416,12 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-size: 13px;
   line-height: 16px;
 }
-/* line 1642, ../scss/styles.scss */
+/* line 1641, ../scss/styles.scss */
 .comment-wrapper textarea a, .comment-wrapper input a, .comment-wrapper select a {
   color: #666666;
   text-decoration: none;
 }
-/* line 1648, ../scss/styles.scss */
+/* line 1647, ../scss/styles.scss */
 .comment-wrapper select {
   background-image: url(../images/arrow-down.png), -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f1f2f2), color-stop(50%, #ffffff));
   background-image: url(../images/arrow-down.png), -webkit-linear-gradient(top, #f1f2f2 0%, #ffffff 50%);
@@ -2431,7 +2430,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   background-repeat: no-repeat;
   background-position: 90% 50%;
 }
-/* line 1654, ../scss/styles.scss */
+/* line 1653, ../scss/styles.scss */
 .comment-wrapper label {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -2439,24 +2438,24 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   font-size: 13px;
   line-height: 24px;
 }
-/* line 1658, ../scss/styles.scss */
+/* line 1657, ../scss/styles.scss */
 .comment-wrapper label a {
   color: #666666;
   text-decoration: none;
 }
-/* line 1663, ../scss/styles.scss */
+/* line 1662, ../scss/styles.scss */
 .comment-wrapper p {
   color: #333333;
   font-weight: 100;
   font-family: "Periodico Text", Helvetica, Arial, sans-serif;
   font-size: 13px;
 }
-/* line 1666, ../scss/styles.scss */
+/* line 1665, ../scss/styles.scss */
 .comment-wrapper p a {
   color: #1a6c99;
   text-decoration: none;
 }
-/* line 1672, ../scss/styles.scss */
+/* line 1671, ../scss/styles.scss */
 .comment-wrapper .username {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-size: 18px;
@@ -2464,17 +2463,17 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
   color: #1a6c99;
   text-decoration: none;
 }
-/* line 1678, ../scss/styles.scss */
+/* line 1677, ../scss/styles.scss */
 .comment-wrapper .username a {
   color: #1a6c99;
   text-decoration: none;
 }
-/* line 1681, ../scss/styles.scss */
+/* line 1680, ../scss/styles.scss */
 .comment-wrapper textarea {
   padding: 10px;
 }
 
-/* line 1694, ../scss/styles.scss */
+/* line 1693, ../scss/styles.scss */
 input[type="submit"] {
   font-family: "Periodico Display", Helvetica, Arial, sans-serif;
   font-style: italic;
@@ -2497,7 +2496,7 @@ input[type="submit"] {
   background: linear-gradient(top, #e5e2da, #ffffff);
 }
 
-/* line 1712, ../scss/styles.scss */
+/* line 1711, ../scss/styles.scss */
 .logo-img {
   display: block;
   float: none;
@@ -2543,21 +2542,21 @@ input[type="submit"] {
     border-right: 1px solid $grayBorder;
   }
 } */
-/* line 1761, ../scss/styles.scss */
+/* line 1760, ../scss/styles.scss */
 .playlist-page-list {
   padding-bottom: 10px;
   padding-top: 10px;
   border-bottom: dashed 1px rgba(102, 102, 102, 0.3);
 }
 
-/* line 1771, ../scss/styles.scss */
+/* line 1770, ../scss/styles.scss */
 .event-list-events {
   padding-bottom: 10px;
   padding-top: 10px;
   border-bottom: dashed 1px rgba(102, 102, 102, 0.3);
 }
 
-/* line 1776, ../scss/styles.scss */
+/* line 1775, ../scss/styles.scss */
 .event-list-date-box {
   display: block;
   float: left;
@@ -2569,54 +2568,54 @@ input[type="submit"] {
   text-align: center;
 }
 
-/* line 1792, ../scss/styles.scss */
+/* line 1791, ../scss/styles.scss */
 .block-events-block-5 {
   float: left;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 1792, ../scss/styles.scss */
+  /* line 1791, ../scss/styles.scss */
   .block-events-block-5 {
     width: 48%;
   }
 }
 
-/* line 1798, ../scss/styles.scss */
+/* line 1797, ../scss/styles.scss */
 .block-story-utility-block-3 {
   float: left;
   clear: left;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 1798, ../scss/styles.scss */
+  /* line 1797, ../scss/styles.scss */
   .block-story-utility-block-3 {
     width: 48%;
   }
 }
 
-/* line 1805, ../scss/styles.scss */
+/* line 1804, ../scss/styles.scss */
 .block-story-utility-block-8 {
   display: block;
   float: right;
 }
 @media only screen and (min-width: 1024px) {
-  /* line 1805, ../scss/styles.scss */
+  /* line 1804, ../scss/styles.scss */
   .block-story-utility-block-8 {
     width: 50%;
   }
 }
 
-/* line 1812, ../scss/styles.scss */
+/* line 1811, ../scss/styles.scss */
 a.site-logo {
   width: 140px;
   height: 120px;
   display: block;
 }
 
-/* line 1817, ../scss/styles.scss */
+/* line 1816, ../scss/styles.scss */
 .front #page-title {
   display: none;
 }
 
-/* line 1824, ../scss/styles.scss */
+/* line 1823, ../scss/styles.scss */
 .sectionTitle {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -2624,13 +2623,13 @@ a.site-logo {
   line-height: 24px;
   color: #1a6c99;
 }
-/* line 1830, ../scss/styles.scss */
+/* line 1829, ../scss/styles.scss */
 .sectionTitle a {
   color: #1a6c99;
   text-decoration: none;
 }
 
-/* line 1833, ../scss/styles.scss */
+/* line 1832, ../scss/styles.scss */
 .storyName {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -2638,13 +2637,13 @@ a.site-logo {
   line-height: 18px;
   color: #333333;
 }
-/* line 1839, ../scss/styles.scss */
+/* line 1838, ../scss/styles.scss */
 .storyName a {
   color: #333333;
   text-decoration: none;
 }
 
-/* line 1842, ../scss/styles.scss */
+/* line 1841, ../scss/styles.scss */
 .storyDescription {
   font-family: "Periodico Text", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -2653,7 +2652,7 @@ a.site-logo {
   color: #333333;
   margin-bottom: 6px;
 }
-/* line 1849, ../scss/styles.scss */
+/* line 1848, ../scss/styles.scss */
 .storyDescription a {
   color: #1a6c99;
   text-decoration: none;
