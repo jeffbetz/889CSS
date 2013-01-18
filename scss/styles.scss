@@ -347,6 +347,7 @@ $break-large: 1024px;
 .om-menu-ul-wrapper {float:left;}
 .om-maximenu ul.om-menu li.om-leaf {height:auto;}
 .om-maximenu .om-maximenu-middle {background:transparent;}
+.om-maximenu .block {display:inline;float:left;}
 #om-maximenu-main-menu > .om-menu-ul-wrapper > ul > li {
     //@include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
     color: $mainNavText;
