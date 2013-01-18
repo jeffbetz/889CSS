@@ -294,7 +294,7 @@ $break-large: 1024px;
   @include respond-to(medium-screens) { height: 36px; }
   @include respond-to(handhelds)      { display: none; } 
 }
-#currentTrack { display:inline; }
+#currentTrack { display:inline-block; }
 
 .brownBarArtist
 {
