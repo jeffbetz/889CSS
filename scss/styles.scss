@@ -338,16 +338,16 @@ $break-large: 1024px;
 // used to be .mainNav
 #om-maximenu-main-menu
 {
-  ul { float:none;
+  ul { float:none;height:auto;overflow:auto;
   }
 
 
 }
-#om-maximenu-main-menu {float:left;}
-.om-menu-ul-wrapper {float:left;}
+#om-maximenu-main-menu {}
+.om-menu-ul-wrapper {}
 .om-maximenu ul.om-menu li.om-leaf {height:auto;}
 .om-maximenu .om-maximenu-middle {background:transparent;}
-.om-maximenu .block {display:inline;float:left;}
+.om-maximenu .block {display:inline;float:left;margin:5px;}
 #om-maximenu-main-menu > .om-menu-ul-wrapper > ul > li {
     //@include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
     color: $mainNavText;
@@ -396,11 +396,14 @@ $break-large: 1024px;
       @include respond-to(medium-screens) { @include background(url(../images/selectedNavArrow.png) no-repeat center bottom, linear-gradient(top, rgba(white, 1) 0%, rgba(white, 1.0) 88%, rgba(white, 0.0) 88%));}
       @include respond-to(handhelds)      {  }
     }
+}
 
-    .om-maximenu-content{ 
-      margin-top:-9px;
+.om-maximenu-tabbed-content{ 
+      top:66px;
+      width: 100%;
+      position: absolute;
       background-color: $tanOverlay;
-      @include background(url(../images/selectedNavArrow.png) no-repeat 35px top, url(../images/navDropdownTopGradient.png) repeat-x top, linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
+      @include background(url(../images/navDropdownTopGradient.png) repeat-x top, linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
       @include respond-to(wide-screens)   {  }
       @include respond-to(medium-screens) {  }
       @include respond-to(handhelds)      {  } 
@@ -411,6 +414,7 @@ $break-large: 1024px;
         border-left: 1px dashed $navDividingLine;
         width: 370px;
         padding: 0 0 0 20px;
+        float:left;
         @include respond-to(wide-screens)   {  }
         @include respond-to(medium-screens) {  }
         @include respond-to(handhelds)      {  }
@@ -425,15 +429,16 @@ $break-large: 1024px;
           width: 162px;
           padding: 0 20px 0 0;
           display: inline-block;
-          a { color: $subNavText; text-decoration:none; width:40%;padding:0 2%;}
+          float:left;
+          a { color: $subNavText; text-decoration:none;}
           @include respond-to(wide-screens)   {  }
           @include respond-to(medium-screens) {  }
           @include respond-to(handhelds)      {  }
         } 
       }
-      .view-story-utility {
+      .view-story-utility, .view-events {
 
-        .highlightSection {
+        .highlight {
           color: $blueText;
           font-size: 13px;
           display:inline;
@@ -442,6 +447,8 @@ $break-large: 1024px;
           @include respond-to(medium-screens) {  }
           @include respond-to(handhelds)      { display: none; }
         }
+        .highlightImage {float:left;}
+        .highlightBody {float:left;}
         .highlightAuthor, .higlightDate {
           color: $brownText;
           font-size: 13px;
@@ -472,10 +479,6 @@ $break-large: 1024px;
 
       }
     }
-  }
-
-  .om-maximenu-no-style .om-maximenu-content {top:66px;}
-
 #om-maximenu-main-menuul.megamenu-slots-columnar
 {
   width: 100%;
