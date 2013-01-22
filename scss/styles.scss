@@ -41,8 +41,8 @@ $experimental-support-for-khtml: false;
 $experimental-support-for-opera: false;
 $experimental-support-for-microsoft: true;
 
-$break-small: 420px; // should be 320px
-$break-inbetween: 620px; // should be 320px
+$break-small: 739px; // should be 320px
+$break-inbetween: 739px; // should be 320px
 $break-large: 980px;
 
 @mixin respond-to($media) {
@@ -134,7 +134,8 @@ $break-large: 980px;
 .ir { display: block; border: 0; text-indent: -999em; overflow: hidden; background-color: transparent; background-repeat: no-repeat; text-align: left; direction: ltr; }
 .ir br { display: none; }
 
-
+body{@include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../images/texturebg.png));}
+.section-content {background-color:white;}
 // -----------------------------------------------------------------------------------------
 // HEADER
 // -----------------------------------------------------------------------------------------
@@ -190,6 +191,49 @@ $break-large: 980px;
   @include respond-to(medium-screens) { margin-top: 13px; right: 15px; }
   @include respond-to(inbetween) { display:none; right: 15px; }
   @include respond-to(handhelds)      { display: none; }
+
+  .searchNav.top
+  {
+    @include PeriodicoDisplay();
+    @include horizontal-list();
+
+    font-style: italic;
+    color: $brownText;
+    font-size: 14px;
+    line-height: 16px;
+    
+    li {
+      padding:0;
+      &:first-child a { padding-left:0; };
+      &:last-child a { border-right: none; };
+      a { color: $brownText; text-decoration:none;padding: 2px 12px;float:left;border-right: dashed 1px $lightGrayImageBorder;};
+    }
+    @include respond-to(wide-screens)   {  }
+    @include respond-to(medium-screens) {  }
+    @include respond-to(handhelds)      {  }
+  }
+  .searchNav.bottom
+  {
+    @include PeriodicoDisplay();
+    @include horizontal-list();
+
+    font-style: italic;
+    color: $brownText;
+    font-size: 14px;
+    line-height: 16px;
+
+    li {   
+      a { color: $brownText; text-decoration:none; 
+      &.footerUtilityDonate { @include background(url(../images/donate-top.png) no-repeat left center); width:85px;height:29px;@include image-2x("../images/donate-top-2x.png", 85px, 29px);};
+      &.footerUtilityGooglePlus { @include background(url(../images/google-plus-top.png) no-repeat center center);width:29px;height:29px;@include image-2x("../images/google-plus-top-2x.png", 29px, 29px);};
+      &.footerUtilityFacebook { @include background(url(../images/facebook-top.png) no-repeat center center); width:29px;height:29px;@include image-2x("../images/facebook-top-2x.png", 29px, 29px);};
+      &.footerUtilityTwitter { @include background(url(../images/twitter-top.png) no-repeat center center); width:29px;height:29px;@include image-2x("../images/twitter-top-2x.png", 29px, 29px);}; 
+      };
+    }
+    @include respond-to(wide-screens)   {  }
+    @include respond-to(medium-screens) {  }
+    @include respond-to(handhelds)      {  }
+  }
 }
 
 .dashedBorder, #zone-branding-wrapper .block-openx img
@@ -408,7 +452,7 @@ $break-large: 980px;
       @include background(url(../images/navDropdownTopGradient.png) repeat-x top, linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));
       @include respond-to(wide-screens)   {  }
       @include respond-to(medium-screens) {  }
-      @include respond-to(handhelds)      {  } 
+      @include respond-to(handhelds)      { display:none; } 
 
       .om-maximenu-tabbed-content-inner {}
       ul
@@ -537,57 +581,6 @@ $break-large: 980px;
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
 } 
-
-.footerUtilityNav.top
-{
-  @include PeriodicoDisplay();
-  @include horizontal-list();
-
-  font-style: italic;
-  color: $brownText;
-  font-size: 14px;
-  line-height: 16px;
-  
-  li {
-    padding:0;
-    &:first-child a { padding-left:0; };
-    &:last-child a { border-right: none; };
-    a { color: $brownText; text-decoration:none;padding: 2px 12px;float:left;border-right: dashed 1px $lightGrayImageBorder;};
-  }
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
-}
-.footerUtilityNav.bottom
-{
-  @include PeriodicoDisplay();
-  @include horizontal-list();
-
-  font-style: italic;
-  color: $brownText;
-  font-size: 14px;
-  line-height: 16px;
-
-  li {   
-    a { color: $brownText; text-decoration:none; 
-    &.footerUtilityDonate { @include background(url(../images/donate-top.png) no-repeat left center); width:85px;height:29px;@include image-2x("../images/donate-top-2x.png", 85px, 29px);};
-    &.footerUtilityGooglePlus { @include background(url(../images/google-plus-top.png) no-repeat center center);width:29px;height:29px;@include image-2x("../images/google-plus-top-2x.png", 29px, 29px);};
-    &.footerUtilityFacebook { @include background(url(../images/facebook-top.png) no-repeat center center); width:29px;height:29px;@include image-2x("../images/facebook-top-2x.png", 29px, 29px);};
-    &.footerUtilityTwitter { @include background(url(../images/twitter-top.png) no-repeat center center); width:29px;height:29px;@include image-2x("../images/twitter-top-2x.png", 29px, 29px);}; 
-    };
-  }
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
-}
-.footerUtilityNavWrapper
-{
-  margin: 0 auto;
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(medium-screens) {  }
-  @include respond-to(handhelds)      {  }
-}
-
 .footerutilitywrapper
 {
   @include background(url(../images/texturebg.png));
@@ -595,9 +588,51 @@ $break-large: 980px;
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
+
+  .footerUtilityNavWrapper{text-align: center;
+    .footerUtilityNav
+    {
+      display: inline-block;
+      text-align: center;
+      @include PeriodicoDisplay();
+      @include horizontal-list();
+      font-style: italic;
+      color: $brownText;
+      font-size: 14px;
+      line-height: 16px;
+      li {   
+        padding: 10px 18px;
+        border-right: dashed 1px $lightGrayImageBorder;
+        &:last-child { border-right: none; };
+        a { color: $brownText; text-decoration:none; };
+        &.footerUtilityDonate {color: red; @include background(url(../images/donate-heart.png) no-repeat 17px 11px); padding-left: 36px;}; 
+      }
+      @include respond-to(wide-screens)   {  }
+      @include respond-to(medium-screens) {  }
+      @include respond-to(handhelds)      {  }
+    }
+  }
 }
 
 
+
+
+.block-menu-social-media-links {
+  float:left;
+  ul {@include horizontal-list();}
+
+  a {width:38px;height:41px;}
+  a.itunes{@include background(url(../images/icon-itunes.png) no-repeat center center)}
+  a.lastfm{@include background(url(../images/icon-lastfm.png) no-repeat center center)}
+  a.flickr{@include background(url(../images/icon-flickr.png) no-repeat center center)}
+  a.facebook{@include background(url(../images/icon-facebook.png) no-repeat center center)}
+  a.twitter{@include background(url(../images/icon-twitter.png) no-repeat center center)}
+  a.youtube{@include background(url(../images/icon-youtube.png) no-repeat center center)}
+  a.myspace{@include background(url(../images/icon-myspace.png) no-repeat center center)}
+  a.digg{@include background(url(../images/icon-digg.png) no-repeat center center)}
+  a.rss{@include background(url(../images/icon-rss.png) no-repeat center center)}
+
+}
 
 
 
@@ -629,7 +664,6 @@ $break-large: 980px;
 
 .footernavwrapper
 { 
-  @include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../images/texturebg.png));
   padding: 30px 15px;
   // height: 500px;
   @include clearfix();
@@ -732,7 +766,7 @@ $break-large: 980px;
   color: $darkBrown;
   a { color: $darkBrown; text-decoration:none; }
   ul { float: left; display: block; }
-  li {@include ellipsis(); padding-right: 3px; float:left; width:140px;}
+  li {@include ellipsis();}
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
@@ -766,27 +800,41 @@ $footerRowSpacing: 30px;
   @include respond-to(handhelds)      {  }
 }
 
-.mobilePhoneImage
+.mobile-apps ul
 {
-  margin: 11px 0 -2px 0;
+  @include background(url(../images/mobile-phone-footer.png) no-repeat left top);
+  padding: 70px 0 0 0;
+  margin-top:10px;
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
 }
 
-.copyrightText
-{
-  @include Calibri();
-  font-weight: bold;
-  font-size: 15px;
-  line-height: 18px;
-  color: $lightGrayText;
-  a { color: $lightGrayText; text-decoration:none; }
+.copyright-wrapper{
+  float:right;
+  display:inline-block;
+  ul {
+    @include horizontal-list();
+    @include Calibri();
+    font-weight: bold;
+    font-size: 15px;
+    line-height: 18px;
+    color: $lightGrayText;
+    a { color: $lightGrayText; text-decoration:none; }
+  }
   @include respond-to(wide-screens)   {  }
   @include respond-to(medium-screens) {  }
   @include respond-to(handhelds)      {  }
 }
-
+.credits-wrapper{
+  float:right;
+  display:inline-block;
+  ul.credits {
+    @include horizontal-list();
+    a.rollmobile{ @include background(url(../images/logo-roll.png) no-repeat center center);width:48px;height:47px;}
+    a.ascedia{ @include background(url(../images/logo-ascedia.png) no-repeat center center);width:63px;height:47px;}
+  }
+}
 
 // -----------------------------------------------------------------------------------------
 // AD COLUMN
