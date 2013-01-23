@@ -984,9 +984,9 @@ $featuredShowDivBarHeight: 84px;
   @include clearfix();
 
 margin-right: 10px;
-    @include respond-to(wide-screens)   { margin-bottom: 15px; width: 365px; margin-right: 10px;}
-    @include respond-to(regular-screens)   { margin-bottom: 15px; width: 365px; margin-right: 10px;}
-    @include respond-to(narrow-screens) { margin-bottom: 15px; width: 310px; margin-right: 10px;}
+    @include respond-to(wide-screens)   { margin-bottom: 15px; margin-right: 10px;}
+    @include respond-to(regular-screens)   { margin-bottom: 15px; margin-right: 10px;}
+    @include respond-to(narrow-screens) { margin-bottom: 15px; margin-right: 10px;}
     @include respond-to(small-screens)      { margin: 0px; }
   // @include box-sizing(border-box);
 
@@ -1959,6 +1959,12 @@ a.site-logo {
 }
 .front #page-title {
   display:none;
+}
+.view-story-utility .views-row-first .grid-4 {
+  margin-left:0;
+}
+.view-story-utility .views-row-last .grid-4  {
+  margin-right:0;
 }
 // -----------------------------------------------------------------------------------------
 // GLOBAL STYLES
