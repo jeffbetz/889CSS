@@ -1993,7 +1993,15 @@ a.site-logo {
 }
 .front #page-title {
   display:none;
+} 
+
+.view-story-utility .views-row-first .grid-4 {
+  margin-left:0;
 }
+.view-story-utility .views-row-last .grid-4  {
+  margin-right:0;
+}
+
 // -----------------------------------------------------------------------------------------
 // GLOBAL STYLES
 // -----------------------------------------------------------------------------------------
