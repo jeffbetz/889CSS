@@ -1562,7 +1562,7 @@ margin-right: 10px;
 {
   border: 1px solid $grayBorder;
   //width: 640px;
-  height: 63px;
+  height: 73px;
   @include box-sizing(border-box);
 
   img {
@@ -1598,7 +1598,7 @@ margin-right: 10px;
 {
   border-left: 1px solid $grayBorder;
   border-bottom: 1px solid $grayBorder;
-  height: 62px;
+  height: 72px;
   width: 60px;
   @include box-sizing(border-box);
   // background-color: red;
@@ -1617,7 +1617,7 @@ margin-right: 10px;
 {
   border-left: 1px solid $grayBorder;
   border-bottom: 1px solid $grayBorder;
-  height: 62px;
+  height: 72px;
   width: 360px;
   @include box-sizing(border-box);
   // background-color: red;
@@ -1966,6 +1966,7 @@ a.site-logo {
 .view-story-utility .views-row-last .grid-4  {
   margin-right:0;
 }
+.fright {float:right;}
 // -----------------------------------------------------------------------------------------
 // GLOBAL STYLES
 // -----------------------------------------------------------------------------------------

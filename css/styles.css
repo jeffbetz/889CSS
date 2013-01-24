@@ -2594,7 +2594,7 @@ body {
 /* line 1562, ../scss/styles.scss */
 .topAudioStoryWrapper {
   border: 1px solid #d3d2d2;
-  height: 63px;
+  height: 73px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2641,7 +2641,7 @@ body {
 .downloadStoryAudio {
   border-left: 1px solid #d3d2d2;
   border-bottom: 1px solid #d3d2d2;
-  height: 62px;
+  height: 72px;
   width: 60px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -2662,7 +2662,7 @@ body {
 .storyAudioPlayer {
   border-left: 1px solid #d3d2d2;
   border-bottom: 1px solid #d3d2d2;
-  height: 62px;
+  height: 72px;
   width: 360px;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -3030,7 +3030,12 @@ a.site-logo {
   margin-right: 0;
 }
 
-/* line 1973, ../scss/styles.scss */
+/* line 1969, ../scss/styles.scss */
+.fright {
+  float: right;
+}
+
+/* line 1974, ../scss/styles.scss */
 .sectionTitle {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -3038,13 +3043,13 @@ a.site-logo {
   line-height: 24px;
   color: #1a6c99;
 }
-/* line 1979, ../scss/styles.scss */
+/* line 1980, ../scss/styles.scss */
 .sectionTitle a {
   color: #1a6c99;
   text-decoration: none;
 }
 
-/* line 1982, ../scss/styles.scss */
+/* line 1983, ../scss/styles.scss */
 .storyName {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -3052,13 +3057,13 @@ a.site-logo {
   line-height: 18px;
   color: #333333;
 }
-/* line 1988, ../scss/styles.scss */
+/* line 1989, ../scss/styles.scss */
 .storyName a {
   color: #333333;
   text-decoration: none;
 }
 
-/* line 1991, ../scss/styles.scss */
+/* line 1992, ../scss/styles.scss */
 .storyDescription {
   font-family: "Periodico Text", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -3067,7 +3072,7 @@ a.site-logo {
   color: #333333;
   margin-bottom: 6px;
 }
-/* line 1998, ../scss/styles.scss */
+/* line 1999, ../scss/styles.scss */
 .storyDescription a {
   color: #1a6c99;
   text-decoration: none;
