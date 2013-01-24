@@ -659,26 +659,35 @@ body{
   .ui-accordion-header {
     @include PeriodicoDisplay();
     font-size:17px;
-    white-space: nowrap;
-    overflow: hidden;
-    -ms-text-overflow: ellipsis;
-    text-overflow: ellipsis;
+    @include ellipsis();
     font-style: italic;
     font-weight: normal;
     text-transform: lowercase;
-    a.accordion-link, span.accordion-link {padding: .5em 1em; display: block;color: $mainNavText;}
-    .ui-icon {
-      position: absolute;
-      right: .5em;
-      left:auto;
-      margin-top: -8px;
+    a.accordion-link, span.accordion-link {
+      @include ellipsis();
+      padding: .5em 1em;
+      display: block;
+      color: $mainNavText;
+      @include background(url(../images/arrow-right.png) no-repeat 97% center);
+      
     }
-    &.ui-state-active{@include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));}
+    .ui-state-active .accordion-link{@include background(url(../images/arrow-down.png) no-repeat 97% center);}
+    .ui-icon {display:none;}
+    &.ui-state-active a.accordion-link, &.ui-state-active span.accordion-link {@include background(url(../images/arrow-down.png) no-repeat 97% center);}
   }
   .ui-accordion-link {}
-  .ui-accordion-content-active{padding:0 1em;@include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));border:none;} 
-}
+  .ui-accordion-content-active{padding:0;@include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));border:none;} 
+  ul.menu {
+      float:none;
+      margin:0;
+      li {padding:0;border-top: dashed 1px $lightGrayImageBorder;border-bottom:none;}
+      li a { @include ellipsis();padding-right: 20px;padding-left: 35px;display:block;@include background(url(../images/arrow-right.png) no-repeat 97% center);}
+      li li a {padding-left: 60px;}
+  }
+  .ui-icon-arrow-right {@include background(url(../images/arrow-right.png) no-repeat);}
+  .ui-icon-arrow-down {@include background(url(../images/arrow-down.png) no-repeat);}
 
+}
 .block-menu-social-media-links {
   float:left;
   ul {
@@ -897,7 +906,9 @@ $footerRowSpacing: 30px;
     font-size: 15px;
     line-height: 18px;
     color: $lightGrayText;
-    .copyright, a {line-height:48px;}
+    .copyright, a {line-height:48px;
+        @include respond-to(small-screens)  {  line-height:18px; }
+    }
     a { 
       color: $lightGrayText; 
       text-decoration:none; 
@@ -907,7 +918,7 @@ $footerRowSpacing: 30px;
   @include respond-to(wide-screens)   {  }
   @include respond-to(regular-screens) {  }
   @include respond-to(narrow-screens) {  }
-  @include respond-to(small-screens)  {  }
+  @include respond-to(small-screens)  {  float:left;clear:both; }
 }
 .credits-wrapper{
   float:right;
@@ -920,6 +931,7 @@ $footerRowSpacing: 30px;
     a.ascedia{ @include background(url(../images/logo-ascedia.png) no-repeat center center);width:63px;height:47px;}
     
   }
+  @include respond-to(small-screens)  { margin-top:5px;float:left;clear:both; }
 }
 
 // -----------------------------------------------------------------------------------------
