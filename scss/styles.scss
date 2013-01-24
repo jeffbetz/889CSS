@@ -141,7 +141,7 @@ $break-wide: 1140px;
 .hidden-small{ @include respond-to(small-screens) {display:none;}}
 .hidden-narrow{ @include respond-to(narrow-screens) {display:none;}}
 .hidden-regular{ @include respond-to(regular-screens) {display:none;}}
-.hidden-wide{ @include respond-to(wide-screens) {display:none;}}
+.hidden-wide{ @include respond-to(wide-screens) {display:none;display:block;}}
 
 body{
     @include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../images/texturebg.png));
