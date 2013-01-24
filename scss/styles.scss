@@ -138,12 +138,15 @@ $break-wide: 1140px;
 .visible-narrow{ display:none; @include respond-to(narrow-screens) {display:block;}}
 .visible-regular{ display:none; @include respond-to(regular-screens) {display:block;}}
 .visible-wide{ display:none; @include respond-to(wide-screens) {display:block;}}
-.hidden-small{ display:none; @include respond-to(small-screens) {display:none;}}
-.hidden-narrow{ display:none; @include respond-to(narrow-screens) {display:none;}}
+.hidden-small{ @include respond-to(small-screens) {display:none;}}
+.hidden-narrow{ @include respond-to(narrow-screens) {display:none;}}
 .hidden-regular{ @include respond-to(regular-screens) {display:none;}}
 .hidden-wide{ @include respond-to(wide-screens) {display:none;}}
 
-body{@include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../images/texturebg.png));}
+body{
+    @include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../images/texturebg.png));
+    @include respond-to(small-screens) {@include background(url(../images/texturebg.png))};
+  }
 .section-content {background-color:white;}
 // -----------------------------------------------------------------------------------------
 // HEADER
@@ -170,7 +173,7 @@ body{@include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../
   @include respond-to(wide-screens)   { margin-top: 50px; }
   @include respond-to(regular-screens)   { margin-top: 50px; }
   @include respond-to(narrow-screens) { margin-top: 34px; }
-  @include respond-to(small-screen)  { display:none; }
+  @include respond-to(small-screens)  { display:none; }
 }
 
 // .zone-branding {
@@ -185,8 +188,8 @@ body{@include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../
   float: none;
   margin: 0 auto;
   @include background(url(../images/logo_desktop.png) center); height: 127px; width: 134px;
-  @include respond-to(wide-screens)   { @include background(url(../images/logo_desktop.png) center no-repeat); height: 127px; width: 134px; padding-top: 16px;}
-  @include respond-to(regular-screens) { @include background(url(../images/logo_tablet.png) center no-repeat); height: 100px; width: 95px;padding-top: 20px; }
+  @include respond-to(regular-screens)   { }
+  @include respond-to(narrow-screens) { @include background(url(../images/logo_tablet.png) center no-repeat); height: 100px; width: 95px;padding-top: 20px; }
   @include respond-to(small-screens)      { @include background(url(../images/logo_mobile.png) center no-repeat); height: 58px; width: 61px;padding-top: 4px; }
 }
 
@@ -197,8 +200,8 @@ body{@include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../
   right: 0;
   top: 0;
   @include respond-to(wide-screens)   { margin-top: 35px; }
-  @include respond-to(regular-screens) { margin-top: 13px; right: 15px; }
-  @include respond-to(narrow-screens) { right: 15px; }
+  @include respond-to(regular-screens) { margin-top: 35px; }
+  @include respond-to(narrow-screens) { margin-top: 13px; right: 15px; }
   @include respond-to(small-screens)      { display: none; }
 
   .searchNav.top
@@ -418,8 +421,9 @@ body{@include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../
       border-right: 1px dashed $navDividingLine;
       text-transform: lowercase;
       @include respond-to(wide-screens)   {  }
-      @include respond-to(narrow-screens) { padding: 8px 8px; }
-      @include respond-to(small-screens)      {  border-right:none; }
+      @include respond-to(regular-screens)   {  }
+      @include respond-to(narrow-screens) { padding: 3px 14px; }
+      @include respond-to(small-screens)      { }
       &.listen-live {@include background(url(../images/radio-tower.png) no-repeat left center); padding-left:37px;}
       &.quick-links {@include background(url(../images/arrow-down.png) no-repeat right center); padding-right:20px;border-right:none;}
     }
@@ -428,12 +432,14 @@ body{@include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../
       font-size: 17px;
       &:last-child { border-right: none; };
     }
-    
     @include respond-to(regular-screens) { 
+      font-size: 17px;
+      &:last-child { border-right: none; };
+    }
+    @include respond-to(narrow-screens) { 
       font-size: 14px;
       &:last-child { border-right: none; }; 
     }
-    
     @include respond-to(small-screens)      { font-size: 17px; display: none;}
     
     &.active, &.active-trail {
@@ -614,7 +620,7 @@ body{@include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../
   @include respond-to(wide-screens)   {  }
   @include respond-to(regular-screens) {  }
   @include respond-to(narrow-screens) {  }
-  @include respond-to(small-screens)      {  }
+  @include respond-to(small-screens)  { @include background(none); }
 
   .footerUtilityNavWrapper{text-align: center;
     .footerUtilityNav
@@ -642,8 +648,36 @@ body{@include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../
   }
 }
 
-
-
+.block-accordion-menu.mobile-main-menu .block-title{display:none;}
+.ui-accordion{
+  color: $mainNavText;
+  @include PeriodicoDisplay();
+  font-size:17px;
+  .ui-corner-all {border-radius: 0;-moz-border-radius:0;-webkit-border-radius:0;}
+  .ui-state-default, .ui-widget-content .ui-state-default, 
+  .ui-widget-header .ui-state-default, .ui-state-active {background:none;border:none !important;border-top: dashed 1px $lightGrayImageBorder !important;}
+  .ui-accordion-header {
+    @include PeriodicoDisplay();
+    font-size:17px;
+    white-space: nowrap;
+    overflow: hidden;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    font-style: italic;
+    font-weight: normal;
+    text-transform: lowercase;
+    a.accordion-link, span.accordion-link {padding: .5em 1em; display: block;color: $mainNavText;}
+    .ui-icon {
+      position: absolute;
+      right: .5em;
+      left:auto;
+      margin-top: -8px;
+    }
+    &.ui-state-active{@include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));}
+  }
+  .ui-accordion-link {}
+  .ui-accordion-content-active{padding:0 1em;@include background(linear-gradient(top, $tanOverlay, $tanOverlay),url(../images/texturebg.png));border:none;} 
+}
 
 .block-menu-social-media-links {
   float:left;
@@ -704,7 +738,7 @@ body{@include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../
   @include respond-to(wide-screens)   { }
   @include respond-to(regular-screens) { }
   @include respond-to(narrow-screens) { }
-  @include respond-to(small-screens)  { }
+  @include respond-to(small-screens)  { padding:15px 0;}
 
   h2 
   {
@@ -984,9 +1018,9 @@ $featuredShowDivBarHeight: 84px;
   @include clearfix();
 
 margin-right: 10px;
-    @include respond-to(wide-screens)   { margin-bottom: 15px; margin-right: 10px;}
-    @include respond-to(regular-screens)   { margin-bottom: 15px; margin-right: 10px;}
-    @include respond-to(narrow-screens) { margin-bottom: 15px; margin-right: 10px;}
+    @include respond-to(wide-screens)   { margin-bottom: 15px; width: 365px; margin-right: 10px;}
+    @include respond-to(regular-screens)   { margin-bottom: 15px; width: 365px; margin-right: 10px;}
+    @include respond-to(narrow-screens) { margin-bottom: 15px; width: 310px; margin-right: 10px;}
     @include respond-to(small-screens)      { margin: 0px; }
   // @include box-sizing(border-box);
 
@@ -1562,7 +1596,7 @@ margin-right: 10px;
 {
   border: 1px solid $grayBorder;
   //width: 640px;
-  height: 73px;
+  height: 63px;
   @include box-sizing(border-box);
 
   img {
@@ -1598,7 +1632,7 @@ margin-right: 10px;
 {
   border-left: 1px solid $grayBorder;
   border-bottom: 1px solid $grayBorder;
-  height: 72px;
+  height: 62px;
   width: 60px;
   @include box-sizing(border-box);
   // background-color: red;
@@ -1617,7 +1651,7 @@ margin-right: 10px;
 {
   border-left: 1px solid $grayBorder;
   border-bottom: 1px solid $grayBorder;
-  height: 72px;
+  height: 62px;
   width: 360px;
   @include box-sizing(border-box);
   // background-color: red;
@@ -1959,14 +1993,15 @@ a.site-logo {
 }
 .front #page-title {
   display:none;
-}
+} 
+
 .view-story-utility .views-row-first .grid-4 {
   margin-left:0;
 }
 .view-story-utility .views-row-last .grid-4  {
   margin-right:0;
 }
-.fright {float:right;}
+
 // -----------------------------------------------------------------------------------------
 // GLOBAL STYLES
 // -----------------------------------------------------------------------------------------
