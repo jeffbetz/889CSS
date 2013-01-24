@@ -3100,7 +3100,17 @@ a.site-logo {
   display: none;
 }
 
+/* line 1998, ../scss/styles.scss */
+.view-story-utility .views-row-first .grid-4 {
+  margin-left: 0;
+}
+
 /* line 2001, ../scss/styles.scss */
+.view-story-utility .views-row-last .grid-4 {
+  margin-right: 0;
+}
+
+/* line 2009, ../scss/styles.scss */
 .sectionTitle {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -3108,13 +3118,13 @@ a.site-logo {
   line-height: 24px;
   color: #1a6c99;
 }
-/* line 2007, ../scss/styles.scss */
+/* line 2015, ../scss/styles.scss */
 .sectionTitle a {
   color: #1a6c99;
   text-decoration: none;
 }
 
-/* line 2010, ../scss/styles.scss */
+/* line 2018, ../scss/styles.scss */
 .storyName {
   font-family: "Calibri", Helvetica, Arial, sans-serif;
   font-weight: bold;
@@ -3122,13 +3132,13 @@ a.site-logo {
   line-height: 18px;
   color: #333333;
 }
-/* line 2016, ../scss/styles.scss */
+/* line 2024, ../scss/styles.scss */
 .storyName a {
   color: #333333;
   text-decoration: none;
 }
 
-/* line 2019, ../scss/styles.scss */
+/* line 2027, ../scss/styles.scss */
 .storyDescription {
   font-family: "Periodico Text", Helvetica, Arial, sans-serif;
   font-size: 14px;
@@ -3137,7 +3147,7 @@ a.site-logo {
   color: #333333;
   margin-bottom: 6px;
 }
-/* line 2026, ../scss/styles.scss */
+/* line 2034, ../scss/styles.scss */
 .storyDescription a {
   color: #1a6c99;
   text-decoration: none;
