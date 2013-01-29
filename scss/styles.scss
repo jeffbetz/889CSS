@@ -416,7 +416,7 @@ body{
     overflow: visible;
     margin-right: 0px;
     padding: 10px 0 19px 0;
-    > a, > span { color: $mainNavText; text-decoration:none; 
+    > span { color: $mainNavText; text-decoration:none; 
       padding: 3px 20px;
       border-right: 1px dashed $navDividingLine;
       text-transform: lowercase;
@@ -425,7 +425,12 @@ body{
       @include respond-to(narrow-screens) { padding: 3px 14px; }
       @include respond-to(small-screens)      { }
       &.listen-live {@include background(url(../images/radio-tower.png) no-repeat left center); padding-left:37px;}
-      &.quick-links {@include background(url(../images/arrow-down.png) no-repeat right center); padding-right:20px;border-right:none;}
+      &.quick-links {@include background(url(../images/arrow-down.png) no-repeat 98% center); padding-right:20px;border-right:none;}
+      &.direct-link {padding:0;height:auto;
+        a {color: $mainNavText; text-decoration:none;padding:3px 20px;text-transform: lowercase;line-height: 36px;
+        @include respond-to(narrow-screens) { padding: 3px 14px; }
+      }
+      }
     }
     
     @include respond-to(wide-screens) { 
