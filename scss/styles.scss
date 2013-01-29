@@ -710,8 +710,8 @@ body{
 
 .detail-support-88nine h3 {
    @include Calibri();
-    font-weight: bold;
-    font-size: 28px;
+    font-weight: normal;
+    font-size: 24px;
     line-height: 36px;
     text-transform: uppercase;
 }
@@ -1028,8 +1028,15 @@ $featuredShowDivBarHeight: 84px;
 // STORY BLOCK
 // -----------------------------------------------------------------------------------------
 
+ .region-sidebar-first {
+   @include respond-to(wide-screens)   { margin-top:15px; }
+   @include respond-to(regular-screens) {   }
+   @include respond-to(small-screens)      {  }
+ }
+
 .storyBlock
 {
+  img { width:100%; height:auto;}
   border: 1px solid $grayBorder;
   background-color: white;
   border-top: 6px solid $tan;
@@ -1037,7 +1044,7 @@ $featuredShowDivBarHeight: 84px;
   float: left;
   @include clearfix();
 
-margin-right: 10px;
+  margin-right: 10px;
     @include respond-to(wide-screens)   { margin-bottom: 15px; width: 365px; margin-right: 10px;}
     @include respond-to(regular-screens)   { margin-bottom: 15px; width: 365px; margin-right: 10px;}
     @include respond-to(narrow-screens) { margin-bottom: 15px; width: 310px; margin-right: 10px;}
@@ -2063,9 +2070,11 @@ a.site-logo {
 
 .view-story-utility .views-row-first .grid-4 {
   margin-left:0;
+  margin-right:5px;
 }
 .view-story-utility .views-row-last .grid-4  {
   margin-right:0;
+  margin-left:0;
 }
 
 .fright {float:right;}
