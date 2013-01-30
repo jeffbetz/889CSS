@@ -173,7 +173,16 @@ body{
   @include respond-to(wide-screens)   { margin-top: 50px; }
   @include respond-to(regular-screens)   { margin-top: 50px; }
   @include respond-to(narrow-screens) { margin-top: 34px; }
-  @include respond-to(small-screens)  { display:none; }
+  @include respond-to(small-screens)  { display:none; } 
+}
+
+.header-menu {
+  float: left;
+  .mobile-menu-jumpto{
+      width:30px;
+      height:30px; 
+      @include background( url(../images/radio-tower.png) no-repeat center center);
+  }
 }
 
 // .zone-branding {
@@ -191,6 +200,17 @@ body{
   @include respond-to(regular-screens)   { }
   @include respond-to(narrow-screens) { @include background(url(../images/logo_tablet.png) center no-repeat); height: 100px; width: 95px;padding-top: 20px; }
   @include respond-to(small-screens)      { @include background(url(../images/logo_mobile.png) center no-repeat); height: 58px; width: 61px;padding-top: 4px; }
+}
+
+.header-listen-live {
+  position: absolute;
+  right: 0;
+  top: 0;
+  .listen-live{
+    width:30px;
+    height:30px;
+    @include background( url(../images/radio-tower.png) no-repeat center center);
+  }
 }
 
 .header-search {
