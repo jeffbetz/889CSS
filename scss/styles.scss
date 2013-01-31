@@ -444,11 +444,12 @@ body{
       @include respond-to(regular-screens)   {  }
       @include respond-to(narrow-screens) { padding: 3px 14px; }
       @include respond-to(small-screens)      { }
-      &.listen-live {@include background(url(../images/radio-tower.png) no-repeat left center); padding-left:37px;}
+      //&.listen-live {@include background(url(../images/radio-tower.png) no-repeat left center); padding-left:37px;}
       &.quick-links {@include background(url(../images/arrow-down.png) no-repeat 98% center); padding-right:20px;border-right:none;}
       &.direct-link {padding:0;height:auto;
         a {color: $mainNavText; text-decoration:none;padding:3px 20px;text-transform: lowercase;line-height: 36px;
         @include respond-to(narrow-screens) { padding: 3px 14px; }
+        &.listen-live {@include background(url(../images/radio-tower.png) no-repeat left center); padding-left:37px;}
       }
       }
     }
