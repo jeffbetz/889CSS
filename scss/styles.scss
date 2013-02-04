@@ -288,7 +288,7 @@ body{
 }
 
 // for the searchbox
-.search-wrapper
+.header-search .search-wrapper
 {
   // input {
     
@@ -319,16 +319,16 @@ body{
     text-transform: lowercase;
   }
 
-#edit-search-block-form--2{
+  #edit-search-block-form--2{
     width:175px;
   }
-#edit-submit {
-  border:none;
-}
+  #edit-submit {
+    border:none;
+  }
 }
 
 // #search-block-form input.form-submit, #search-form input.form-submit {
-#search-block-form input.form-submit, #search-form input.form-submit {
+.header-search #search-block-form input.form-submit, #search-form input.form-submit {
      @include background(url(../images/searchIcon.png) no-repeat right center, linear-gradient(top, $searchBox, $searchBox) );
     -webkit-background-origin: content-box;
     background-origin: content-box;
@@ -646,7 +646,7 @@ body{
   @include respond-to(wide-screens)   {  }
   @include respond-to(regular-screens) {  }
   @include respond-to(narrow-screens) {  }
-  @include respond-to(small-screens)  { @include background(none); }
+  @include respond-to(small-screens)  { @include background(none); padding: 0;}
 
   .footerUtilityNavWrapper{text-align: center;
     .footerUtilityNav
@@ -716,6 +716,7 @@ body{
 }
 .block-menu-social-media-links {
   float:left;
+  clear:both;
   ul {
       @include horizontal-list(); 
       li {padding:0;}
@@ -783,7 +784,7 @@ body{
   @include respond-to(wide-screens)   { }
   @include respond-to(regular-screens) { }
   @include respond-to(narrow-screens) { }
-  @include respond-to(small-screens)  { padding:15px 0;}
+  @include respond-to(small-screens)  { padding:0;}
 
   h2 
   {
@@ -968,6 +969,54 @@ $footerRowSpacing: 30px;
     
   }
   @include respond-to(small-screens)  { margin-top:5px;float:left;clear:both; }
+}
+
+// for the searchbox
+.section-footer .search-wrapper
+{
+    float:left;
+    border: 1px solid $tan;
+    background-color: $searchBox;
+    // @include opacity(0.95);
+    padding-left: 10px; 
+    padding-right: 10px;
+   
+    @include Calibri();
+    color: $searchBoxText;
+    font-size: 14px;
+
+    margin: 10px 0;
+    .search-form {margin:0;}
+    .form-item {display:inline-block;}
+  .form-item, .form-actions{margin:0;display:inline-block;}
+  input {
+    display:inline-block;
+    background-color: $transparent;
+    border: none;
+    @include Calibri();
+    color: $searchBoxText;
+    font-size: 14px;
+    &:focus { box-shadow: none; };
+    &.form-submit{
+      border:none;
+       @include background(url(../images/searchIcon.png) no-repeat right center, linear-gradient(top, $searchBox, $searchBox) );
+      -webkit-background-origin: content-box;
+      background-origin: content-box;
+      cursor: pointer;
+      height: 27px;
+      margin-left: 0;
+      margin-right: 0;
+      overflow: hidden;
+      padding: 0;
+      text-indent: -9999px;
+      width: 27px;
+      &:focus { box-shadow: none; };      
+    }
+  }
+
+  a {
+    text-transform: lowercase;
+  }
 }
 
 // -----------------------------------------------------------------------------------------
