@@ -1119,7 +1119,7 @@ $featuredShowDivBarHeight: 84px;
     a.facebook { float:left; margin-top:4px; margin-left:4px; @include background(url(../images/icon-noshadow-facebook.png) no-repeat center center); width:32px;height:32px;@include image-2x("../images/icon-noshadow-facebook-2x.png", 32px, 32px);};
     a.twitter { float:left; margin-top:4px; margin-left:4px; @include background(url(../images/icon-noshadow-twitter.png) no-repeat center center); width:32px;height:32px;@include image-2x("../images/icon-noshadow-twitter-2x.png", 32px, 32px);}; 
     //a.gplus { display:none; float:left; margin-top:4px; margin-left:4px; @include background(url(../images/icon-noshadow-google-plus.png) no-repeat center center); width:32px;height:32px;@include image-2x("../images/icon-noshadowgoogle-plus-2x.png", 32px, 32px);};
-    a.email { float:left; margin-top:4px; margin-left:4px; @include background(url(../images/icon-noshadow-mail.png) no-repeat center center); width:32px;height:32px;@include image-2x("../images/icon-noshadow-mail-2x.png", 32px, 32px);}; 
+    a.email { float:left; margin-top:4px; margin-left:4px; @include background(url(../images/icon-noshadow-mail.png) no-repeat center center); width:33px;height:32px;@include image-2x("../images/icon-noshadow-mail-2x.png", 32px, 32px);}; 
   }
   .storyDescription{
     height: 80px;
@@ -1318,9 +1318,9 @@ $featuredShowDivBarHeight: 84px;
   margin-top: 10px;
   @include Calibri();
   font-weight: bold;
-  @include respond-to(wide-screens)   { font-size: 32px; line-height: 30px; }
-  @include respond-to(regular-screens) { font-size: 32px; line-height: 30px; }
-  @include respond-to(narrow-screens) { font-size: 32px; line-height: 30px; }
+  @include respond-to(wide-screens)   { font-size: 32px; line-height: 30px; margin-bottom: 15px;}
+  @include respond-to(regular-screens) { font-size: 32px; line-height: 30px; margin-bottom: 15px;}
+  @include respond-to(narrow-screens) { font-size: 32px; line-height: 30px; margin-bottom: 15px;}
   @include respond-to(small-screens)      { font-size: 35px; line-height: 32px; padding: 0px 15px; display: inline-block; }
 }
 
@@ -1671,9 +1671,9 @@ $featuredShowDivBarHeight: 84px;
     margin: 3px;
   }
 
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(regular-screens) {  }
-  @include respond-to(narrow-screens) {  }
+  @include respond-to(wide-screens)   {  margin-bottom:25px; }
+  @include respond-to(regular-screens) { margin-bottom:25px; }
+  @include respond-to(narrow-screens) { margin-bottom:25px; }
   @include respond-to(small-screens)  { border: none;  }
 }
 
