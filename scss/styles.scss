@@ -147,7 +147,13 @@ body{
     @include background(linear-gradient(top, $tanOverlay, $tanOverlay), url(../images/texturebg.png));
     @include respond-to(small-screens) {@include background(url(../images/texturebg.png))};
   }
-.section-content {background-color:white;}
+.section-content {
+  background-color:white;
+  @include respond-to(wide-screens)   { padding-top: 30px; }
+  @include respond-to(regular-screens)   { padding-top: 30px; }
+  @include respond-to(narrow-screens) { padding-top: 0px; }
+  @include respond-to(small-screens)  { padding-top: 0px; } 
+}
 // -----------------------------------------------------------------------------------------
 // HEADER
 // -----------------------------------------------------------------------------------------
@@ -178,10 +184,12 @@ body{
 
 .header-menu {
   float: left;
-  .mobile-menu-jumpto{
+  a.mobile-menu-jumpto{
       width:30px;
       height:30px; 
-      @include background( url(../images/radio-tower.png) no-repeat center center);
+      text-indent:-9999px;
+      display:block;
+      @include background( url(../images/icon-mobile-menu.png) no-repeat center center);
   }
 }
 
@@ -209,6 +217,8 @@ body{
   .listen-live{
     width:30px;
     height:30px;
+    text-indent:-9999px;
+    display:block;
     @include background( url(../images/radio-tower.png) no-repeat center center);
   }
 }
@@ -1040,10 +1050,13 @@ $footerRowSpacing: 30px;
     @include respond-to(small-screens)  { display: block; margin: 0 auto;  }
     &:last-child { padding-bottom: 4px;  };
   }
+  div {
+    width:100% !important;  
+  }
   @include respond-to(wide-screens)   {  }
   @include respond-to(regular-screens) {  }
   @include respond-to(narrow-screens) {  }
-  @include respond-to(small-screens)  { width: 100%;  }
+  @include respond-to(small-screens)  {   }
 }
 
 
@@ -1119,10 +1132,10 @@ $featuredShowDivBarHeight: 84px;
   float: left;
   @include clearfix();
 
-  margin-right: 10px;
-    @include respond-to(wide-screens)   { margin-bottom: 15px; width: 365px; margin-right: 10px;}
-    @include respond-to(regular-screens)   { margin-bottom: 15px; width: 365px; margin-right: 10px;}
-    @include respond-to(narrow-screens) { margin-bottom: 15px; width: 310px; margin-right: 10px;}
+  //margin-right: 10px;
+    @include respond-to(wide-screens)   { margin-bottom: 15px; }
+    @include respond-to(regular-screens)   { margin-bottom: 15px; }
+    @include respond-to(narrow-screens) { margin-bottom: 15px; }
     @include respond-to(small-screens)      { margin: 0px; }
   // @include box-sizing(border-box);
 
@@ -1143,6 +1156,7 @@ $featuredShowDivBarHeight: 84px;
   }
 
   .storyName {
+    min-height:35px;
     margin-bottom: 5px;
   }
 
@@ -1168,10 +1182,10 @@ $featuredShowDivBarHeight: 84px;
     a.facebook { float:left; margin-top:4px; margin-left:4px; @include background(url(../images/icon-noshadow-facebook.png) no-repeat center center); width:32px;height:32px;@include image-2x("../images/icon-noshadow-facebook-2x.png", 32px, 32px);};
     a.twitter { float:left; margin-top:4px; margin-left:4px; @include background(url(../images/icon-noshadow-twitter.png) no-repeat center center); width:32px;height:32px;@include image-2x("../images/icon-noshadow-twitter-2x.png", 32px, 32px);}; 
     //a.gplus { display:none; float:left; margin-top:4px; margin-left:4px; @include background(url(../images/icon-noshadow-google-plus.png) no-repeat center center); width:32px;height:32px;@include image-2x("../images/icon-noshadowgoogle-plus-2x.png", 32px, 32px);};
-    a.email { float:left; margin-top:4px; margin-left:4px; @include background(url(../images/icon-noshadow-mail.png) no-repeat center center); width:32px;height:32px;@include image-2x("../images/icon-noshadow-mail-2x.png", 32px, 32px);}; 
+    a.email { float:left; margin-top:4px; margin-left:4px; @include background(url(../images/icon-noshadow-mail.png) no-repeat center center); width:33px;height:32px;@include image-2x("../images/icon-noshadow-mail-2x.png", 32px, 32px);}; 
   }
   .storyDescription{
-    height: 80px;
+    min-height: 80px;
   }
 }
 
@@ -1187,14 +1201,14 @@ $featuredShowDivBarHeight: 84px;
 {
   // @include background(url(../images/texturebg.png));
   @include background(linear-gradient(top, $grayOverlay, $grayOverlay),url(../images/texturebg.png));
-  width: 320px;
-  padding: 9px;
+  
+  //padding: 9px;
   //min-height: 225px;
   @include box-sizing(border-box);
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(regular-screens) {  }
-  @include respond-to(narrow-screens) {  }
-  @include respond-to(small-screens)  { @include background(white); }
+  @include respond-to(wide-screens)   { width: 320px; }
+  @include respond-to(regular-screens) { width: 320px; }
+  @include respond-to(narrow-screens) { width:100%; }
+  @include respond-to(small-screens)  { @include background(white); width:100%; }
   
   img {margin-bottom: 0px;}
 
@@ -1230,7 +1244,7 @@ $featuredShowDivBarHeight: 84px;
 .musicPlayer
 {
   width: 320px;
-  height: 158px;
+  //height: 158px;
   border: 1px solid $grayBorder;
   padding: 10px;
   position: relative;
@@ -1239,13 +1253,22 @@ $featuredShowDivBarHeight: 84px;
   @include border-radius(10px);
   @include respond-to(wide-screens)   {  }
   @include respond-to(regular-screens) {  }
-  @include respond-to(narrow-screens) {  }
-  @include respond-to(small-screens)  {  }
+  @include respond-to(narrow-screens) { width:100%; }
+  @include respond-to(small-screens)  { width:100%; }
 
   .storyName {
     margin-top: -5px;
   }
+   .flex-nav-container {
+      margin-bottom:0;
+    }
+  .flexslider {
+    border:none;
+    box-shadow: none;
+    -webkit-box-shadow:none;
+    background:none;
 
+  }
   .textArea {
     margin-left: 150px;
     margin-top: 20px;
@@ -1367,9 +1390,9 @@ $featuredShowDivBarHeight: 84px;
   margin-top: 10px;
   @include Calibri();
   font-weight: bold;
-  @include respond-to(wide-screens)   { font-size: 32px; line-height: 30px; }
-  @include respond-to(regular-screens) { font-size: 32px; line-height: 30px; }
-  @include respond-to(narrow-screens) { font-size: 32px; line-height: 30px; }
+  @include respond-to(wide-screens)   { font-size: 32px; line-height: 30px; margin-bottom: 15px;}
+  @include respond-to(regular-screens) { font-size: 32px; line-height: 30px; margin-bottom: 15px;}
+  @include respond-to(narrow-screens) { font-size: 32px; line-height: 30px; margin-bottom: 15px;}
   @include respond-to(small-screens)      { font-size: 35px; line-height: 32px; padding: 0px 15px; display: inline-block; }
 }
 
@@ -1394,6 +1417,7 @@ $featuredShowDivBarHeight: 84px;
 {
   color: $grayText;
   font-weight: 100;
+
   a { color: $blueText; text-decoration:none; }
   p { margin-top: 10px; }
   img {
@@ -1404,19 +1428,34 @@ $featuredShowDivBarHeight: 84px;
   @include respond-to(wide-screens)   { font-size: 16px; line-height: 24px; }
   @include respond-to(regular-screens) { font-size: 16px; line-height: 24px; }
   @include respond-to(narrow-screens) { font-size: 16px; line-height: 24px; }
-  @include respond-to(small-screens)      { font-size: 14px; line-height: 24px; padding: 0px 15px; display: inline-block; }
+  //0px 15px padding below? might fix slider on homepage... 
+  @include respond-to(small-screens)      { font-size: 14px; line-height: 24px; padding: 0px; display: inline-block; }
 }
 
+.field-items {
+   img {
+    padding: 4px;
+    border: dashed 1px $lightGrayImageBorder;
+   
+    @include respond-to(wide-screens)   {  }
+    @include respond-to(regular-screens) {  }
+    @include respond-to(narrow-screens) {  } 
+    @include respond-to(small-screens) { width:100%; height:auto; }
+  }
+}
+
+.region-content { width:100%; }
 
 // ----------------------------------------------------------------
 // SPONSOR BLOCK
 // ----------------------------------------------------------------
 .sponsorBlock {
-  width:350px;
+  //width:350px;
   img {
     border:none;
     margin:0;
     padding:0;
+    width:50%;
   }
 }
 
@@ -1627,6 +1666,7 @@ $featuredShowDivBarHeight: 84px;
   cursor: pointer;
   border: 2px solid $grayBorder;
   @include box-sizing(border-box);
+  text-decoration: none;
   font-size: 25px;
   // display: none;
   @include background(linear-gradient(top, $buttonGradientBottom, white));
@@ -1720,12 +1760,14 @@ $featuredShowDivBarHeight: 84px;
     margin: 3px;
   }
 
-  @include respond-to(wide-screens)   {  }
-  @include respond-to(regular-screens) {  }
-  @include respond-to(narrow-screens) {  }
+  @include respond-to(wide-screens)   {  margin-bottom:25px; }
+  @include respond-to(regular-screens) { margin-bottom:25px; }
+  @include respond-to(narrow-screens) { margin-bottom:25px; }
   @include respond-to(small-screens)  { border: none;  }
 }
-
+.jp-audio {
+  width:100%;
+}
 .storyDate, .submitted
 {
   @include Calibri();
@@ -1768,7 +1810,11 @@ $featuredShowDivBarHeight: 84px;
   border-left: 1px solid $grayBorder;
   border-bottom: 1px solid $grayBorder;
   height: 72px;
-  width: 360px;
+  
+  @include respond-to(wide-screens)   { width: 360px; }
+  @include respond-to(regular-screens) { width: 360px; }
+  @include respond-to(narrow-screens) { width:100%; }
+  @include respond-to(small-screens)  { width:100%; }
   @include box-sizing(border-box);
   // background-color: red;
   @include background( url(../images/texturebg.png));
@@ -1807,7 +1853,7 @@ $featuredShowDivBarHeight: 84px;
   @include respond-to(wide-screens)   {  }
   @include respond-to(regular-screens) {  }
   @include respond-to(narrow-screens) {  }
-  @include respond-to(small-screens)  {  }
+  @include respond-to(small-screens)  { width:100%; height:auto; }
 }
 
 .flexSliderImageWrapper
@@ -1885,6 +1931,10 @@ $featuredShowDivBarHeight: 84px;
     font-size: 32px;
     line-height: 24px;
     color: white;
+    @include respond-to(wide-screens)   {  }
+    @include respond-to(regular-screens) {  }
+    @include respond-to(narrow-screens) { font-size: 24px; line-height: 24px; }
+    @include respond-to(small-screens)  { font-size: 22px; line-height: 20px; }
   }
   .slide-inner {
     padding:12px;
@@ -1903,6 +1953,16 @@ $featuredShowDivBarHeight: 84px;
   display:block;
   margin-left:10px;
   margin-bottom:10px;
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(regular-screens) {  }
+  @include respond-to(narrow-screens) {  }
+  @include respond-to(small-screens)  { margin-left:0px; width:100%; }
+  .field-items {
+    @include respond-to(wide-screens)   {  }
+    @include respond-to(regular-screens) {  }
+    @include respond-to(narrow-screens) {  }
+    @include respond-to(small-screens)  { margin-left:0px; width:100%; }
+  }
 }
 .node-type-track .region-content .field-type-image { float:left; margin-left:0px; margin-right:10px;}
 // -----------------------------------------------------------------------------------------
@@ -2086,7 +2146,19 @@ input[type="submit"] {
   h3 {display:none;}
   }
 .playlist-page-list img { border:none; }
-
+#selector { 
+  border:none; 
+  background:transparent; 
+  text-indent:-999em; 
+  display:inline; 
+  overflow:hidden; 
+  background-image: url(../images/button-change-date.png);
+  @include image-2x("../images/button-change-date-2x.png", 115px, 29px); 
+  background-position:center; 
+  background-repeat:no-repeat;
+  width: 115px;
+  height: 29px;
+}
 //===================================================
 // Events
 //===================================================
@@ -2098,15 +2170,15 @@ input[type="submit"] {
 .event-list-date-box {
   display:block;
   float:left;
-  width:80px;
-  height:80px;
-  border-right: 2px solid $grayBorder;
-  border-bottom: 2px solid $grayBorder;
+  width:102px;
+  height:105px;
+  background-image: url(../images/date-block-bg.png);
+  @include image-2x("../images/date-block-bg-2x.png", 102px, 105px); 
   margin-right:10px;
   text-align: center;
 }
 
-.event-list-date-box-day {}
+.event-list-date-box-day {padding-top: 18px;}
 .event-list-date-box-month-date {}
 .event-list-date-box-time {}
 .event-list-buy-tickets {}
@@ -2135,9 +2207,9 @@ input[type="submit"] {
   @include respond-to(small-screens)  {  }
 }
 a.site-logo {
-  width:140px;
+  /*width:140px;
   height:120px;
-  display:block;
+  display:block;*/
 }
 .front #page-title, .page-taxonomy-term #page-title {
   display:none;
@@ -2155,6 +2227,16 @@ a.site-logo {
 .fright {float:right;}
 .fleft {float:left;}
 .pager, .pager li.first, .pager li.first a, .pager li.first a:hover {border:none; margin-bottom:25px; clear:both;}
+
+div.jp-interface {
+  position: relative;
+  background-color:none;
+  @include respond-to(wide-screens)   { width:100%; }
+  @include respond-to(regular-screens) { width:100%; }
+  @include respond-to(narrow-screens) { width:100%; clear:both;}
+  @include respond-to(small-screens)  { width:100%; clear:both;}
+  border:none;
+}
 
 // -----------------------------------------------------------------------------------------
 // GLOBAL STYLES
