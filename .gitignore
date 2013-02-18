@@ -12,3 +12,7 @@ sftp-config-alt.json
 >>>>>>> Feb12additions
 
 *.sublime-workspace
+
+scripts/om_maximenu.js
+
+*.scssc
