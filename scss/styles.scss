@@ -185,11 +185,12 @@ body{
 .header-menu {
   float: left;
   a.mobile-menu-jumpto{
-      width:30px;
-      height:30px; 
-      text-indent:-9999px;
+      width:66px;
+      height:57px; 
+      padding: 38px 0px 0px 22px;
+      // text-indent:-9999px;
       display:block;
-      @include background( url(../images/icon-mobile-menu.png) no-repeat center center);
+      @include background( url(../images/icon-mobile-menu.png) no-repeat 24px 14px);
   }
 }
 
@@ -215,8 +216,8 @@ body{
   right: 0;
   top: 0;
   .listen-live{
-    width:30px;
-    height:30px;
+    width:66px;
+    height:57px;
     text-indent:-9999px;
     display:block;
     @include background( url(../images/radio-tower.png) no-repeat center center);
@@ -447,19 +448,19 @@ body{
     margin-right: 0px;
     padding: 10px 0 19px 0;
     > span { color: $mainNavText; text-decoration:none; 
-      padding: 3px 20px;
+      padding: 3px 12px 5px 12px;
       border-right: 1px dashed $navDividingLine;
       text-transform: lowercase;
       @include respond-to(wide-screens)   {  }
       @include respond-to(regular-screens)   {  }
-      @include respond-to(narrow-screens) { padding: 3px 14px; }
+      @include respond-to(narrow-screens) { padding: 3px 12px 5px 12px; }
       @include respond-to(small-screens)      { }
       //&.listen-live {@include background(url(../images/radio-tower.png) no-repeat left center); padding-left:37px;}
       &.quick-links {@include background(url(../images/arrow-down.png) no-repeat 98% center); padding-right:20px;border-right:none;}
       &.direct-link {padding:0;height:auto;
         a {color: $mainNavText; text-decoration:none;padding:3px 20px;text-transform: lowercase;line-height: 36px;
-        @include respond-to(narrow-screens) { padding: 3px 14px; }
-        &.listen-live {@include background(url(../images/radio-tower.png) no-repeat left center); padding-left:37px;}
+        @include respond-to(narrow-screens) { padding: 3px 12px 5px 12px; }
+        &.listen-live {@include background(url(../images/radio-tower.png) no-repeat 5px center); padding-left: 38px; padding-right: 14px;}
       }
       }
     }
@@ -1131,6 +1132,7 @@ $featuredShowDivBarHeight: 84px;
   // padding: 10px;
   float: left;
   @include clearfix();
+  // min-height: 386px;
 
   //margin-right: 10px;
     @include respond-to(wide-screens)   { margin-bottom: 15px; }
@@ -1185,7 +1187,7 @@ $featuredShowDivBarHeight: 84px;
     a.email { float:left; margin-top:4px; margin-left:4px; @include background(url(../images/icon-noshadow-mail.png) no-repeat center center); width:33px;height:32px;@include image-2x("../images/icon-noshadow-mail-2x.png", 32px, 32px);}; 
   }
   .storyDescription{
-    min-height: 80px;
+    min-height: 112px;
   }
 }
 
@@ -1661,8 +1663,9 @@ $featuredShowDivBarHeight: 84px;
   text-align: center;
   // margin-top: 15px;
   margin: 15px auto;
+  // margin-bottom: 50px;
   // line-height: 50px;
-  padding: 10px;
+  padding: 12px 40px;
   cursor: pointer;
   border: 2px solid $grayBorder;
   @include box-sizing(border-box);
@@ -1674,6 +1677,14 @@ $featuredShowDivBarHeight: 84px;
   @include respond-to(regular-screens) {  }
   @include respond-to(narrow-screens) {  }
   @include respond-to(small-screens)  {  }
+}
+
+ul.pager {
+  margin: 43px 0px;
+  // display: inline-block;
+  li { 
+    margin: 0;
+  }
 }
 
 
@@ -2226,7 +2237,7 @@ a.site-logo {
 
 .fright {float:right;}
 .fleft {float:left;}
-.pager, .pager li.first, .pager li.first a, .pager li.first a:hover {border:none; margin-bottom:25px; clear:both;}
+//.pager, .pager li.first, .pager li.first a, .pager li.first a:hover {border:none; margin-bottom:25px; clear:both;}
 
 div.jp-interface {
   position: relative;
@@ -2268,4 +2279,8 @@ div.jp-interface {
   color: $grayText;
   margin-bottom: 6px;
   a { color: $blueText; text-decoration:none; }
+}
+
+.testClass2 {
+  display:none;
 }

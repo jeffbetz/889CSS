@@ -1,2 +1,14 @@
+<<<<<<< HEAD
 
 *.json
+=======
+88nineRip.sublime-project
+88nineRip.sublime-workspace
+.sass-cache/*
+sftp-config.json
+sftp-config-alt.json
+/css/sftp-config.json
+.sass-cache/feb4fa193572a45ac5dc8e93ab610e0f28a49fa7/styles.scssc
+>>>>>>> Feb12additions
+
+*.sublime-workspace
