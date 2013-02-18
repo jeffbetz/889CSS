@@ -3,3 +3,4 @@
 .sass-cache
 sftp-config.json
 sftp-config-alt.json
+/css/sftp-config.json
