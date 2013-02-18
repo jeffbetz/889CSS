@@ -185,11 +185,12 @@ body{
 .header-menu {
   float: left;
   a.mobile-menu-jumpto{
-      width:30px;
-      height:30px; 
-      text-indent:-9999px;
+      width:66px;
+      height:57px; 
+      padding: 38px 0px 0px 22px;
+      // text-indent:-9999px;
       display:block;
-      @include background( url(../images/icon-mobile-menu.png) no-repeat center center);
+      @include background( url(../images/icon-mobile-menu.png) no-repeat 24px 14px);
   }
 }
 
@@ -215,8 +216,8 @@ body{
   right: 0;
   top: 0;
   .listen-live{
-    width:30px;
-    height:30px;
+    width:66px;
+    height:57px;
     text-indent:-9999px;
     display:block;
     @include background( url(../images/radio-tower.png) no-repeat center center);

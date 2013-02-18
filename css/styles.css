@@ -233,11 +233,11 @@ body {
 .header-menu {
   float: left; }
   .header-menu a.mobile-menu-jumpto {
-    width: 30px;
-    height: 30px;
-    text-indent: -9999px;
+    width: 66px;
+    height: 57px;
+    padding: 38px 0px 0px 22px;
     display: block;
-    background: url(../images/icon-mobile-menu.png) no-repeat center center; }
+    background: url(../images/icon-mobile-menu.png) no-repeat 24px 14px; }
 
 .header-logo {
   display: block;
@@ -264,8 +264,8 @@ body {
   right: 0;
   top: 0; }
   .header-listen-live .listen-live {
-    width: 30px;
-    height: 30px;
+    width: 66px;
+    height: 57px;
     text-indent: -9999px;
     display: block;
     background: url(../images/radio-tower.png) no-repeat center center; }
