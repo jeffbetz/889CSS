@@ -16,3 +16,7 @@ sftp-config-alt.json
 scripts/om_maximenu.js
 
 *.scssc
+
+.sass-cache/feb4fa193572a45ac5dc8e93ab610e0f28a49fa7/styles.scssc
+
+88nineRip.sublime-workspace
