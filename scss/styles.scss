@@ -151,7 +151,7 @@ body{
   background-color:white;
   @include respond-to(wide-screens)   { padding-top: 30px; }
   @include respond-to(regular-screens)   { padding-top: 30px; }
-  @include respond-to(narrow-screens) { padding-top: 0px; }
+  @include respond-to(narrow-screens) { padding-top: 17px; }
   @include respond-to(small-screens)  { padding-top: 0px; } 
 }
 // -----------------------------------------------------------------------------------------
@@ -1222,7 +1222,7 @@ $featuredShowDivBarHeight: 84px;
   @include box-sizing(border-box);
   @include respond-to(wide-screens)   { width: 320px; }
   @include respond-to(regular-screens) { width: 320px; }
-  @include respond-to(narrow-screens) { width:100%; }
+  @include respond-to(narrow-screens) { width:290px; }
   @include respond-to(small-screens)  { @include background(white); width:100%; }
   
   img {margin-bottom: 0px;}
@@ -2163,6 +2163,10 @@ input[type="submit"] {
   }
 }
 
+#block-views-story-utility-block-5 {
+  margin-left: 0px;
+}
+
 .block-track-utility-block-3, .playlist-page-list, .view-display-id-block_4 {
   .views-field-field-image { 
     float:left; padding-right:15px; 
@@ -2227,8 +2231,8 @@ input[type="submit"] {
   display:block;
   float:right;
   @include respond-to(wide-screens)   { width:50%; }
-  @include respond-to(regular-screens) {  }
-  @include respond-to(narrow-screens) {  }
+  @include respond-to(regular-screens) { width:50%; }
+  @include respond-to(narrow-screens) { width:40%; }
   @include respond-to(small-screens)  {  }
 }
 a.site-logo {

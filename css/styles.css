@@ -190,7 +190,7 @@ body {
       padding-top: 30px; } }
   @media only screen and (min-width: 740px) and (max-width: 979px) {
     .section-content {
-      padding-top: 0px; } }
+      padding-top: 17px; } }
   @media only screen and (max-width: 739px) {
     .section-content {
       padding-top: 0px; } }
@@ -1560,7 +1560,7 @@ body {
       width: 320px; } }
   @media only screen and (min-width: 740px) and (max-width: 979px) {
     .featuredArtistSlider {
-      width: 100%; } }
+      width: 290px; } }
   @media only screen and (max-width: 739px) {
     .featuredArtistSlider {
       background: white;
@@ -2381,6 +2381,9 @@ input[type="submit"] {
   margin-bottom: 15px;
   margin-top: 15px; }
 
+#block-views-story-utility-block-5 {
+  margin-left: 0px; }
+
 .block-track-utility-block-3 .views-field-field-image, .playlist-page-list .views-field-field-image, .view-display-id-block_4 .views-field-field-image {
   float: left;
   padding-right: 15px; }
@@ -2450,6 +2453,12 @@ input[type="submit"] {
   @media only screen and (min-width: 1140px) {
     .block-story-utility-block-8 {
       width: 50%; } }
+  @media only screen and (min-width: 980px) and (max-width: 1139px) {
+    .block-story-utility-block-8 {
+      width: 50%; } }
+  @media only screen and (min-width: 740px) and (max-width: 979px) {
+    .block-story-utility-block-8 {
+      width: 40%; } }
 
 a.site-logo {
   /*width:140px;
