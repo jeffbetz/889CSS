@@ -237,7 +237,13 @@ body {
     height: 57px;
     padding: 38px 0px 0px 22px;
     display: block;
-    background: url(../images/icon-mobile-menu.png) no-repeat 24px 14px; }
+    background: url(../images/icon-mobile-menu.png) no-repeat 24px 14px;
+    font-family: "Periodico Display", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    color: #4f3700;
+    font-size: 14px;
+    line-height: 16px;
+    text-decoration: none; }
 
 .header-logo {
   display: block;
@@ -266,9 +272,15 @@ body {
   .header-listen-live .listen-live {
     width: 66px;
     height: 57px;
-    text-indent: -9999px;
     display: block;
-    background: url(../images/radio-tower.png) no-repeat center center; }
+    background: url(../images/radio-tower.png) no-repeat 25px 13px;
+    font-family: "Periodico Display", Helvetica, Arial, sans-serif;
+    font-style: italic;
+    color: #4f3700;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 38px 0px 0px 22px;
+    text-decoration: none; }
 
 .header-search {
   position: absolute;
@@ -1671,7 +1683,8 @@ body {
       background: url(../images/texturebg.png);
       width: 100%; } }
   .programListing .sectionTitle {
-    margin-bottom: -2px; }
+    margin-bottom: -2px;
+    padding-top: 12px; }
   @media only screen and (min-width: 740px) and (max-width: 979px) {
     .programListing .storyDescription {
       display: none; } }
@@ -2512,3 +2525,15 @@ div.jp-interface {
 
 .testClass2 {
   display: none; }
+
+.flex-nav-container {
+  margin-bottom: 0px; }
+  @media only screen and (max-width: 739px) {
+    .flex-nav-container {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding: 12px; } }
+
+.featuredArtistSlider .flex-nav-container {
+  margin-bottom: 30px; }

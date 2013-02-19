@@ -191,6 +191,12 @@ body{
       // text-indent:-9999px;
       display:block;
       @include background( url(../images/icon-mobile-menu.png) no-repeat 24px 14px);
+      @include PeriodicoDisplay();
+      font-style: italic;
+      color: $brownText;
+      font-size: 14px;
+      line-height: 16px;
+      text-decoration: none;
   }
 }
 
@@ -218,9 +224,16 @@ body{
   .listen-live{
     width:66px;
     height:57px;
-    text-indent:-9999px;
+    // text-indent:-9999px;
     display:block;
-    @include background( url(../images/radio-tower.png) no-repeat center center);
+    @include background( url(../images/radio-tower.png) no-repeat 25px 13px);
+    @include PeriodicoDisplay();
+    font-style: italic;
+    color: $brownText;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 38px 0px 0px 22px;
+    text-decoration: none;
   }
 }
 
@@ -1353,6 +1366,7 @@ $featuredShowDivBarHeight: 84px;
 
   .sectionTitle {
     margin-bottom: -2px;
+    padding-top: 12px;
   }
 
   .storyDescription {
@@ -2283,4 +2297,16 @@ div.jp-interface {
 
 .testClass2 {
   display:none;
+}
+
+.flex-nav-container {
+  margin-bottom: 0px;
+  @include respond-to(small-screens)  { 
+    @include box-sizing(border-box);
+    padding: 12px;
+  }
+}
+
+.featuredArtistSlider .flex-nav-container {
+  margin-bottom: 30px;
 }
