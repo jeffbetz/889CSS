@@ -42,8 +42,8 @@ $experimental-support-for-opera: false;
 $experimental-support-for-microsoft: true;
 
 $break-small: 739px; // should be 320px
-$break-normal: 980px; // should be 320px
-$break-wide: 1140px;
+$break-normal: 980px; // was 980px Jeff changed on 022113 because breakpoint not lining up with Omega breakpoints.
+$break-wide: 1140px; // was 1140px Jeff changed on 022113 because breakpoint not lining up with Omega breakpoints. 
 
 @mixin respond-to($media) {
   @if $media == small-screens {
@@ -560,6 +560,12 @@ body{
       .block-views { border-left: 1px dashed $navDividingLine;margin-left:0;padding-left:25px;}
       .view-story-utility, .view-events {
           
+          margin-top: 15px;
+
+          @include respond-to(wide-screens)   {  }
+          @include respond-to(regular-screens) {  }
+          @include respond-to(narrow-screens) {  }
+          @include respond-to(small-screens)   {  }
          
         .highlight {
           color: $blueText;
@@ -741,9 +747,12 @@ body{
 .block-menu-social-media-links {
   float:left;
   clear:both;
+  margin-left: 10px;
   ul {
       @include horizontal-list(); 
-      li {padding:0;}
+      li {padding:2px;
+        @include respond-to(small-screens) { padding: 2px;}
+      }
     }
 
   a {width:38px;height:41px;}
@@ -979,7 +988,7 @@ $footerRowSpacing: 30px;
   @include respond-to(wide-screens)   {  }
   @include respond-to(regular-screens) {  }
   @include respond-to(narrow-screens) {  }
-  @include respond-to(small-screens)  {  float:left;clear:both; }
+  @include respond-to(small-screens)  {  float:left;clear:both; padding: 10px; }
 }
 .credits-wrapper{
   float:right;
@@ -992,7 +1001,7 @@ $footerRowSpacing: 30px;
     a.ascedia{ @include background(url(../images/logo-ascedia.png) no-repeat center center);width:63px;height:47px;}
     
   }
-  @include respond-to(small-screens)  { margin-top:5px;float:left;clear:both; }
+  @include respond-to(small-screens)  { margin-top:15px;float:left;clear:both; margin-left: 10px; }
 }
 
 // for the searchbox
@@ -1132,7 +1141,8 @@ $featuredShowDivBarHeight: 84px;
 
  .region-sidebar-first {
    @include respond-to(wide-screens)   { margin-top:15px; }
-   @include respond-to(regular-screens) {   }
+   @include respond-to(regular-screens) {  margin-top:15px; }
+   @include respond-to(narrow-screens) { margin-top:15px; }
    @include respond-to(small-screens)      {  }
  }
 
@@ -1171,7 +1181,7 @@ $featuredShowDivBarHeight: 84px;
   }
 
   .storyName {
-    min-height:35px;
+    // min-height:35px;
     margin-bottom: 5px;
   }
 
@@ -1453,10 +1463,10 @@ $featuredShowDivBarHeight: 84px;
     padding: 4px;
     border: dashed 1px $lightGrayImageBorder;
    
-    @include respond-to(wide-screens)   {  }
-    @include respond-to(regular-screens) {  }
-    @include respond-to(narrow-screens) {  } 
-    @include respond-to(small-screens) { width:100%; height:auto; }
+    @include respond-to(wide-screens)   { max-width: 880px }
+    @include respond-to(regular-screens) { max-width: 700px }
+    @include respond-to(narrow-screens) { max-width: 520px } 
+    @include respond-to(small-screens) { width:100%; height:auto; border: none; padding: 4px 0px; }
   }
 }
 
@@ -1466,12 +1476,19 @@ $featuredShowDivBarHeight: 84px;
 // SPONSOR BLOCK
 // ----------------------------------------------------------------
 .sponsorBlock {
-  //width:350px;
+  max-width: 400px;
+  @include respond-to(small-screens){
+    margin-top: 15px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
   img {
     border:none;
     margin:0;
     padding:0;
     width:50%;
+    height: auto;
   }
 }
 
@@ -1734,6 +1751,17 @@ ul.pager {
   @include respond-to(small-screens)  {  }
 }
 
+
+// -----------------------------------------------------------------------------------------
+// Story pages
+// -----------------------------------------------------------------------------------------
+
+.categoryDescription {
+  @include respond-to(wide-screens)   {  }
+  @include respond-to(regular-screens) {  }
+  @include respond-to(narrow-screens) {  }
+  @include respond-to(small-screens)  { padding-left: 10px; padding-right: 10px; }
+}
 
 
 // -----------------------------------------------------------------------------------------
