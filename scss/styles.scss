@@ -211,7 +211,8 @@ body{
   display: block;
   float: none;
   margin: 0 auto;
-  @include background(url(../images/logo_desktop.png) center); height: 127px; width: 134px;
+  padding-top: 25px;
+  @include background(url(../images/logo_desktop.png) center no-repeat); height: 127px; width: 134px;
   @include respond-to(regular-screens)   { }
   @include respond-to(narrow-screens) { @include background(url(../images/logo_tablet.png) center no-repeat); height: 100px; width: 95px;padding-top: 20px; }
   @include respond-to(small-screens)      { @include background(url(../images/logo_mobile.png) center no-repeat); height: 58px; width: 61px;padding-top: 4px; }
@@ -1403,6 +1404,28 @@ $featuredShowDivBarHeight: 84px;
 
 
 
+// -----------------------------------------------------------------------------------------
+// HOME PAGE
+// -----------------------------------------------------------------------------------------
+
+.views-field-field-album-name {
+
+  @include respond-to(wide-screens)     {  }
+  @include respond-to(regular-screens)  {  }
+  @include respond-to(narrow-screens)   {  }
+  @include respond-to(small-screens)    { padding-left: 15px; }
+}
+
+.views-field-play-date
+{
+
+  @include respond-to(small-screens)      { padding-left: 15px; }
+
+  .views-label.views-label-play-date, .field-content {
+    line-height: 16px;
+  }
+}
+
 
 // -----------------------------------------------------------------------------------------
 // STORY BLURB AND STORY PAGE COPY
@@ -1787,7 +1810,7 @@ ul.pager {
   @include respond-to(wide-screens)   { display: none; }
   @include respond-to(regular-screens) {  }
   @include respond-to(narrow-screens) {  }
-  @include respond-to(small-screens)  {  }
+  @include respond-to(small-screens)  { padding-left: 15px; }
 }
 
 
